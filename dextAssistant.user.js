@@ -15,10 +15,12 @@
 // @require https://piyolab.github.io/sushiether/web3.js/libs/web3.js_v1.0.0-beta.33/web3.min.js
 // ==/UserScript==
 
+// Follow t.me/ApopheniaProjects for announcements.
+
 /************** DISCLAIMER *********************/
 //
 // TO BE READ IN A STERN, GRUFF VOICE:
-// Despite my efforts to give it an easy-to-understand GUI, this is an advanced tool for advanced traders.
+// Despite my efforts to give it an easy-to-understand GUI, this is an advanced tool for technically advanced traders.
 //
 // If you are trading on Uniswap or other DEXs, you need to have a certain level of general knowledge in order
 // to avoid the high risks, and I'm not going to enable anyone to jump in and lose money. If there's anything
