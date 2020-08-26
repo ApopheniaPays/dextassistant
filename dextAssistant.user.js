@@ -156,7 +156,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA 2020.08.25";
+var currentVersion="ALPHA 2020.08.25b";
              var IDcounter=1;
 
              /* DON'T NEED ANYMORE  $(document).ready(function() {
@@ -458,7 +458,7 @@ function filterFunction(filterAddr,tableId,theColor) {
 
 
                  thisNode.parent().append('<a title="Zerion wallet overview" onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
-                                          +' href="https://app.zerion.io/overview'+theHex+'">'
+                                          +' href="https://app.zerion.io/overview/'+theHex+'">'
                                           +' <div class="backImg zeriImg hide"></div></a>');
              }
 
