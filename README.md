@@ -9,7 +9,9 @@ The nice people at DEXTools.io have built a great information explorer for Unisw
 
 # DISCLAIMER 
 
-TO BE READ IN A STERN, GRUFF VOICE: Despite my efforts to give it an easy-to-understand GUI, this is an advanced tool for advanced traders.
+TO BE READ IN A STERN, GRUFF VOICE: 
+
+Despite my efforts to give it an easy-to-understand GUI, this is an advanced tool for advanced traders.
 
 If you are trading on Uniswap or other DEXs, you need to have a certain level of general knowledge in order to avoid the high risks, and I'm not going to enable anyone to jump in and lose money. If there's anything in this you don't understand, then you probably shouldn't be trading on Uniswap yet, so this tool is not for you.
 
