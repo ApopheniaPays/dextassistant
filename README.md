@@ -19,6 +19,8 @@ What's more, as this is under active development, you may find bugs, though I tr
 
 As I'm sharing this for free, I won't give you any support or any guarantees, and if you choose to use it I don't owe you anything for any reason. It's presented as-is, use it only at your own risk. What you see is what you get.If you have questions you'll have to do your own research and figure out the answers yourself. I'm grouchy, don't bother me.
 
+This is an independent project, not affiliated with the Dextools.io team, please never bother them with questions about it.
+
 ESSENTIALLY, YOU'RE ON YOUR OWN.
 
 # INSTRUCTIONS 
