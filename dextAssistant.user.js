@@ -33,6 +33,9 @@
 // is what you get.If you have questions you'll have to do your own research and figure out the answers yourself.
 // I'm grouchy, don't bother me.
 //
+// This is an independent project, not affiliated with the Dextools.io team, please never bother them with questions 
+// about it.
+//
 // ESSENTIALLY, YOU'RE ON YOUR OWN.
 
 /************** BACKGROUND *********************/
