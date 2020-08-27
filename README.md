@@ -1,6 +1,6 @@
 VERSION ALPHA 2020.08.25
  
-(This is the initial alpha release. More complete information will be added later. Follow t.me/ApopheniaProjects on Telegram for announcements. )
+(This is the initial alpha release. More complete information will be added later. Follow [http://t.me/ApopheniaProjects](http://t.me/ApopheniaProjects) on Telegram for announcements.)
 
 # BACKGROUND 
 
