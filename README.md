@@ -6,6 +6,7 @@ VERSION ALPHA 2020.08.25
 
 The nice people at DEXTools.io have built a great information explorer for Uniswap. However, I found that as I explored the information it gave me, I had to do far too much clicking around to other websites to do my own research on the coins listed. I wanted a quicker way to gather information and determine which coins might be worth investing in, and more importantly, which look like scams and should be avoided. So I took all the research I was doing by hand, and coded a tool that gave quicker access to it, and in some cases, embedded it right in the page without having to leave DEXTools.
 
+Installation tips are included below. Yes, you're going to have to _read_.
 
 # DISCLAIMER 
 
@@ -25,9 +26,15 @@ ESSENTIALLY, YOU'RE ON YOUR OWN.
 
 # INSTRUCTIONS 
 
-(If you're unfamiliar with userscripts or Tampermonkey, Greasemonkey, Violentmonkey, etc, you should educate yourself from a page like https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide before you try to use this.)
+## Installation
 
-This script is for use in a browser plugin that allows you to install and manage user scripts, such as Greasemonkey, Tampermonkey, or Violentmonkey. I chose to go with a userscript instead of a browser plugin because it would allow the code to remain 100% open source and cross-platform.
+This script is for use with a browser plugin that allows you to install and manage user scripts, such as Greasemonkey, Tampermonkey, or Violentmonkey. I chose to go with a userscript instead of a browser plugin because it would allow the code to remain 100% open source and cross-platform.
+
+(Here's where you need to bring a little knowledge to the table. If you're unfamiliar with userscripts or Tampermonkey, Greasemonkey, Violentmonkey, etc, you should educate yourself from a page like [https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) before you try to use this.)
+
+*BONUS!* For users that already have a userscript manager extension installed in their browser, this script is now also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant) for one-click install. Maybe you'll even get automatic version updates if your browser plugin is configured that way.
+
+## Usage
 
 This adds a few cosmetic changes to the DEXTools.io Pool Explorer, and soon will also add features to their Pair Explorer page. You will notice them right away:
 
