@@ -128,7 +128,8 @@ var ethplorerkey="freekey";
 // slerts for adds with over a certain amount of liquidity
 // view maker contract addresses on Zerion
 // show % increase in pool over initial
-// Maybe gray out any row with no pool left. This requires keeping the wTCH TIMER ALIVE, SO, THINK ABOUT IT.
+// Maybe gray out any row with no pool left. This requires keeping the ontimer() live, so, think about it.
+// maybe provision to enter your own wellet addresses and hilight them to find your own transactions easily
 
 /**/
 /**/
