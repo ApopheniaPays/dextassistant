@@ -4,7 +4,7 @@ VERSION ALPHA 2020.08.25
 
 # BACKGROUND 
 
-The nice people at DEXTools.io have built a great information explorer for Uniswap. However, I found that as I explored the information it gave me, I had to do far too much clicking around to other websites to do my own research on the coins listed. I wanted a quicker way to gather information and determine which coins might be worth investing in, and more importantly, which look like scams and should be avoided. So I took all the research I was doing by hand, and coded an add-on tool that set on top of DEXTools but gave quicker access to all that information, and in some cases, embedded it right in the page without having to leave DEXTools.
+The nice people at [http://DEXTools.io](http://DEXTools.io) have built a great information explorer for Uniswap. However, I found that as I explored the information it gave me, I had to do far too much clicking around to other websites to do my own research on the coins listed. I wanted a quicker way to gather information and determine which coins might be worth investing in, and more importantly, which look like scams and should be avoided. So I took all the research I was doing by hand, and coded an add-on tool that set on top of DEXTools but gave quicker access to all that information, and in some cases, embedded it right in the page without having to leave DEXTools.
 
 Installation tips are included below. Yes, you're going to have to _read_.
 
