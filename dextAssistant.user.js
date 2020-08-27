@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DextAssistant
 // @namespace    http://apopheniapays.com/
-// @version      ALPHA 2020.08.25c
+// @version      ALPHA 2020.08.25d
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
 // @match        https://www.dextools.io/app/*
@@ -161,7 +161,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA 2020.08.25c";
+var currentVersion="ALPHA 2020.08.25d";
              var IDcounter=1;
 
              /* DON'T NEED ANYMORE  $(document).ready(function() {
@@ -463,7 +463,7 @@ function filterFunction(filterAddr,tableId,theColor) {
 
 
                  thisNode.parent().append('<a title="Zerion wallet overview" onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
-                                          +' href="https://app.zerion.io/overview/'+theHex+'">'
+                                          +' href="https://app.zerion.io/'+theHex+'/overview">'
                                           +' <div class="backImg zeriImg hide"></div></a>');
              }
 
@@ -487,7 +487,7 @@ function filterFunction(filterAddr,tableId,theColor) {
              function addLink(jNode) { var creditHTML='<div style="float:right"><div class="sirImg backImg"></div> <a href="#">DextAssistant Installed</a></div>';
                                       jNode.parent().prepend(creditHTML);
                                      }
-             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted bottomdiv"><a href="#">DextAssistant</a> <div class="sirImg backImg" onclick="javascript:this.classList.toggle(\'anim\');"></div> '+currentVersion+' installed</div>';
+             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted bottomdiv"><a href="#">DextAssistant</a><div class="sirImg backImg" onclick="javascript:this.classList.toggle(\'anim\');"></div>'+currentVersion+' installed</div>';
                                             //              var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted"><a href="#">DextAssistant</a><div class="sirImg backImg"></div> is an independent community project not affiliated with DEXTools.io</div>';
                                             jNode.before(creditHTML);
                                             $("div.navbar-toggler").on('click', 'div.navbar-toggler', function (e) {
