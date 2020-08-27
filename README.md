@@ -20,7 +20,7 @@ What's more, as this is under active development, you may find bugs, though I tr
 
 ## Support? Support is for _closers_.
 
-As I'm sharing this for free, I won't give you any support or any guarantees, and if you choose to use it I don't owe you anything for any reason. It's presented as-is, use it only at your own risk. What you see is what you get.If you have questions you'll have to do your own research and figure out the answers yourself. I'm grouchy, don't bother me.
+As I'm sharing this for free, I won't give you any support or any guarantees, and if you choose to use it I don't owe you anything for any reason. It's presented as-is, use it only at your own risk. What you see is what you get. If you have questions you'll have to do your own research and figure out the answers yourself. I'm grouchy, don't bother me.
 
 ## The Murky Depths From Whence This Came
 
@@ -30,9 +30,9 @@ This is an independent project that bubbled up out of a single developer's needs
 
 Essentially, YOU'RE ON YOUR OWN with this. 
 
-Do you think Indiana Jones needed someone holding his hand? No, never. When you're fighting for your life in a remote jungle, there's no support, no instruction manual, no second chances, just your ingenuity, will to live, and the rich rewards that will come if you can figure out on your own how to succeed.
+Do you think Indiana Jones needed someone holding his hand? No, never. When you're fighting for your life in a remote jungle or far-flung desert outpost, there's no support, no instruction manual, no second chances... just your own ingenuity, will to live, and the rich rewards that will come if you can figure out on your own how to succeed.
 
-As on right now, _that is your life._
+As of right now, _that is your life._
 
 (Metaphorically speaking.)
 
