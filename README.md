@@ -42,11 +42,11 @@ Enjoy!
 
 ## Installation
 
-This script is for use with a browser plugin that allows you to install and manage user scripts, such as Greasemonkey, Tampermonkey, or Violentmonkey. I chose to go with a userscript instead of a browser plugin because it would allow the code to remain 100% open source and cross-platform.
+This script is for use with a browser plugin that allows you to install and manage user scripts, such as Greasemonkey, Tampermonkey, or Violentmonkey. I chose to go with a userscript instead of a browser plugin because it would allow the code to remain 100% open source and cross-platform. 
 
-(Here's where you need to bring a little knowledge to the table. If you're unfamiliar with userscripts or Tampermonkey, Greasemonkey, Violentmonkey, etc, you should educate yourself from a page like [https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) before you try to use this.)
+(Here's where you need to bring a little knowledge to the table. If you're unfamiliar with userscripts or Tampermonkey, Greasemonkey, Violentmonkey, etc, you should educate yourself from a page like [https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) before you try to use this. BTW I use Tampermonkey [https://www.tampermonkey.net/](https://www.tampermonkey.net/) myself, on Firefox, Brave, and Chrome, so I know for sure this works with that, and that the browser copy properly auto-updates when I update the master in this repo to a new version. But you'll need to decide for yourself which userscript manager is right for you. Consult your doctor.)
 
-*BONUS!* For users that already have a userscript manager extension installed in their browser, you can install simply by loading the raw javascript file by clicking this link: [https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js](https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js). This script is now also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant) for one-click install if you prefer to get a minified version.
+*BONUS!* For users that already have a userscript manager extension installed in their browser, you can install DextAssistant simply by loading the raw javascript file by clicking this link: [https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js](https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js). This script is also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant) for one-click install if you prefer to get a minified version.
 
 ## Usage
 
@@ -62,7 +62,7 @@ This adds a few cosmetic changes to the DEXTools.io Pool Explorer, and soon will
 
 5.) In the Pair Explorer page, wallet addresses that have more than one transaction in the list are now color-coded to make it easier to spot scammy trades, where one address buys and sells just to generate activity. Next to these addresses, there is also now a "ƒ" button to filter the list to show all the transactions for just that address, and a "Z" button that takes you to the Zerion overview for that wallet.
 
-As this script makes cosmetic changes only, there's no harm in poking around. Explore it.
+As this script makes cosmetic changes only, there's no harm you can do by poking around. Explore it.
 
 # KNOWN ISSUES
 
