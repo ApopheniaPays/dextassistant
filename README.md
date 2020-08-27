@@ -46,7 +46,7 @@ This script is for use with a browser plugin that allows you to install and mana
 
 (Here's where you need to bring a little knowledge to the table. If you're unfamiliar with userscripts or Tampermonkey, Greasemonkey, Violentmonkey, etc, you should educate yourself from a page like [https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) before you try to use this.)
 
-*BONUS!* For users that already have a userscript manager extension installed in their browser, this script is now also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant) for one-click install. Maybe you'll even get automatic version updates if your browser plugin is configured that way.
+*BONUS!* For users that already have a userscript manager extension installed in their browser, you can install simply by loading the raw javascript file by clicking this link: [https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js](https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js). This script is now also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant) for one-click install if you prefer to get a minified version.
 
 ## Usage
 
