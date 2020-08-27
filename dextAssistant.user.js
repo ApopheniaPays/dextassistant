@@ -1,19 +1,20 @@
 // ==UserScript==
 // @name         DextAssistant
 // @namespace    http://apopheniapays.com/
-// @version      ALPHA 2020.08.25d
+// @version      ALPHA 2020.08.25e
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
+// @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
 // @match        https://www.dextools.io/app/*
 // @match        http://www.dextools.io/app/*
-// @grant    GM_addStyle
-// @run-at   document-start
-// @require https://code.jquery.com/jquery-3.3.1.min.js
-// @require https://gist.github.com/raw/2625891/waitForKeyElements.js
-// @require https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
-// @require https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js
-// @require https://piyolab.github.io/sushiether/web3.js/libs/web3.js_v1.0.0-beta.33/web3.min.js
-// @license MIT
+// @grant        GM_addStyle
+// @run-at       document-start
+// @require      https://code.jquery.com/jquery-3.3.1.min.js
+// @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
+// @require      https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
+// @require      https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js
+// @require      https://piyolab.github.io/sushiether/web3.js/libs/web3.js_v1.0.0-beta.33/web3.min.js
+// @license      MIT
 // ==/UserScript==
 
 // Follow t.me/ApopheniaProjects for announcements.
@@ -161,7 +162,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA 2020.08.25d";
+var currentVersion="ALPHA 2020.08.25e";
              var IDcounter=1;
 
              /* DON'T NEED ANYMORE  $(document).ready(function() {
