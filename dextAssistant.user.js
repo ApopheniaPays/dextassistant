@@ -130,6 +130,7 @@ var ethplorerkey="freekey";
 // show % increase in pool over initial
 // Maybe gray out any row with no pool left. This requires keeping the ontimer() live, so, think about it.
 // maybe provision to enter your own wellet addresses and hilight them to find your own transactions easily
+// maybe switch to using mutationobservers per https://stackoverflow.com/questions/32233895/using-waitforkeyelements-is-it-possible-to-prevent-the-key-element-from-being-d
 
 /**/
 /**/
