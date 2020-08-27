@@ -125,12 +125,14 @@ var ethplorerkey="freekey";
 // option to always open Pair Explorer in new tab
 // "star" favorite tokens so get alerts when something happens
 // make column filtering and sort order persist for new rows
-// slerts for adds with over a certain amount of liquidity
+// alerts for adds with over a certain amount of liquidity
 // view maker contract addresses on Zerion
 // show % increase in pool over initial
 // Maybe gray out any row with no pool left. This requires keeping the ontimer() live, so, think about it.
 // maybe provision to enter your own wellet addresses and hilight them to find your own transactions easily
 // maybe switch to using mutationobservers per https://stackoverflow.com/questions/32233895/using-waitforkeyelements-is-it-possible-to-prevent-the-key-element-from-being-d
+// show when liquidity has grown by a certain amount from initial add
+// make mouse pointer into finger over all clickabl elements
 
 /**/
 /**/
