@@ -4,7 +4,7 @@ VERSION ALPHA 2020.08.25
 
 # BACKGROUND 
 
-The nice people at DEXTools.io have built a great information explorer for Uniswap. However, I found that as I explored the information it gave me, I had to do far too much clicking around to other websites to do my own research on the coins listed. I wanted a quicker way to gather information and determine which coins might be worth investing in, and more importantly, which look like scams and should be avoided. So I took all the research I was doing by hand, and coded a tool that gave quicker access to it, and in some cases, embedded it right in the page without having to leave DEXTools.
+The nice people at DEXTools.io have built a great information explorer for Uniswap. However, I found that as I explored the information it gave me, I had to do far too much clicking around to other websites to do my own research on the coins listed. I wanted a quicker way to gather information and determine which coins might be worth investing in, and more importantly, which look like scams and should be avoided. So I took all the research I was doing by hand, and coded an add-on tool that set on top of DEXTools but gave quicker access to all that information, and in some cases, embedded it right in the page without having to leave DEXTools.
 
 Installation tips are included below. Yes, you're going to have to _read_.
 
@@ -22,9 +22,9 @@ What's more, as this is under active development, you may find bugs, though I tr
 
 As I'm sharing this for free, I won't give you any support or any guarantees, and if you choose to use it I don't owe you anything for any reason. It's presented as-is, use it only at your own risk. What you see is what you get. If you have questions you'll have to do your own research and figure out the answers yourself. I'm grouchy, don't bother me.
 
-## The Murky Depths From Whence This Came
+## The murky depths from whence this came
 
-This is an independent project that bubbled up out of a single developer's needs. It's not affiliated with Dextools.io or its development team in any way, please *never bother them with questions about it*.
+This is an independent project that bubbled up out of a single developer's needs. It's not affiliated with DEXTools.io or its development team in any way, please *never bother them with questions about it*.
 
 ## In not so many words:
 
