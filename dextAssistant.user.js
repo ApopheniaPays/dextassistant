@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DextAssistant
 // @namespace    http://apopheniapays.com/
-// @version      ALPHA 2020.08.25f
+// @version      ALPHA 2020.08.25g
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
 // @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
@@ -162,7 +162,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA 2020.08.25f";
+var currentVersion="ALPHA 2020.08.25g";
              var IDcounter=1;
 
              /* DON'T NEED ANYMORE  $(document).ready(function() {
@@ -457,7 +457,7 @@ function filterFunction(filterAddr,tableId,theColor) {
 
                  if( thisNode.closest("table").attr("id")==""){thisNode.closest("table").attr('id','AddressesTable');}
 
-if(jNode.next("td>a.ng-tns-c49-2>span.badge-secondary")) { /* next cell indicates multiple transactions from this address */
+                 if(jNode.next("td>a.ng-tns-c49-2>span.badge-secondary").length) { /* next cell indicates multiple transactions from this address */
                  thisNode.attr('style','color: #'+theHex.toHexColour()+' !important');
                  thisNode.parent().prepend('<a  title="filter on this address" class="badge filterbutton" style="background:#'+theHex.toHexColour()+' !important" onclick="filterFunction(\''+theHex+'\',\''+thisNode.closest("table").attr("id")+'\',\''+theHex.toHexColour()+'\')">&fnof;</a>');
                  //  jNode.closest("td").next().attr('style','background: #'+theHex.toHexColour()+' !important');
