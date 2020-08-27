@@ -10,7 +10,7 @@ Installation tips are included below. Yes, you're going to have to _read_.
 
 # DISCLAIMER 
 
-TO BE READ IN A STERN, GRUFF VOICE: 
+## TO BE READ IN A STERN, GRUFF VOICE: 
 
 Despite my efforts to give it an easy-to-understand GUI, this is an advanced tool for technically advanced traders.
 
@@ -18,11 +18,25 @@ If you are trading on Uniswap or other DEXs, you need to have a certain level of
 
 What's more, as this is under active development, you may find bugs, though I try hard to avoid that.
 
+## Support? Support is for _closers_.
+
 As I'm sharing this for free, I won't give you any support or any guarantees, and if you choose to use it I don't owe you anything for any reason. It's presented as-is, use it only at your own risk. What you see is what you get.If you have questions you'll have to do your own research and figure out the answers yourself. I'm grouchy, don't bother me.
 
-This is an independent project, not affiliated with the Dextools.io team, please never bother them with questions about it.
+## The Murky Depths From Whence This Came
 
-ESSENTIALLY, YOU'RE ON YOUR OWN.
+This is an independent project that bubbled up out of a single developer's needs. It's not affiliated with Dextools.io or its development team in any way, please *never bother them with questions about it*.
+
+## In not so many words:
+
+Essentially, YOU'RE ON YOUR OWN with this. 
+
+Do you think Indiana Jones needed someone holding his hand? No, never. When you're fighting for your life in a remote jungle, there's no support, no instruction manual, no second chances, just your ingenuity, will to live, and the rich rewards that will come if you can figure out on your own how to succeed.
+
+As on right now, _that is your life._
+
+(Metaphorically speaking.)
+
+Enjoy!
 
 # INSTRUCTIONS 
 
