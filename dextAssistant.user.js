@@ -190,6 +190,7 @@ var ethplorerkey="freekey";
 // show when liquidity has grown by a certain amount from initial add
 // make mouse pointer into finger over all clickabl elements
 // expand functions to work on other frequently used sites, like etherscan, Zerion
+// total columns in pair explorer
 
 /**/
 /**/
