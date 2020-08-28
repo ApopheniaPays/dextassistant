@@ -1,12 +1,15 @@
 // ==UserScript==
 // @name         DextAssistant
-// @namespace    http://apopheniapays.com/
-// @version      ALPHA 2020.08.25g
+// @namespace    https://apopheniapays.com/
+// @version      ALPHA-2020.08.25h
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
 // @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
+// @downloadURL  https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
 // @match        https://www.dextools.io/app/*
 // @match        http://www.dextools.io/app/*
+// @match        https://dextools.io/app/*
+// @match        http://dextools.io/app/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // @require      https://code.jquery.com/jquery-3.3.1.min.js
@@ -162,7 +165,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA 2020.08.25g";
+var currentVersion="ALPHA-2020.08.25h";
              var IDcounter=1;
 
              /* DON'T NEED ANYMORE  $(document).ready(function() {
