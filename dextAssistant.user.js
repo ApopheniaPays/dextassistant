@@ -488,7 +488,7 @@ function filterFunction(filterAddr,tableId,theColor) {
 
                  if( thisNode.closest("table").attr("id")==""){thisNode.closest("table").attr('id','AddressesTable');}
 
-                 if(jNode.next("td>a.ng-tns-c49-2>span.badge-secondary").length) { /* next cell indicates multiple transactions from this address */
+                    if(jNode.next("td:has(>a.ng-tns-c49-2>span.badge-secondary)").length) { /* next cell indicates multiple transactions from this address */
                  thisNode.attr('style','color: #'+theHex.toHexColour()+' !important');
                  thisNode.parent().prepend('<a  title="filter on this address" class="badge filterbutton" style="background:#'+theHex.toHexColour()+' !important" onclick="filterFunction(\''+theHex+'\',\''+thisNode.closest("table").attr("id")+'\',\''+theHex.toHexColour()+'\')">&fnof;</a>');
                  //  jNode.closest("td").next().attr('style','background: #'+theHex.toHexColour()+' !important');
@@ -868,14 +868,14 @@ div.popover-body {font-weight:bold}
 .redBkgd, td.bg-light.redBkgd{ background-color: #FFF2F2 !important;
  }
 
-body.dark-theme .redBkgd, body.dark-theme td.bg-light.redBkgd{ background-color: #0D0D00 !important;
+body.dark-theme .redBkgd, body.dark-theme td.bg-light.redBkgd{ background-color: #330000 !important;
  }
 
 
 
 .greenBkgd, td.bg-light.greenBkgd{ background-color: #CCFFCC !important;
  }
-body.dark-theme .greenBkgd, body.dark-theme td.bg-light.greenBkgd{ background-color: #003300 !important;
+body.dark-theme .greenBkgd, body.dark-theme td.bg-light.greenBkgd{ background-color: #00696900 !important;
  }
 
 .makeBold{ font-weight:bold;
