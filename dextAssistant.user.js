@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DextAssistant
 // @namespace    https://apopheniapays.com/
-// @version      ALPHA-2020.08.27f
+// @version      ALPHA-2020.08.27g
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
 // @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
@@ -9,7 +9,7 @@
 // @match        https://www.dextools.io/app/*
 // @match        http://www.dextools.io/app/*
 // @match        https://dextools.io/app/*
-// @match        http://dextools.io/app/*
+// @match        http://dextools.io/app/*c
 // @grant        GM_addStyle
 // @grant        GM.xmlHttpRequest
 // @connect      github.com
@@ -163,7 +163,10 @@ var ethplorerkey="freekey";
 
 
 /************** HISTORY *********************/
-// 2020.08.27 - make compatible with DEXTools dark theme, because that's more important than working on real features. Add icon. Add functionality to display "update availalable" link.
+// 2020.08.27 - make compatible with DEXTools dark theme, because that's more important than 
+//                    working on real features. Add icon. Add functionality to display "update 
+//                    availalable" link. Update Pair Explorer filter icon to match default 
+//                    Pool Explorer one.
 // 2020.08.25 - Alpha development. Color pool rows for added liquidity or new pools,
 //                    popover menu of extra research tools, token icons from Trustwallet
 //                    repo, mark 100% removes as "rugpull", integrate custom crypto search
@@ -191,6 +194,7 @@ var ethplorerkey="freekey";
 // make mouse pointer into finger over all clickabl elements
 // expand functions to work on other frequently used sites, like etherscan, Zerion
 // total columns in pair explorer
+// add an identifier as TD values are evaluated and screen for it so don't keep selecting same TD's over and over again
 
 /**/
 /**/
@@ -219,7 +223,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA-2020.08.27f";
+var currentVersion="ALPHA-2020.08.27g";
              
              
 
@@ -374,7 +378,7 @@ function sortTableMain(n,tableId) {
              }
 
              waitForKeyElements ( "th", prepareTable);
-             waitForKeyElements ("td.ng-tns-c46-2", setTDvalue);
+             waitForKeyElements ("td.ng-tns-c46-2,td.ng-tns-c49-2", setTDvalue);
              waitForKeyElements ( ".circle", addLogo);
              waitForKeyElements ( "span.copyright.ml-auto.my-auto.mr-2", addDisclaimer);
 
