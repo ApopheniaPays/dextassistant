@@ -196,6 +196,7 @@ var ethplorerkey="freekey";
 // expand functions to work on other frequently used sites, like etherscan, Zerion
 // total columns in pair explorer
 // add an identifier as TD values are evaluated and screen for it so don't keep selecting same TD's over and over again
+// alert if new pool doubles in size. 
 
 /**/
 /**/
