@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DextAssistant
 // @namespace    https://apopheniapays.com/
-// @version      ALPHA-2020.08.25h
+// @version      ALPHA-2020.08.27
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
 // @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
@@ -112,6 +112,7 @@ var ethplorerkey="freekey";
 
 
 /************** HISTORY *********************/
+// 2020.08.27 - make compatible with DEXTools dark theme. Because that's more important than working on real features.
 // 2020.08.25 - Alpha development. Color pool rows for added liquidity or new pools,
 //                    popover menu of extra research tools, token icons from Trustwallet
 //                    repo, mark 100% removes as "rugpull", integrate custom crypto search
@@ -165,7 +166,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA-2020.08.25h";
+var currentVersion="ALPHA-2020.08.27";
              var IDcounter=1;
 
              /* DON'T NEED ANYMORE  $(document).ready(function() {
@@ -840,7 +841,14 @@ div.popover-body {font-weight:bold}
 .redBkgd, td.bg-light.redBkgd{ background-color: #FFF2F2 !important;
  }
 
+body.dark-theme .redBkgd, body.dark-theme td.bg-light.redBkgd{ background-color: #0D0D00 !important;
+ }
+
+
+
 .greenBkgd, td.bg-light.greenBkgd{ background-color: #CCFFCC !important;
+ }
+body.dark-theme .greenBkgd, body.dark-theme td.bg-light.greenBkgd{ background-color: #003300 !important;
  }
 
 .makeBold{ font-weight:bold;
