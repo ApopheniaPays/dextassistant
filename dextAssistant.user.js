@@ -12,6 +12,7 @@
 // @match        http://dextools.io/app/*
 // @grant        GM_addStyle
 // @run-at       document-start
+// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAE00lEQVRIDY2Ve0xTdxTH6wvpLVDAuZAsuswZjTO6LZrtD3WazCzRbMYN0DiX7I+5LXGmbCqgsgBmTqHlIVUqqBMxvqXisFgRLay8WloqBS4USnkMKl6LvJXah9/lXGnDxMWd5OScex6fc+7vtvcKBK8QANPk5u6o1QVG7UeXa2sAzPKVUW6zquHGyst63ZHazq2++P+yB6ptnzIKDYIUZWAUZZDXd+3yNeaYe6OY7HJ/7lxzz0Zf7rX2VGPPOnFOOZZfqEFYbjmCFRrP6muGO2uuGkpDTpS7aJgoW8MPvdXOrXotkAoABPQ/dckfPX0GkkGnG2l13VhxUde69FxVq/hEmVuk0IAhcLYGddzA8teCy4CZAArsdjvSZRmI3hyNpMQksE0snnm8f9D56ntH5sRVWCTzTmv7aOvfdbb9/wlW3O/+duX56tp73f1321rbkJCQgBpdDXQ6HaprqpGYmAhLSwvdQIwPUtz5KOKTq/ri4ON3XZFFpstrr+hTV1yoqjist+3mawDMXHhG272hsA7P3B7s2LEDBoMBGo3Gr2azGdJUKYF7aGsf3AjMWnNJX80cK4VwQiNyNMMsECDQ2B2LGfkd3O50oLK8Ej/8+D30Or0fSgO0Wi0ypZn8mQMI84HJqmzceqH8DohBKpSXoOHhwDJ6WLO+K2nMruwdcF84exESiWTKxkajERnpGQTmAMyYDAYw/cOzlazwaAmEWSXejQX6cw8Axl/jeY6/8nLzkJ+Xzz8wun3a1mQyQSqVwlRnIvBBf8MkJ6a0KVN0VI2dpQ0Zk8IvXABlZ0/mw9JsgVqtxs8xMYjbE4fYvbEoVBYSlP6BoimNAoFAbrQdZDLUuGtzLJqSB9BxIisHNms7Qcrdbvegrd0Gt8tF108BfAbgYwApAH4FMN8HOVJlORSYocLVlp61vhhva+2P51F32iEZGZJtADZ4vd7xrs4uNDexGB8f9zrHnWhsaER7mxVer5eG7QSwrvbBYPuq8xVYlHvPomrjFvDQ9tHRN9+Sqx1Ey0zJxNjoGDwezwiAJ/Hx+/DG3FCEhgkRvzce0ZFREIcGIjhkNpITk+Fyuah2jL3fhNsdHIRpRYiQ3xpgh4fDBWdMfXPnZKqe+MDFxcWI2SXBgX37IQqehmDx9BcaMgNBIRO+eDrEoQGIioxE7J49yM3OwU1rHxhZEUSyP715bGcEv/WW6/orBJb+lspvsf3rbTxEHDYDpAT/avOXWLJk8ZT4smVL4XQ6sbVQD0Z2A+vOV2j952x8MDCfwLKJMx4aHkJiQhJCQ8UQBTHYtfMn9Pf3w95rx8GkZISHh4NhArH3l93gHnJwP3+uPFPf/blEbd5/y8q96weTQ+AsaRYZsI4hqZkbwpDTxWuzY9hT2NJz8UpT16X6h4P+eOvjEXCj48n0WvgXbPIFAdMPp/Pg/PqObwJTr0OYQqoEM2EDJyzFKMekKGF2jCyezJniE5HOmERSYjodyDcTQIl3jql6Uist24/XWLe8l3275QWYBiqRa7RGT4FNDhCQfm4kl9i/Ny3IUvUyRwoQlKJ0azq49321DdzQgjBp4Rhz+Brezrppq+p99IEv90pLQHmanAcDmM2ybIDCYN100mBb/3LDqbqONbKKli9yjUb/R/blmn8ATIrJHJzMCdEAAAAASUVORK5CYII=
 // @require      https://code.jquery.com/jquery-3.3.1.min.js
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
@@ -112,7 +113,7 @@ var ethplorerkey="freekey";
 
 
 /************** HISTORY *********************/
-// 2020.08.27 - make compatible with DEXTools dark theme. Because that's more important than working on real features.
+// 2020.08.27 - make compatible with DEXTools dark theme, because that's more important than working on real features. Add icon.
 // 2020.08.25 - Alpha development. Color pool rows for added liquidity or new pools,
 //                    popover menu of extra research tools, token icons from Trustwallet
 //                    repo, mark 100% removes as "rugpull", integrate custom crypto search
