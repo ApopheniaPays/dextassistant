@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DextAssistant
 // @namespace    https://apopheniapays.com/
-// @version      ALPHA-2020.08.27g
+// @version      ALPHA-2020.08.28
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
 // @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
@@ -163,6 +163,7 @@ var ethplorerkey="freekey";
 
 
 /************** HISTORY *********************/
+// 2020.08.28 - add visual higlight and prominent indication when there's contact info on pair page
 // 2020.08.27 - make compatible with DEXTools dark theme, because that's more important than 
 //                    working on real features. Add icon. Add functionality to display "update 
 //                    availalable" link. Update Pair Explorer filter icon to match default 
@@ -223,7 +224,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA-2020.08.27g";
+var currentVersion="ALPHA-2020.08.28";
              
              
 
@@ -520,13 +521,21 @@ function filterFunction(filterAddr,tableId,theColor) {
 </script>
 `);
               });
-              waitForKeyElements ( "td.ng-tns-c49-2:nth-child(7)", colorCodeHex);
-             // end page=pair
+            waitForKeyElements ( "td.ng-tns-c49-2:nth-child(7)", colorCodeHex);
+            waitForKeyElements ( "h3.page-title:has(a.ng-tns-c49-2+a.ng-tns-c49-2)",hiliteExtraInfo); //nth-child(2) didn't work because 2nd child isn't 'a'!
+
+                     // end page=pair
                  }
 
 
              } /*end initPage*/
 
+
+             function hiliteExtraInfo(jNode) { //visually highlight when there's extra contact info for a token
+
+                 jNode.children("a").addClass("badge-warning");
+                 jNode.append("<span class='text-warning'>Contact info found!</span>"); //let's only post it once.
+             }
 
              function colorCodeHex(jNode) {
                  var thisNode = jNode.children("a").first();
