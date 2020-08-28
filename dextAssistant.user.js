@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DextAssistant
 // @namespace    https://apopheniapays.com/
-// @version      ALPHA-2020.08.28
+// @version      ALPHA-2020.08.28b
 // @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
 // @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
@@ -25,55 +25,55 @@
 // ==/UserScript==
 
 // Follow t.me/ApopheniaProjects for announcements.
-// A block of user-configurable options are further down in the script, if you want to tinker. 
+// A block of user-configurable options are further down in the script, if you want to tinker.
 
 /*
 
-# BACKGROUND 
+# BACKGROUND
 
-The nice people at [http://DEXTools.io](http://DEXTools.io) have built a great information explorer 
-for Uniswap. However, I found that as I explored the information it gave me, I had to do far too 
-much clicking around to other websites to do my own research on the coins listed. I wanted a quicker 
-way to gather information and determine which coins might be worth investing in, and more importantly, 
-which look like scams and should be avoided. So I took all the research I was doing by hand, and coded 
-an add-on tool that set on top of DEXTools but gave quicker access to all that information, and in 
+The nice people at [http://DEXTools.io](http://DEXTools.io) have built a great information explorer
+for Uniswap. However, I found that as I explored the information it gave me, I had to do far too
+much clicking around to other websites to do my own research on the coins listed. I wanted a quicker
+way to gather information and determine which coins might be worth investing in, and more importantly,
+which look like scams and should be avoided. So I took all the research I was doing by hand, and coded
+an add-on tool that set on top of DEXTools but gave quicker access to all that information, and in
 some cases, embedded it right in the page without having to leave DEXTools.
 
 Installation tips are included below. Yes, you're going to have to _read_.
 
-# DISCLAIMER 
+# DISCLAIMER
 
-## TO BE READ IN A STERN, GRUFF VOICE: 
+## TO BE READ IN A STERN, GRUFF VOICE:
 
-Despite my efforts to give it an easy-to-understand GUI, this is an advanced tool for technically 
+Despite my efforts to give it an easy-to-understand GUI, this is an advanced tool for technically
 advanced traders.
 
-If you are trading on Uniswap or other DEXs, you need to have a certain level of general knowledge in 
-order to avoid the high risks, and I'm not going to enable anyone to jump in and lose money. If there's 
-anything in this you don't understand, then you probably shouldn't be trading on Uniswap yet, so this 
+If you are trading on Uniswap or other DEXs, you need to have a certain level of general knowledge in
+order to avoid the high risks, and I'm not going to enable anyone to jump in and lose money. If there's
+anything in this you don't understand, then you probably shouldn't be trading on Uniswap yet, so this
 tool is not for you.
 
 What's more, as this is under active development, you may find bugs, though I try hard to avoid that.
 
 ## Support? Support is for _closers_.
 
-As I'm sharing this for free, I won't give you any support or any guarantees, and if you choose to use 
-it I don't owe you anything for any reason. It's presented as-is, use it only at your own risk. What 
-you see is what you get. If you have questions you'll have to do your own research and figure out the 
+As I'm sharing this for free, I won't give you any support or any guarantees, and if you choose to use
+it I don't owe you anything for any reason. It's presented as-is, use it only at your own risk. What
+you see is what you get. If you have questions you'll have to do your own research and figure out the
 answers yourself. I'm grouchy, don't bother me.
 
 ## The murky depths from whence this came
 
-This is an independent project that bubbled up out of a single developer's needs. It's not affiliated 
+This is an independent project that bubbled up out of a single developer's needs. It's not affiliated
 with DEXTools.io or its development team in any way, please *never bother them with questions about it*.
 
 ## In not so many words:
 
-Essentially, YOU'RE ON YOUR OWN with this. 
+Essentially, YOU'RE ON YOUR OWN with this.
 
-Do you think Indiana Jones needed someone holding his hand? No, never. When you're fighting for your 
-life in a remote jungle or far-flung desert outpost, there's no support, no instruction manual, no second 
-chances... just your own ingenuity, will to live, and the rich rewards that will come if you can figure 
+Do you think Indiana Jones needed someone holding his hand? No, never. When you're fighting for your
+life in a remote jungle or far-flung desert outpost, there's no support, no instruction manual, no second
+chances... just your own ingenuity, will to live, and the rich rewards that will come if you can figure
 out on your own how to succeed.
 
 As of right now, _that is your life._
@@ -82,67 +82,67 @@ As of right now, _that is your life._
 
 Enjoy!
 
-# INSTRUCTIONS 
+# INSTRUCTIONS
 
 ## Installation
 
-This script is for use with a browser plugin that allows you to install and manage user scripts, such as 
-Greasemonkey, Tampermonkey, or Violentmonkey. I chose to go with a userscript instead of a browser plugin 
-because it would allow the code to remain 100% open source and cross-platform. 
+This script is for use with a browser plugin that allows you to install and manage user scripts, such as
+Greasemonkey, Tampermonkey, or Violentmonkey. I chose to go with a userscript instead of a browser plugin
+because it would allow the code to remain 100% open source and cross-platform.
 
-(Here's where you need to bring a little knowledge to the table. If you're unfamiliar with userscripts or 
-Tampermonkey, Greasemonkey, Violentmonkey, etc, you should educate yourself from a page like 
-[https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) 
-before you try to use this. BTW I use Tampermonkey [https://www.tampermonkey.net/](https://www.tampermonkey.net/) 
-myself, on Firefox, Brave, and Chrome, so I know for sure that this script works with that. But you'll 
+(Here's where you need to bring a little knowledge to the table. If you're unfamiliar with userscripts or
+Tampermonkey, Greasemonkey, Violentmonkey, etc, you should educate yourself from a page like
+[https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide)
+before you try to use this. BTW I use Tampermonkey [https://www.tampermonkey.net/](https://www.tampermonkey.net/)
+myself, on Firefox, Brave, and Chrome, so I know for sure that this script works with that. But you'll
 need to decide for yourself which userscript manager is right for you. Consult your doctor.)
 
-*BONUS!* For users that already have a userscript manager extension installed in their browser, you can 
-install DextAssistant simply by clicking this link: [https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js](https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js). 
+*BONUS!* For users that already have a userscript manager extension installed in their browser, you can
+install DextAssistant simply by clicking this link: [https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js](https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js).
 
-This script is also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant) 
-for one-click install if you prefer to get a minified version. Supposedly that will stay current as I update 
-it here, but I haven't checked. 
+This script is also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant)
+for one-click install if you prefer to get a minified version. Supposedly that will stay current as I update
+it here, but I haven't checked.
 
 ## Usage
 
-This adds a few cosmetic changes to the DEXTools.io Pool Explorer, and soon will also add features to their 
+This adds a few cosmetic changes to the DEXTools.io Pool Explorer, and soon will also add features to their
 Pair Explorer page. You will notice them right away:
 
-1.) The most prominent addition is a new icon under the Pool Explorer's Actions column, which opens a 
-"research assistant" popup that will allow you to view data from other websites pertaining to the token Name, 
-Contract Address, and Uniswap.info Pair Address for the token on that row. Next to the Contract addresses you 
-will see a little circled arrow that will show you Google search results for those contract addresses, embedded 
+1.) The most prominent addition is a new icon under the Pool Explorer's Actions column, which opens a
+"research assistant" popup that will allow you to view data from other websites pertaining to the token Name,
+Contract Address, and Uniswap.info Pair Address for the token on that row. Next to the Contract addresses you
+will see a little circled arrow that will show you Google search results for those contract addresses, embedded
 right in the popup, when you hover your mouse over it.
 
-2.) For tokens with a particularly low DEXT score or which are auto-generated by a lazy website token-generator 
-script, the distinguished monocle and handlebar mustache on the "research assistant" gear button are replaced 
+2.) For tokens with a particularly low DEXT score or which are auto-generated by a lazy website token-generator
+script, the distinguished monocle and handlebar mustache on the "research assistant" gear button are replaced
 with a "poop" emoji.
 
-3.) Rows in the the Pool Explorer are color-coded to indicate liquidity adds, removes, and new pools. 100% 
-liquidity removals are now labeled as "rugpull" instead of just "remove", to make sure you know to feel 
+3.) Rows in the the Pool Explorer are color-coded to indicate liquidity adds, removes, and new pools. 100%
+liquidity removals are now labeled as "rugpull" instead of just "remove", to make sure you know to feel
 extra-bitter.
 
 4.) Columns are sortable on both the Pool and Pair explorers buy clicking on the column headings.
 
 5.) In the Pair Explorer page, wallet addresses that have more than one transaction in the list are now color-
-coded to make it easier to spot scammy trades, where one address buys and sells just to generate activity. Next 
-to these addresses, there is also now a "ƒ" button to filter the list to show all the transactions for just that 
+coded to make it easier to spot scammy trades, where one address buys and sells just to generate activity. Next
+to these addresses, there is also now a "ƒ" button to filter the list to show all the transactions for just that
 address, and a "Z" button that takes you to the Zerion overview for that wallet.
 
-6.) DEXTools "Dark mode" is now supported, because I was too lazy to attempt any real work tonight. 
+6.) DEXTools "Dark mode" is now supported, because I was too lazy to attempt any real work tonight.
 
-7.) Rather than rely on the various browser plugins' hinky auto-update mechanism, the script adds an unobtrusive 
-"update available" link to the footer of the screen after a new version has been pushed to this repo, for 
-convenient one-click upgrading. (Some extremely nerdy people will notice the script phones home to github on page 
+7.) Rather than rely on the various browser plugins' hinky auto-update mechanism, the script adds an unobtrusive
+"update available" link to the footer of the screen after a new version has been pushed to this repo, for
+convenient one-click upgrading. (Some extremely nerdy people will notice the script phones home to github on page
 load. This update check is why.)
 
 As this script makes cosmetic changes only, there's no harm you can do by poking around. Explore it.
 
 # KNOWN ISSUES
 
-1.) Right now the list filtering and sorting only acts on existing rows. As new transactions or pools appear, they 
-come in at the top, exactly as if the list wasn't filtered or sorted. I'll get around to it. Hey, it's an open 
+1.) Right now the list filtering and sorting only acts on existing rows. As new transactions or pools appear, they
+come in at the top, exactly as if the list wasn't filtered or sorted. I'll get around to it. Hey, it's an open
 source script, you don't like it, fix it yourself.
 
 */
@@ -163,10 +163,11 @@ var ethplorerkey="freekey";
 
 
 /************** HISTORY *********************/
-// 2020.08.28 - add visual higlight and prominent indication when there's contact info on pair page
-// 2020.08.27 - make compatible with DEXTools dark theme, because that's more important than 
-//                    working on real features. Add icon. Add functionality to display "update 
-//                    availalable" link. Update Pair Explorer filter icon to match default 
+// 2020.08.28 - add visual higlight and prominent indication when there's contact info on pair page,
+//                    add hover effects and pointer cursor for all clickable elements,
+// 2020.08.27 - make compatible with DEXTools dark theme, because that's more important than
+//                    working on real features. Add icon. Add functionality to display "update
+//                    availalable" link. Update Pair Explorer filter icon to match default
 //                    Pool Explorer one.
 // 2020.08.25 - Alpha development. Color pool rows for added liquidity or new pools,
 //                    popover menu of extra research tools, token icons from Trustwallet
@@ -196,7 +197,7 @@ var ethplorerkey="freekey";
 // expand functions to work on other frequently used sites, like etherscan, Zerion
 // total columns in pair explorer
 // add an identifier as TD values are evaluated and screen for it so don't keep selecting same TD's over and over again
-// alert if new pool doubles in size. 
+// alert if new pool doubles in size.
 // user option to open Zerion in private window
 
 /**/
@@ -226,39 +227,28 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-var currentVersion="ALPHA-2020.08.28";
-             
-             
+             var currentVersion="ALPHA-2020.08.28b";
 
-GM.xmlHttpRequest({
-  method: "GET",
-  url: "https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js",
-  onload: function(scrptTxt) {
-    var versionMtch = scrptTxt.response.match(/\/\/\s+@version\s+(.+)/i);
-    if (versionMtch  &&  versionMtch.length > 1) {
-    var newVersionAvail = versionMtch[1];
-    if(newVersionAvail!=currentVersion) {waitForKeyElements('span#newVersion',addNewVersion);}
-    };
-  }
-});
+
+
+             GM.xmlHttpRequest({
+                 method: "GET",
+                 url: "https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js",
+                 onload: function(scrptTxt) {
+                     var versionMtch = scrptTxt.response.match(/\/\/\s+@version\s+(.+)/i);
+                     if (versionMtch  &&  versionMtch.length > 1) {
+                         var newVersionAvail = versionMtch[1];
+                         if(newVersionAvail!=currentVersion) {waitForKeyElements('span#newVersion',addNewVersion);}
+                     };
+                 }
+             });
 
              function addNewVersion (jNode) {
-                 jNode.html('<a href="https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js">update available</a>');
-    //yeah, it's hinky. This runs asynchronously so there's two different places this can happen: here, or synchronously down below.
-                                         }
+                 jNode.html('<a href="https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js" class="AP-DAJS-element">update available</a>');
+                 //yeah, it's hinky. This runs asynchronously so there's two different places this can happen: here, or synchronously down below.
+             }
 
-             var IDcounter=1;
-
-             /* DON'T NEED ANYMORE  $(document).ready(function() {
-                 $("head").append("<script> $(document).ready(function() { $('a.DApopupWin').live('click', function(){ newwindow=window.open($(this).attr('href'),'','height=600,width=400'); if (window.focus) {newwindow.focus()} return false;});});</script>")});
-
-
-             $(document).ready(function(){
-                 $(document.body).append('<div id="DApreview"><a href="#" id="DAclosebutton" onclick="javascript:document.getElementById(\'DAframe\').src=\'\';"></a><iframe name="DAframe" id="DAframe"></iframe></div>')
-             }); */
-
-
-
+             var IDcounter=1
 
              // Hash any string into an integer value
              // Then we'll use the int and convert to hex.
@@ -292,18 +282,18 @@ GM.xmlHttpRequest({
 
 
              var allPagesScripts=`
-<script id="DAallPageScripts">
+<script id="AP-DAJS-allPageScripts">
 function sortTable(n,tableId) {
     var table = document.getElementById(tableId);
-    document.getElementById("th"+tableId+n).classList.toggle(".sorting");
+    document.getElementById("AP-DAJS-th"+tableId+n).classList.toggle(".sorting");
     window.setTimeout(sortTableMain(n,tableId), 100);
     return;}
 
 function sortTableMain(n,tableId) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById(tableId);
-    try { document.getElementById("th"+tableId+table.getAttribute("lastSortedBy")).textContent="⇅";
-         document.getElementById("th"+tableId+table.getAttribute("lastSortedBy")).classList.toggle("text-info");
+    try { document.getElementById("AP-DAJS-th"+tableId+table.getAttribute("lastSortedBy")).textContent="⇅";
+         document.getElementById("AP-DAJS-th"+tableId+table.getAttribute("lastSortedBy")).classList.toggle("text-info");
         } catch {}
             table.setAttribute("lastSortedBy",n);
 
@@ -326,8 +316,8 @@ function sortTableMain(n,tableId) {
             y = rows[i + 1].getElementsByTagName("TD")[n];
             /* Check if the two rows should switch place,
       based on the direction, asc or desc: */
-            xValue=isNaN(x.getAttribute('davaluecalc'))?x.getAttribute('davaluecalc') :(+x.getAttribute('davaluecalc') );
-            yValue=isNaN(y.getAttribute('davaluecalc'))?y.getAttribute('davaluecalc') :(+y.getAttribute('davaluecalc') );
+            xValue=isNaN(x.getAttribute('AP-DAJS-valueCalc'))?x.getAttribute('AP-DAJS-valueCalc') :(+x.getAttribute('AP-DAJS-valueCalc') );
+            yValue=isNaN(y.getAttribute('AP-DAJS-valueCalc'))?y.getAttribute('AP-DAJS-valueCalc') :(+y.getAttribute('AP-DAJS-valueCalc') );
             if (dir == "asc") {
                 if (xValue < yValue) {
                     // If so, mark as a switch and break the loop:
@@ -358,9 +348,9 @@ function sortTableMain(n,tableId) {
             }
         }
     }
-    document.getElementById("th"+tableId+n).textContent=(dir=="desc"?"↓":"↑");
-    document.getElementById("th"+tableId+n).classList.toggle("text-info");
-    document.getElementById("th"+tableId+n).classList.toggle(".sorting");
+    document.getElementById("AP-DAJS-th"+tableId+n).textContent=(dir=="desc"?"↓":"↑");
+    document.getElementById("AP-DAJS-th"+tableId+n).classList.toggle("text-info");
+    document.getElementById("AP-DAJS-th"+tableId+n).classList.toggle(".sorting");
 }
 
 
@@ -390,7 +380,7 @@ function sortTableMain(n,tableId) {
 
 
 
-                 jNode.attr("davalueCalc",
+                 jNode.attr("AP-DAJS-valueCalc",
                             ( jNode.text()!="" && jNode.text().replace(/[ 0-9hdmsHDMS]*/g,"")=="" )?timeStringToSeconds(jNode.text()):(isNaN(jNode.text().replace(/[$,]/g,"")))?jNode.text().toLowerCase():parseFloat(jNode.text().replace(/[$,]/g,""))
                            ); /*convert relative times to epoch time so don't have to worry about cell value updating, as it does. */
                  return true;
@@ -400,9 +390,9 @@ function sortTableMain(n,tableId) {
              function prepareTable (jNode) {
                  if (!jNode.closest("table").attr("id"))
                  {  jNode.closest("table").attr("id",Math.floor(Math.random() * Math.floor(Math.random() * Date.now())));}
-
+                 jNode.addClass("AP-DAJS-clickable");
                  jNode.attr("onclick","sortTable("+jNode.index()+","+jNode.closest("table").attr("id")+")");
-                 jNode.append('<span class="DAsorter" id="th'+jNode.closest("table").attr("id")+jNode.index()+'">⇅</span>');
+                 jNode.append('<span class="AP-DAJS-element DAsorter" id="AP-DAJS-th'+jNode.closest("table").attr("id")+jNode.index()+'">⇅</span>');
              }
 
 
@@ -445,7 +435,7 @@ function sortTableMain(n,tableId) {
                  if(thisPage=="pool"){
                      $(document).ready(function(){
                          $(document.head).append(allPagesScripts+`
-<script id="DApoolScripts">
+<script id="AP-DAJS-poolScripts">
     async function DAgetCCPrice(symbol,identifier) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://min-api.cryptocompare.com/data/price?fsym="+symbol+"&tsyms=USD,ETH", true);
@@ -464,37 +454,37 @@ function resizeIFrameToFitContent( iFrame ) {
 }
 
 function previewToggle (thisCounter,url,section){
-    if(document.getElementById('previewResults'+thisCounter).style.display=='block'
-       && document.getElementById('DAresults'+thisCounter).src==decodeURIComponent(url))
-    {document.getElementById('previewResults'+thisCounter).style.display='none';
-     document.getElementById('floaterlink'+section+thisCounter).innerHTML='&gt;🔎'}
+    if(document.getElementById('AP-DAJS-previewResults'+thisCounter).style.display=='block'
+       && document.getElementById('AP-DAJS-results'+thisCounter).src==decodeURIComponent(url))
+    {document.getElementById('AP-DAJS-previewResults'+thisCounter).style.display='none';
+     document.getElementById('AP-DAJS-floaterlink'+section+thisCounter).innerHTML='&gt;🔎'}
     else
-    {document.getElementById('DAresults'+thisCounter).src=decodeURIComponent(url);
-     document.getElementById('previewResults'+thisCounter).style.display='block';
-     document.getElementById('floaterlink'+section+thisCounter).innerHTML='&lt;🔍'}
+    {document.getElementById('AP-DAJS-results'+thisCounter).src=decodeURIComponent(url);
+     document.getElementById('AP-DAJS-previewResults'+thisCounter).style.display='block';
+     document.getElementById('AP-DAJS-floaterlink'+section+thisCounter).innerHTML='&lt;🔍'}
 }
 </script>
 `);
-                 });
+                     });
 
-   
-                 waitForKeyElements ( "td:nth-child(4) > a.badge-danger", makeRed);
-                 waitForKeyElements ( "td:nth-child(4) > a.badge-success", makeGreen);
-                 waitForKeyElements ( "td:nth-child(3) > a > i.fa-wpexplorer.pools-icon-warning:not(i.gAdded)", addGoog);
-                 waitForKeyElements ( "td:nth-child(4) > i.fa-info-circle.pools-icon-warning", poolWarning);
-                 waitForKeyElements ( "td:nth-child(9) > a.ng-tns-c46-2.badge.badge-danger", rugPull);
-                 //            waitForKeyElements ( "td:nth-child(5) > span", ccAdd);
 
-                 waitForKeyElements ( "#DAframe[src='']", togglePreview);
-                 //End page=pool
+                     waitForKeyElements ( "td:nth-child(4) > a.badge-danger", makeRed);
+                     waitForKeyElements ( "td:nth-child(4) > a.badge-success", makeGreen);
+                     waitForKeyElements ( "td:nth-child(3) > a > i.fa-wpexplorer.pools-icon-warning:not(i.gAdded)", addGoog);
+                     waitForKeyElements ( "td:nth-child(4) > i.fa-info-circle.pools-icon-warning", poolWarning);
+                     waitForKeyElements ( "td:nth-child(9) > a.ng-tns-c46-2.badge.badge-danger", rugPull);
+                     //            waitForKeyElements ( "td:nth-child(5) > span", ccAdd);
+
+                     waitForKeyElements ( "#AP-DAJS-popupframe[src='']", togglePreview);
+                     //End page=pool
                  }
                  else
                  {
                      //page=pair
-                  $(document).ready(function(){
-                      $(document.head).append(
-                          allPagesScripts+`
-<script id="DApairScripts">
+                     $(document).ready(function(){
+                         $(document.head).append(
+                             allPagesScripts+`
+<script id="AP-DAJS-pairScripts">
 var filterState="";
 
 function filterFunction(filterAddr,tableId,theColor) {
@@ -518,13 +508,13 @@ function filterFunction(filterAddr,tableId,theColor) {
             }
         }
     }
-    if (filter == "") {hTD.innerHTML = hTD.getAttribute("oldText");} else {hTD.setAttribute("oldText",hTD.innerHTML);hTD.innerHTML = 'Maker <span style="color:#'+theColor+' !important">'+filter+' only</span>';}
+    if (filter == "") {hTD.innerHTML = hTD.getAttribute("oldText");} else {hTD.setAttribute("oldText",hTD.innerHTML);hTD.innerHTML = 'Maker <span style="color:#'+theColor+' !important" class="AP-DAJS-element">'+filter+' only</span>';}
 }
 </script>
 `);
-              });
-            waitForKeyElements ( "td.ng-tns-c49-2:nth-child(7)", colorCodeHex);
-            waitForKeyElements ( "h3.page-title:has(a.ng-tns-c49-2+a.ng-tns-c49-2)",hiliteExtraInfo); //nth-child(2) didn't work because 2nd child isn't 'a'!
+                     });
+                     waitForKeyElements ( "td.ng-tns-c49-2:nth-child(7)", colorCodeHex);
+                     waitForKeyElements ( "h3.page-title:has(a.ng-tns-c49-2+a.ng-tns-c49-2)",hiliteExtraInfo); //nth-child(2) didn't work because 2nd child isn't 'a'!
 
                      // end page=pair
                  }
@@ -545,37 +535,37 @@ function filterFunction(filterAddr,tableId,theColor) {
 
                  if( thisNode.closest("table").attr("id")==""){thisNode.closest("table").attr('id','AddressesTable');}
 
-                    if(jNode.next("td:has(>a.ng-tns-c49-2>span.badge-secondary)").length) 
-                    { /* next cell indicates multiple transactions from this address */
+                 if(jNode.next("td:has(>a.ng-tns-c49-2>span.badge-secondary)").length)
+                 { /* next cell indicates multiple transactions from this address */
                      thisNode.attr('style','color: #'+theHex.toHexColour()+' !important');
-                     thisNode.parent().prepend('<i title="filter on this address" class="filterbutton fa fa-filter pools-icon-warning ng-tns-c46-2" onclick="filterFunction(\''+theHex+'\',\''+thisNode.closest("table").attr("id")+'\',\''+theHex.toHexColour()+'\')"></i>');
+                     thisNode.parent().prepend('<i title="filter on this address" class="AP-DAJS-element AP-DAJS-clickable filterbutton fa fa-filter pools-icon-warning ng-tns-c46-2" onclick="filterFunction(\''+theHex+'\',\''+thisNode.closest("table").attr("id")+'\',\''+theHex.toHexColour()+'\')"></i>');
                      //style="background:#'+theHex.toHexColour()+' !important"
                      //  jNode.closest("td").next().attr('style','background: #'+theHex.toHexColour()+' !important');
-                     }
-                 thisNode.parent().append('<a title="Zerion wallet overview" onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                 }
+                 thisNode.parent().append('<a title="Zerion wallet overview" onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                           +' href="https://app.zerion.io/'+theHex+'/overview">'
-                                          +' <div class="backImg zeriImg hide"></div></a>');
+                                          +' <div class="AP-DAJS-element backImg zeriImg hide"></div></a>');
              }
 
-             function togglePreview (jNode) {$("#DApreview").toggle();}
+             function togglePreview (jNode) {$("#AP-DAJS-preview").toggle();}
 
              function addLogo (jNode)
              {jNode.addClass("gearImg").css({"background-repeat":"no-repeat","background-position":"center"})};
 
-             function rugPull(jNode) { if (jNode.text()=="-100%") { //var rugHTML='<span class="text-warning badge-danger">RUGPULL</span> ';
+             function rugPull(jNode) { if (jNode.text()=="-100%") { //var rugHTML='<span class="AP-DAJS-element text-warning badge-danger">RUGPULL</span> ';
                  jNode.addClass("badge-dark");
                  // jNode.parent().prev().addClass("badge-danger");
-                 //   jNode.parent().prevAll().eq(4).first().first().remove();
+                 // jNode.parent().prevAll().eq(4).first().first().remove();
                  jNode.parent().prevAll().eq(4).children(":first").addClass("badge-dark");
                  jNode.parent().prevAll().eq(4).children(":first").text("RUGPULL");
                  //jNode.parent().next().addClass("badge-danger");
              } }
 
-             function addLink(jNode) { var creditHTML='<div style="float:right"><div class="sirImg backImg"></div> <a href="#">DextAssistant Installed</a></div>';
+             function addLink(jNode) { var creditHTML='<div style="float:right" class="AP-DAJS-element"><div class="AP-DAJS-element sirImg backImg"></div> <a href="#" class="AP-DAJS-element">DextAssistant Installed</a></div>';
                                       jNode.parent().prepend(creditHTML);
                                      }
-             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted bottomdiv"><a href="#">DextAssistant</a><div class="sirImg backImg" onclick="javascript:this.classList.toggle(\'anim\');"></div> '+currentVersion+' installed <span id="newVersion"></span></div>';
-                                            //              var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted"><a href="#">DextAssistant</a><div class="sirImg backImg"></div> is an independent community project not affiliated with DEXTools.io</div>';
+             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="AP-DAJS-element text-muted bottomdiv"><a href="#" class="AP-DAJS-element">DextAssistant</a><div class="AP-DAJS-element sirImg backImg" onclick="javascript:this.classList.toggle(\'anim\');"></div> '+currentVersion+' installed <span id="newVersion" class="AP-DAJS-element"></span></div>';
+                                            //              var creditHTML='<div style="margin:auto 0 auto auto;" class="AP-DAJS-element text-muted"><a href="#" class="AP-DAJS-element">DextAssistant</a><div class="AP-DAJS-element sirImg backImg"></div> is an independent community project not affiliated with DEXTools.io</div>';
                                             jNode.before(creditHTML);
                                             $("div.navbar-toggler").on('click', 'div.navbar-toggler', function (e) {
 
@@ -596,141 +586,137 @@ function filterFunction(filterAddr,tableId,theColor) {
                                      theContract=theContract.substring(theContract.lastIndexOf("/")+1);
                                      thePair=thePair.substring(thePair.lastIndexOf("/")+1);
                                      var theIcon='https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/'+Web3.utils.toChecksumAddress(theContract)+'/logo.png'
-                                     //var theHTML='<a _ngcontent-apl-c46 target="_blank" class="mr-2 ng-tns-c46-2 ng-star-inserted" href="https://www.google.com/search?q=%22'+theContract+'%22+OR+%22$'+theAbbreviation+'%22"><div _ngcontent-apl-c46 class="googImg ng-tns-c46-2"></div></a>';
+                                     //var theHTML='<a _ngcontent-apl-c46 target="_blank" class="AP-DAJS-element mr-2 ng-tns-c46-2 ng-star-inserted" href="https://www.google.com/search?q=%22'+theContract+'%22+OR+%22$'+theAbbreviation+'%22"><div _ngcontent-apl-c46 class="AP-DAJS-element googImg ng-tns-c46-2"></div></a>';
 
 
                                      var thisCounter = IDcounter.toString();
                                      //let's create the row icon while we're here
-                                     jNode.parent().parent().siblings("td:first-child").prepend('<img id="theCoinRow'+thisCounter+'" class="smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'theCoinRpw'+thisCounter+'\').classList.add(\'pHide\')"> ');
+                                     jNode.parent().parent().siblings("td:first-child").prepend('<img id="AP-DAJS-theCoinRow'+thisCounter+'" class="AP-DAJS-element smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'AP-DAJS-theCoinRow'+thisCounter+'\').classList.add(\'pHide\')"> ');
 
 
                                      var theTD = jNode.parent().parent()||{};
                                      var theNextTD = theTD.next()||{};
                                      function displayPreviewOpener(thisCounter,url,section){
-                                         var theResult = '<div style="float:right" id="floater'+section+thisCounter+'">'
-                                         +' <a class="floaterlink" id="floaterlink'+section+thisCounter+'" onmouseenter="previewToggle(\''+thisCounter+'\',\''+encodeURIComponent(url)+'\',\''+section+'\')">'
+                                         var theResult = '<div style="float:right" id="AP-DAJS-floater'+section+thisCounter+'" class="AP-DAJS-element">'
+                                         +' <a class="AP-DAJS-element floaterlink" id="AP-DAJS-floaterlink'+section+thisCounter+'" onmouseenter="previewToggle(\''+thisCounter+'\',\''+encodeURIComponent(url)+'\',\''+section+'\')">'
                                          +'&gt;🔎</a></div>';
                                          return theResult;
                                      }
 
-                                     var thePreviewResults= '<div id="previewResults'+thisCounter+'" style="padding-left: 12px;margin:0; float: right; background: white; width: 285px !important; height: 275px !important; display: block;"><span><b>Quick search results for contract addresses:</b></span><br><iframe style="background:white;border-style:none;position:relative;top:0px;width:285px !important;height:95% !important;" id="DAresults'+thisCounter+'"></iframe></div>'
+                                     var thePreviewResults= '<div id="AP-DAJS-previewResults'+thisCounter+'" style="padding-left: 12px;margin:0; float: right; background: white; width: 285px !important; height: 275px !important; display: block;" class="AP-DAJS-element"><span class="AP-DAJS-element"><b>Quick search results for contract addresses:</b></span><br><iframe style="background:white;border-style:none;position:relative;top:0px;width:285px !important;height:95% !important;" id="AP-DAJS-results'+thisCounter+'" class="AP-DAJS-element"></iframe></div>';
 
 
                                      var theHTML=
-                                     //~popover button
-                                         '<div class="'+(theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted,i.text-secondary")[0]?'sirImg':'sirImg') //was 'sirImg':'gearImg'
+                                         //~popover button
+                                         '<div class="AP-DAJS-element '+(theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted,i.text-secondary")[0]?'sirImg':'sirImg') //was 'sirImg':'gearImg'
                                      +' text-'+(theNextTD.children("i.text-info")[0]?'info':theNextTD.children("i.text-warning")[0]?'warning':
                                                 theNextTD.children("i.text-danger")[0]?'danger':theNextTD.children("i.text-success")[0]?'success':'muted')
                                      +' backImg" id="popButton'+thisCounter+'" data-toggle="popover"'
                                      + ' data-container="body" data-boundary="viewport" data-placement="top" type="button" data-html="true">'
-                                     + (theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted")[0]?'':theNextTD.children("i.text-danger,i.fa-warning.text-danger")[0]?'<span>💩</span>':theNextTD.children("i")[0]?'N':'')
+                                     + (theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted")[0]?'':theNextTD.children("i.text-danger,i.fa-warning.text-danger")[0]?'<span class="AP-DAJS-element">💩</span>':theNextTD.children("i")[0]?'N':'')
                                      + '</div>'
 
 
-                                     + '<div id="popover-content'+thisCounter+'" class="pHide"></div>'
-                                     // +'<div>Crypto Web search results for Token Contract and Uniswap Liquidity address:'
-                                     //                                    +'<script> document.getElementById("DAframe").src=\'https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22\'"></script></div>';
-
-
+                                     + '<div id="popover-content'+thisCounter+'" class="AP-DAJS-element pHide"></div>'
                                      var contractFloatOpener=displayPreviewOpener(thisCounter,"https://apopheniapays.com/cryptosearch/resultsOnly.html?q=%22"+theContract+"%22+OR+%22"+thePair+"%22",'contract');
                                      var chartexFloatOpener=displayPreviewOpener(thisCounter,"https://chartex.pro/?symbol=UNISWAP:"+theAbbreviation,'chartex');
-                                     var thisHTML= '<table><tr><td><div class="centered DApopupItem">'
+                                     var thisHTML= '<table class="AP-DAJS-element"><tr><td><div class="AP-DAJS-element centered AP-DAJS-popupItem">'
 
                                      //~initialize side popup
-                                     + '<script>'
-                                     +'document.getElementById("previewResults'+thisCounter+'").style.display="none";'
+                                     + '<script id="AP-DAJS-hidePreviewResults">'
+                                     +'document.getElementById("AP-DAJS-previewResults'+thisCounter+'").style.display="none";'
                                      +'</script>'
 
                                      //~popover headers
-                                     + '<img id="theCoin'+thisCounter+'" class="smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'theCoin'+thisCounter+'\').classList.add(\'coinImg\');document.getElementById(\'warning'+thisCounter+'\').classList.remove(\'pHide\')"><span contentediable="true"  class="abbrev" id="abbrev'+thisCounter+'">'+theAbbreviation+'</span> <div id="warning'+thisCounter+'" class="badge badge-danger pHide">no icon!</div>'
+                                     + '<img id="AP-DAJS-theCoin'+thisCounter+'" class="AP-DAJS-element smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'AP-DAJS-theCoin'+thisCounter+'\').classList.add(\'coinImg\');document.getElementById(\'AP-DAJS-warning'+thisCounter+'\').classList.remove(\'pHide\')"><span contentediable="true"  class="AP-DAJS-element abbrev" id="abbrev'+thisCounter+'">'+theAbbreviation+'</span> <div id="AP-DAJS-warning'+thisCounter+'" class="AP-DAJS-element badge badge-danger pHide">no icon!</div>'
                                      + '<br />'
                                      + contractFloatOpener
 
                                      //~Uniswap etherscan addr
-                                     + '<a class="DApopupWin"  href="https://etherscan.io/token/'+theContract+'"><div class="smallImg addrImg hide"></div></a><span contentediable="true" class="contract text-muted">'+ theContract.substring(0,14)+'...'+theContract.substring(theContract.length-14,theContract.length)
+                                     + '<a class="AP-DAJS-element AP-DAJS-popupWin"  href="https://etherscan.io/token/'+theContract+'"><div class="AP-DAJS-element smallImg addrImg hide"></div></a><span contentediable="true" class="AP-DAJS-element contract text-muted">'+ theContract.substring(0,14)+'...'+theContract.substring(theContract.length-14,theContract.length)
                                      + '</span>'
 
                                      //~Uniswap pool addr
                                      + '<br />'
-                                     + '<a  class="DApopupWin" href="https://uniswap.info/pair/'+thePair+'"><div class="smallImg unisImg hide"></div></a> <span contentediable="true" class="contract text-muted">'+ thePair.substring(0,14)+'...'+thePair.substring(thePair.length-14,thePair.length)
+                                     + '<a  class="AP-DAJS-element AP-DAJS-popupWin" href="https://uniswap.info/pair/'+thePair+'"><div class="AP-DAJS-element smallImg unisImg hide"></div></a> <span contentediable="true" class="AP-DAJS-element contract text-muted">'+ thePair.substring(0,14)+'...'+thePair.substring(thePair.length-14,thePair.length)
                                      + '</span>'
                                      + '</div>'
 
                                      //CryptoCompare Price
-                                     + '<hr><span>Cryptocompare price:</span> <span id="priceSpanUSD'+thisCounter+'"></span> '
-                                     + '<script>DAgetCCPrice("'+theAbbreviation+'","USD'+thisCounter+'");DAgetCCPrice("'+theAbbreviation+'","ETH'+thisCounter+'")</script>'
-                                     + '<hr>'
+                                     + '<hr class="AP-DAJS-element"><span class="AP-DAJS-element">Cryptocompare price:</span> <span id="priceSpanUSD'+thisCounter+'" class="AP-DAJS-element"></span> <span onclick="javascript:alert(\'CryptoCompare\\\'s free API is not reliable and returns incorrect data. Sorry, I\\\'ll reenable this when I can find a reliable free data source. Love, your developer\')" class="AP-DAJS-element"><u>disabled</u></span>'
+                                     + '<!-- script>DAgetCCPrice("'+theAbbreviation+'","USD'+thisCounter+'");DAgetCCPrice("'+theAbbreviation+'","ETH'+thisCounter+'")</script -->'
+                                     + '<hr class="AP-DAJS-element">'
 
                                      //~Google Custom Seach Enging - crypto web search, include crypto news & social media, exclude block explorers
-                                     + '<div class="backImg googImg hide"></div>'
-                                     + '<a onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin makeBold"'
+                                     + '<div class="AP-DAJS-element backImg googImg hide"></div>'
+                                     + '<a onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin makeBold"'
                                      + ' href="https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22&orig='+theAbbreviation+'&icon='+encodeURIComponent(theIcon)+'">'
                                      +' Ox Addresses</a> | <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://apopheniapays.com/cryptosearch/results.html?q=%22$'+theAbbreviation+'%22&orig=Token%20addr%20'+theContract+'%20and%20Uniswap%20liquidity%20pool%20address'+thePair+'&icon='+encodeURIComponent(theIcon)+'">&quot;$'+theAbbreviation+'&quot;</a> <br> Crypto Filtered Web Search'
-                                     +'<hr> '
+                                     +'<hr class="AP-DAJS-element"> '
 
                                      //~whole web search
-                                     + '<div class="backImg googImg hide"></div> <a '
-                                     +'  onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin makeBold"'
+                                     + '<div class="AP-DAJS-element backImg googImg hide"></div> <a '
+                                     +'  onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin makeBold"'
                                      +' href="https://www.google.com/search?q=%22'+theContract+'%22+OR+%22'+thePair+'%22">'
                                      +' Ox Addresses</a> | <a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://www.google.com/search?q=%22$'+theAbbreviation+'%22">&quot;$'+theAbbreviation+'&quot;</a> <br> Whole Web Search'
-                                     +'<hr> '
+                                     +'<hr class="AP-DAJS-element"> '
 
                                      //~zerion
                                      +'<a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://app.zerion.io/explore/asset/'+theAbbreviation+'-'+theContract+'">'
-                                     +' <div class="backImg zeriImg hide"></div>Token/Portfolio Analytics</a> <br>Zerion'
-                                     +'<hr>'
+                                     +' <div class="AP-DAJS-element backImg zeriImg hide"></div>Token/Portfolio Analytics</a> <br>Zerion'
+                                     +'<hr class="AP-DAJS-element">'
 
                                      //~Uniswap
-                                     +'<div class="backImg unisImg hide"></div> <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'<div class="AP-DAJS-element backImg unisImg hide"></div> <a  '
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://uniswap.info/token/'+theContract+'">Token Analytics</a> | '
                                      +' <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://uniswap.info/pair/'+thePair+'">Pool Stats</a> <br>Uniswap'
-                                     +'<hr>'
+                                     +'<hr class="AP-DAJS-element">'
 
                                      //~Mooniswap
-                                     +'<div class="backImg moonImg hide"></div> <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'<div class="AP-DAJS-element backImg moonImg hide"></div> <a  '
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://mooniswap.info/token/'+theContract+'">Token Analytics</a> | '
                                      +' <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://mooniswap.exchange/#/swap?inputCurrency='+theContract+'">Live trading</a> <br>1inch Mooniswap'
-                                     +'<hr>'
+                                     +'<hr class="AP-DAJS-element">'
 
                                      //~unicrypt
                                      +'<a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://unicrypt.network/uniswap-browser/pair/'+thePair+'">'
-                                     +' <div class="backImg crypImg hide"></div>Verify liquidity lock</a> <br>Unicrypt'
-                                     +'<hr> '
+                                     +' <div class="AP-DAJS-element backImg crypImg hide"></div>Verify liquidity lock</a> <br>Unicrypt'
+                                     +'<hr class="AP-DAJS-element"> '
 
                                      //~cerberus.saren
                                      +'<a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://cerberus.saren.io/coins/'+theContract+'">'
-                                     +' <div class="backImg cerbImg hide"></div> Token analytics</a> <br> cerberus.saren'
-                                     +'<hr> '
+                                     +' <div class="AP-DAJS-element backImg cerbImg hide"></div> Token analytics</a> <br> cerberus.saren'
+                                     +'<hr class="AP-DAJS-element"> '
 
                                      //~Chartex
                                      /*  + chartexFloatOpener No, don't the popover is really too small for Chartex */
                                      +'<a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://chartex.pro/?symbol=UNISWAP:'+theAbbreviation+'">'
-                                     +' <div class="backImg chexImg hide"></div> Candlestick chart</a> <br> ChartEX'
-                                     +'<hr>'
+                                     +' <div class="AP-DAJS-element backImg chexImg hide"></div> Candlestick chart</a> <br> ChartEX'
+                                     +'<hr class="AP-DAJS-element">'
 
                                      //~Uniswap.vision
                                      +'<a'
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="DApopupItem DApopupWin"'
+                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
                                      +' href="https://uniswap.vision/?ticker=UniswapV2:'+theAbbreviation+'ETH">'
-                                     +' <div class="backImg visiImg hide"></div> Candlestick chart</a> <br> uniswap.vision'
+                                     +' <div class="AP-DAJS-element backImg visiImg hide"></div> Candlestick chart</a> <br> uniswap.vision'
                                      +'</td><td>'+thePreviewResults
                                      +'</td></tr></table>' //end links
 
@@ -738,7 +724,7 @@ function filterFunction(filterAddr,tableId,theColor) {
 
                                      +''; // just leave this at bottom so I don't have to keep moving semicolon as I add things
 
-                                     //                 var theHTML = '<Div href="#" data-toggle="popover" title="Popover Header" data-html="true" data-content="'+theInnerHTML.replace(/"/g,'\\"')+'">Toggle popover</div>';
+                                     //                 var theHTML = '<Div href="#" data-toggle="popover" title="Popover Header" data-html="true" data-content="'+theInnerHTML.replace(/"/g,'\\"')+'" class="AP-DAJS-element">Toggle popover</div>';
                                      //gotta use a DIV anot an IMG, because IMG with SRC="" or missing SRC attribute causes visual glitches, unwanted borders, etc
                                      jNode.parent().parent().append( theHTML);
                                      var showFunction=function() { var _this = this;
@@ -779,7 +765,7 @@ function filterFunction(filterAddr,tableId,theColor) {
                                           var thePoolLeft = jNode.closest("td").siblings().last().prev()
                                           thePoolLeft.addClass(theClass).addClass("makeBold");
                                           thePoolLeft.prev().prev().addClass(theClass).addClass("makeBold");
-                                          //<i _ngcontent-ljj-c46="" class="ng-tns-c46-2 fa fa-info-circle ml-1 pools-icon-warning  text-danger ng-star-inserted" style=""></i>
+                                          //<i _ngcontent-ljj-c46="" class="AP-DAJS-element ng-tns-c46-2 fa fa-info-circle ml-1 pools-icon-warning  text-danger ng-star-inserted" style=""></i>
                                          }
 
              //add Styles
@@ -788,16 +774,16 @@ function filterFunction(filterAddr,tableId,theColor) {
 
 /*body {max-width: 100% ;max-height: 100% ; overflow: hidden} yes, need this to prevent scrollbars during animation, but, breaks pair explorer */
 
-       #DApreview {position:fixed;display:none;top:15px;bottom:15px;right:15px;left:50%;z-index:9998;padding:12px;}
-                 #DAclosebutton {height:24px;widht:24px;position:fixed;top:5px;right:5px;border:1px solid black;content:'X';color:red;background-color:white;font-size:24px;font-weight:bold;}
-#DAframe {height:100%;width:100%};
+       #AP-DAJS-preview {position:fixed;display:none;top:15px;bottom:15px;right:15px;left:50%;z-index:9998;padding:12px;}
+                 #AP-DAJS-closebutton {height:24px;widht:24px;position:fixed;top:5px;right:5px;border:1px solid black;content:'X';color:red;background-color:white;font-size:24px;font-weight:bold;}
+#AP-DAJS-popupframe {height:100%;width:100%};
 
 .invisible{ display:none; }
 
 
 
 
-div.DApopupItem, a.DApopupItem, a.DApopupItem:hover{ font-size:10px;color:black;font-style:normal;
+div.AP-DAJS-popupItem, a.AP-DAJS-popupItem, a.AP-DAJS-popupItem:hover{ font-size:10px;color:black;font-style:normal;
  }
 
 .centered{ text-align:center
@@ -910,7 +896,7 @@ content:'\\f0b0';
 
 .sorting {text-decoration:underline;}
 
-.sorting:after {content:'<span><i>(sorting...)</i></span>';}
+.sorting:after {content:'<span class="AP-DAJS-element"><i>(sorting...)</i></span>';}
 
 div.popover-body hr {margin:0px !important;}
 
@@ -937,6 +923,9 @@ body.dark-theme .greenBkgd, body.dark-theme td.bg-light.greenBkgd{ background-co
 
 .makeBold{ font-weight:bold;
  }
+
+.AP-DAJS-clickable, a.AP-DAJS-element {cursor:pointer;}
+.AP-DAJS-clickable:hover, a.AP-DAJS-element:hover {cursor:pointer; opacity: .5; color:#007bff;}
 
 i.fa-warning{ background-color:#FFFF00 !important;
  }
