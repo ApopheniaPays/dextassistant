@@ -197,6 +197,7 @@ var ethplorerkey="freekey";
 // total columns in pair explorer
 // add an identifier as TD values are evaluated and screen for it so don't keep selecting same TD's over and over again
 // alert if new pool doubles in size. 
+// user option to open Zerion in private window
 
 /**/
 /**/
