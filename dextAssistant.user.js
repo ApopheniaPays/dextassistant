@@ -178,18 +178,15 @@ GM.xmlHttpRequest({
   method: "GET",
   url: "https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js",
   onload: function(scrptTxt) {
-      console.log("hey ",scrptTxt.response.match(/\/\/\s+@version\s+(.+)/i)[1]);
     var versionMtch = scrptTxt.response.match(/\/\/\s+@version\s+(.+)/i);
     if (versionMtch  &&  versionMtch.length > 1) {
-        newVersionAvail = versionMtch[1];
-         console.log("hey2 ",scrptTxt.response.match(/\/\/\s+@version\s+(.+)/i)[1]);
-       if(newVersionAvail!=currentVersion) {waitForKeyElements('span#newVersion',addNewVersion);}
+    var newVersionAvail = versionMtch[1];
+    if(newVersionAvail!=currentVersion) {waitForKeyElements('span#newVersion',addNewVersion);}
     };
   }
 });
 
              function addNewVersion (jNode) {
-                 console.log("jn ",jNode);
                  jNode.html('<a href="https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js">update available</a>');
     //yeah, it's hinky. This runs asynchronously so there's two different places this can happen: here, or synchronously down below.
                                          }
@@ -319,7 +316,6 @@ function sortTableMain(n,tableId) {
 
                  var hms = timeString.replace(/ *[hmdHMD] */g,":").replace(/ *[s] *$/g,"");   // your input string
                  var a = hms.split(':'); // split it at the colons
-                 console.log(a);
                  // minutes are worth 60 seconds. Hours are worth 60 minutes.
                  var seconds = (typeof a[3] !== "undefined")?(+a[0]) * 60 * 60 * 60 + (+a[1]) * 60 + (+a[2])*60+(+a[3]):(typeof a[2] !== "undefined")?(+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]):
                  (typeof a[1] !== "undefined")?(+a[0]) * 60+ (+a[1]):(+a[0]);
@@ -346,7 +342,6 @@ function sortTableMain(n,tableId) {
              }
 
              function prepareTable (jNode) {
-                 console.log("pt",jNode);
                  if (!jNode.closest("table").attr("id"))
                  {  jNode.closest("table").attr("id",Math.floor(Math.random() * Math.floor(Math.random() * Date.now())));}
 
@@ -390,8 +385,6 @@ function sortTableMain(n,tableId) {
 
              function initPage(){
                  var thisPage = (document.location.href.match('www.dextools.io/app/uniswap/pair-explorer'))?"pair":"pool";
-                 console.log(thisPage);
-
                  //   waitForKeyElements ( "div.card-header.border-bottom.ng-tns-c46-2>h6", addLink);
                  if(thisPage=="pool"){
                      $(document).ready(function(){
@@ -415,7 +408,6 @@ function resizeIFrameToFitContent( iFrame ) {
 }
 
 function previewToggle (thisCounter,url,section){
-    console.log(thisCounter,url,section);
     if(document.getElementById('previewResults'+thisCounter).style.display=='block'
        && document.getElementById('DAresults'+thisCounter).src==decodeURIComponent(url))
     {document.getElementById('previewResults'+thisCounter).style.display='none';
@@ -552,12 +544,9 @@ function filterFunction(filterAddr,tableId,theColor) {
                                      var theTD = jNode.parent().parent()||{};
                                      var theNextTD = theTD.next()||{};
                                      function displayPreviewOpener(thisCounter,url,section){
-                                         console.log(thisCounter,url,section);
                                          var theResult = '<div style="float:right" id="floater'+section+thisCounter+'">'
                                          +' <a class="floaterlink" id="floaterlink'+section+thisCounter+'" onmouseenter="previewToggle(\''+thisCounter+'\',\''+encodeURIComponent(url)+'\',\''+section+'\')">'
                                          +'&gt;🔎</a></div>';
-
-                                         console.log("result",theResult);
                                          return theResult;
                                      }
 
@@ -581,12 +570,7 @@ function filterFunction(filterAddr,tableId,theColor) {
 
 
                                      var contractFloatOpener=displayPreviewOpener(thisCounter,"https://apopheniapays.com/cryptosearch/resultsOnly.html?q=%22"+theContract+"%22+OR+%22"+thePair+"%22",'contract');
-                                     console.log("A:",contractFloatOpener,thisCounter,'https://apopheniapays.com/cryptosearch/resultsOnly.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22','contract')
-
                                      var chartexFloatOpener=displayPreviewOpener(thisCounter,"https://chartex.pro/?symbol=UNISWAP:"+theAbbreviation,'chartex');
-                                     console.log("B:",contractFloatOpener,thisCounter,'https://apopheniapays.com/cryptosearch/resultsOnly.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22','contract')
-
-
                                      var thisHTML= '<table><tr><td><div class="centered DApopupItem">'
 
                                      //~initialize side popup
@@ -691,13 +675,9 @@ function filterFunction(filterAddr,tableId,theColor) {
 
                                      +''; // just leave this at bottom so I don't have to keep moving semicolon as I add things
 
-                                     //console.log("theInner",theInnerHTML);
                                      //                 var theHTML = '<Div href="#" data-toggle="popover" title="Popover Header" data-html="true" data-content="'+theInnerHTML.replace(/"/g,'\\"')+'">Toggle popover</div>';
-                                     //console.log("html",theHTML);
                                      //gotta use a DIV anot an IMG, because IMG with SRC="" or missing SRC attribute causes visual glitches, unwanted borders, etc
-                                     // console.log(theHTML);
                                      jNode.parent().parent().append( theHTML);
-                                     console.log((function() { return $('#popover-content'+thisCounter).html(); })());
                                      var showFunction=function() { var _this = this;
                                                                   $("div.sirImg").not(this).popover('hide');
                                                                   $(this).popover("show");//$('#frame'+thisCounter).src='https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22';
@@ -733,21 +713,13 @@ function filterFunction(filterAddr,tableId,theColor) {
              function poolWarning(jNode) { var theClasses= jNode.prop("class");
 
                                           var theClass = (theClasses.match(/\btext\-[^ ]*\b/g, '')||[""])[0];
-
-                                          //    console.log("jNode",jNode);
-                                          //   console.log("theClasses",theClasses);
-                                          // console.log("theClass",theClass);
                                           var thePoolLeft = jNode.closest("td").siblings().last().prev()
                                           thePoolLeft.addClass(theClass).addClass("makeBold");
                                           thePoolLeft.prev().prev().addClass(theClass).addClass("makeBold");
-                                          //    console.log(jNode.closest("td").siblings().last().prev()[0])
                                           //<i _ngcontent-ljj-c46="" class="ng-tns-c46-2 fa fa-info-circle ml-1 pools-icon-warning  text-danger ng-star-inserted" style=""></i>
-
                                          }
 
-
              //add Styles
-
              GM_addStyle ( `
 
 
