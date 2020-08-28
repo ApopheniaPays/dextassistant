@@ -519,7 +519,7 @@ function filterFunction(filterAddr,tableId,theColor) {
              function addLink(jNode) { var creditHTML='<div style="float:right"><div class="sirImg backImg"></div> <a href="#">DextAssistant Installed</a></div>';
                                       jNode.parent().prepend(creditHTML);
                                      }
-             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted bottomdiv"><a href="#">DextAssistant</a><div class="sirImg backImg" onclick="javascript:this.classList.toggle(\'anim\');"></div> '+currentVersion+' installed</div>';
+             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted bottomdiv"><a href="#">DextAssistant</a><div class="sirImg backImg" onclick="javascript:this.classList.toggle(\'anim\');"></div> '+currentVersion+' installed <span id="newVersion"></span></div>';
                                             //              var creditHTML='<div style="margin:auto 0 auto auto;" class="text-muted"><a href="#">DextAssistant</a><div class="sirImg backImg"></div> is an independent community project not affiliated with DEXTools.io</div>';
                                             jNode.before(creditHTML);
                                             $("div.navbar-toggler").on('click', 'div.navbar-toggler', function (e) {
