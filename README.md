@@ -60,8 +60,8 @@ Enjoy!
 
 ## Installation
 
-This script is for use with a browser plugin that allows you to install and manage user scripts, such as 
-Greasemonkey, Tampermonkey, or Violentmonkey. I chose to go with a userscript instead of a browser plugin 
+This script *requires a browser plugin that allows you to install and manage user scripts, such as 
+Greasemonkey, Tampermonkey, or Violentmonkey.* I chose to go with a userscript instead of a browser plugin 
 because it would allow the code to remain 100% open source and cross-platform. 
 
 (Here's where you need to bring a little knowledge to the table. If you're unfamiliar with userscripts or 
