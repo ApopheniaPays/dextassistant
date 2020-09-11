@@ -15,7 +15,7 @@ some cases, embedded it right in the page without having to leave DEXTools.
 
 Installation tips are included below. Yes, you're going to have to _read_.
 
-### UPDATE, 11 September 2020: There will be one more update focusing on additional functionality for 
+**UPDATE, 11 September 2020:** There will be one more update focusing on additional functionality for 
 DEXTools.io. After that, development will shift to adding functionality to other sites, and active 
 development and bugfixes for DEXTools-based functionality will cease, with the project moving to a new 
 name and repo. The current version of the script already includes update alerts (in the form of a link
