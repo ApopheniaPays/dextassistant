@@ -20,7 +20,9 @@ DEXTools.io. After that, development will shift to adding functionality to other
 development and bugfixes for DEXTools-based functionality will cease, with the project moving to a new 
 name and repo. The current version of the script already includes update alerts (in the form of a link
 in the footer when an update is available) and this will give you one-click migration to
-the new script and repo after the next version is posted and it's ready to migrate. 
+the new script and repo after the next version is posted and it's ready to migrate. The features in the
+next posted version will continue to work for as long as th DEXTools.io UI doesn't change enough to 
+break them.
 
 # DISCLAIMER 
 
