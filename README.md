@@ -2,7 +2,7 @@
 
 #Clicking on the built-in upgrade link will automatically upgrade your script to the new name, version and repo. 
 
-#Below are the final notes for the previous version. 
+#Below are the final notes for the transition version. 
 
 # DYORassistant (formerly "DEXTassistant")
 
@@ -42,7 +42,7 @@ whatever tools show the most promising combination of usefulness, accessibility,
 intermediate traders in the months to come. DEXTools is an amazing service run by a great team, and likely 
 to only get better as it develops; however, I cannot justify volunteering time and development skills for 
 free to support what now looks like an exclusive service aimed at catering to traders who are already 
-succesfully enough to be able to afford to pay quite a lot of money for the tools they need. I think it's 
+succesfully enough to be able to afford to pay quite a lot of money for the tools they need. I think it's tr
 terrific that DEXTools is offering an awesome toolset to those traders, I just don't see any reason to 
 support that myself. 
 
