@@ -1,27 +1,54 @@
-VERSION ALPHA 2020.08.25
- 
-(This is the initial alpha release. More complete information will be added later. Follow 
-[http://t.me/ApopheniaProjects](http://t.me/ApopheniaProjects) on Telegram for announcements.)
+# DextAssistant has become DYORassistant. Please go to the new repo at [https://github.com/ApopheniaPays/DYORassistant/](https://github.com/ApopheniaPays/DYORassistant/)
+
+#Clicking on the built-in upgrade link will automatically upgrade your script to the new name, version and repo. 
+
+#Below are the final notes for the previous version. 
+
+# DYORassistant (formerly "DEXTassistant")
+
+An independently developed userscript bringing new UI features and embedded research tools to popular DEX- & 
+DeFi-related websites, to give you an edge and help avoid scams. Follow 
+[http://t.me/ApopheniaProjects](http://t.me/ApopheniaProjects) on Telegram for announcements.
 
 # BACKGROUND 
 
-The nice people at [http://DEXTools.io](http://DEXTools.io) have built a great information explorer 
+## I. Origins
+
+The folks behind the website  [http://DEXTools.io](http://DEXTools.io) have built a great information explorer 
 for Uniswap. However, I found that as I explored the information it gave me, I had to do far too 
 much clicking around to other websites to do my own research on the coins listed. I wanted a quicker 
 way to gather information and determine which coins might be worth investing in, and more importantly, 
 which look like scams and should be avoided. So I took all the research I was doing by hand, and coded 
 an add-on tool that set on top of DEXTools but gave quicker access to all that information, and in 
-some cases, embedded it right in the page without having to leave DEXTools.
+some cases, embedded it right in the page without having to leave DEXTools. Once it was written, it 
+struck me that this was a good way to lend a hand to beginning traders and newbies, and I decided to 
+make it available on Github for that purpose.
 
-Installation tips are included below. Yes, you're going to have to _read_.
+Since then, script development has begun to shift focus away from DEXTools to other popular sites. 
+Which I believe are more in keeping with my original intent of helping the beginning traders who need 
+this most and may not necessarily be in profit yet... traders very much like I was, literally only weeks 
+ago.  
 
-**UPDATE, 11 September 2020:** There will be one more update focusing on additional functionality for 
-DEXTools.io. After that, development will shift to adding research functionality to a wide range sites, 
-and active development and bugfixes for DEXTools-based functionality will cease, with the project moving 
-to a new name and repo. The current version of the script already includes update alerts (in the form of 
-a link in the footer when an update is available) and this will give you one-click migration to the new 
-script and repo after the next version is posted and it's ready to migrate. The features in the next 
-posted version will continue to work for as long as th DEXTools.io UI doesn't change enough to break them.
+## II. From DextAssistant to DYORassistant: Change of focus and rebranding
+
+As of 1 September 2020, going forward, this script has been rebranded from "DextAssistant" to 
+"DYORassistant" ("Do Your Own Reasearch" Assistant) to reflect a broader emphasis on helping fledgling 
+DEX traders research new tokens, rather than just focusing exclusively on enhancing DEXTools. For the 
+next month, I will be shifting focus to helping new traders by providing information and enhancements 
+on sites that do not charge the subscription fees that DEXTools will be instituting by the end of September.
+
+The transition will be gradual. But I hope to shift focus before too long completely away from DEXTools, to 
+whatever tools show the most promising combination of usefulness, accessibility, and value to beginning or 
+intermediate traders in the months to come. DEXTools is an amazing service run by a great team, and likely 
+to only get better as it develops; however, I cannot justify volunteering time and development skills for 
+free to support what now looks like an exclusive service aimed at catering to traders who are already 
+succesfully enough to be able to afford to pay quite a lot of money for the tools they need. I think it's 
+terrific that DEXTools is offering an awesome toolset to those traders, I just don't see any reason to 
+support that myself. 
+
+At the same time, I plan on concurrently transitioning away from using DEXTools in my own trading. But I'll 
+make an effort to support the existing DEXTools-related features, and even continue to add new ones that were 
+already in the planning stages, for as long as possible. 
 
 # DISCLAIMER 
 
@@ -86,10 +113,18 @@ This script is also hosted at [https://openuserjs.org/scripts/ApopheniaPays/Dext
 for one-click install if you prefer to get a minified version. Supposedly that will stay current as I update 
 it here, but I haven't checked. 
 
-## Usage
+## Features
 
-This adds a few cosmetic changes to the DEXTools.io Pool Explorer, and soon will also add features to their 
-Pair Explorer page. You will notice them right away:
+Global enhancemensts:
+
+1.) In any table that has a header row, columns are now sortable.
+
+2.) Ethereum addresses in table columns can be filtered to show only the rows for that address. 
+
+3.) Any links to Etherscan.io now also have a button added to look that address up on Zerion. Ethereum addresses
+are color coded to make repeated transactions from the same address more noticeable in tables.
+
+DEXTools.io enhancements:
 
 1.) The most prominent addition is a new icon under the Pool Explorer's Actions column, which opens a 
 "research assistant" popup that will allow you to view data from other websites pertaining to the token Name, 
@@ -105,13 +140,6 @@ with a "poop" emoji.
 liquidity removals are now labeled as "rugpull" instead of just "remove", to make sure you know to feel 
 extra-bitter.
 
-4.) Columns are sortable on both the Pool and Pair explorers buy clicking on the column headings.
-
-5.) In the Pair Explorer page, wallet addresses that have more than one transaction in the list are now color-
-coded to make it easier to spot scammy trades, where one address buys and sells just to generate activity. Next 
-to these addresses, there is also now a "ƒ" button to filter the list to show all the transactions for just that 
-address, and a "Z" button that takes you to the Zerion overview for that wallet.
-
 6.) DEXTools "Dark mode" is now supported, because I was too lazy to attempt any real work tonight. 
 
 7.) Rather than rely on the various browser plugins' hinky auto-update mechanism, the script adds an unobtrusive 
@@ -121,9 +149,27 @@ load. This update check is why.)
 
 As this script makes cosmetic changes only, there's no harm you can do by poking around. Explore it.
 
+## Usage Tips
+
+Ok, if you need to be told how to use this, you probably aren't ready to be doing this kind of trading. But here's my
+basic routine for checking out a token and deciding if it's real or a scam: Check an see any the existing search results 
+for the contract address, check if liquidity is locked, look at the pair explorer and see if there is website/telegram/
+discord referenced and look at those to get an impression. Takes no time at all.
+
+Oh, yeah, and, be extra skeptical if the liquidity pool is less than 1000 ETH. I've seen real coins with pools as small as
+20 ETH, but I've never (yet) seen a scam with a pool over 1000 ETH. 
+
 # KNOWN ISSUES
 
 1.) Right now the list filtering and sorting only acts on existing rows. As new transactions or pools appear, they 
 come in at the top, exactly as if the list wasn't filtered or sorted. I'll get around to it. Hey, it's an open 
 source script, you don't like it, fix it yourself.
+
+# FUTURE PLANS
+
+In keeping with this tool's mission of helping beginning and small traders get a leg up, in an upcoming version this userscript 
+may begin asking for permission to check your wallet balances. If you hold enough wealth to qualify for the premium-level
+subscriptions to some popular websites, such as holding 20k DEXT for DEXTools 2nd-tier subscription or holding enough TRND to 
+qualify for Trendering's exclusive 300-member telegram, you may be prevented from further use of this script. If you wish to 
+avoid these restrictions you may wish not to upgrade the script. 
 
