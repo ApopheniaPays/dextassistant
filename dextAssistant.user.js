@@ -1,26 +1,27 @@
 // ==UserScript==
-// @name         DextAssistant
+// @name         DYORassistant
 // @namespace    https://apopheniapays.com/
-// @version      ALPHA-2020.08.28b
-// @description  Adds some research tools and visual niceties to Dextools.io. Does not interfere with existing functionality, just adds cosmetics for user convenience.
+// @version      ALPHA-2020.90.04t
+// @description  Adds some research tools and visual niceties to DeFi utilities and sites (currently only Dextools.io, more soon). Does not interfere with existing functionality, just adds cosmetics for user convenience.
 // @author       @ApopheniaPays
-// @updateURL    https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
-// @downloadURL  https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js
-// @match        https://www.dextools.io/app/*
+// @updateURL    https://github.com/ApopheniaPays/DYORassistant/raw/master/DYORassistant.user.js
+// @downloadURL  https://github.com/ApopheniaPays/DYORassistant/raw/master/DYORassistant.user.js
+// @match        *://*/*
 // @match        http://www.dextools.io/app/*
 // @match        https://dextools.io/app/*
-// @match        http://dextools.io/app/*c
+// @match        http://dextools.io/app/*
 // @grant        GM_addStyle
 // @grant        GM.xmlHttpRequest
 // @connect      github.com
 // @connect      githubusercontent.com
 // @run-at       document-start
-// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAE00lEQVRIDY2Ve0xTdxTH6wvpLVDAuZAsuswZjTO6LZrtD3WazCzRbMYN0DiX7I+5LXGmbCqgsgBmTqHlIVUqqBMxvqXisFgRLay8WloqBS4USnkMKl6LvJXah9/lXGnDxMWd5OScex6fc+7vtvcKBK8QANPk5u6o1QVG7UeXa2sAzPKVUW6zquHGyst63ZHazq2++P+yB6ptnzIKDYIUZWAUZZDXd+3yNeaYe6OY7HJ/7lxzz0Zf7rX2VGPPOnFOOZZfqEFYbjmCFRrP6muGO2uuGkpDTpS7aJgoW8MPvdXOrXotkAoABPQ/dckfPX0GkkGnG2l13VhxUde69FxVq/hEmVuk0IAhcLYGddzA8teCy4CZAArsdjvSZRmI3hyNpMQksE0snnm8f9D56ntH5sRVWCTzTmv7aOvfdbb9/wlW3O/+duX56tp73f1321rbkJCQgBpdDXQ6HaprqpGYmAhLSwvdQIwPUtz5KOKTq/ri4ON3XZFFpstrr+hTV1yoqjist+3mawDMXHhG272hsA7P3B7s2LEDBoMBGo3Gr2azGdJUKYF7aGsf3AjMWnNJX80cK4VwQiNyNMMsECDQ2B2LGfkd3O50oLK8Ej/8+D30Or0fSgO0Wi0ypZn8mQMI84HJqmzceqH8DohBKpSXoOHhwDJ6WLO+K2nMruwdcF84exESiWTKxkajERnpGQTmAMyYDAYw/cOzlazwaAmEWSXejQX6cw8Axl/jeY6/8nLzkJ+Xzz8wun3a1mQyQSqVwlRnIvBBf8MkJ6a0KVN0VI2dpQ0Zk8IvXABlZ0/mw9JsgVqtxs8xMYjbE4fYvbEoVBYSlP6BoimNAoFAbrQdZDLUuGtzLJqSB9BxIisHNms7Qcrdbvegrd0Gt8tF108BfAbgYwApAH4FMN8HOVJlORSYocLVlp61vhhva+2P51F32iEZGZJtADZ4vd7xrs4uNDexGB8f9zrHnWhsaER7mxVer5eG7QSwrvbBYPuq8xVYlHvPomrjFvDQ9tHRN9+Sqx1Ey0zJxNjoGDwezwiAJ/Hx+/DG3FCEhgkRvzce0ZFREIcGIjhkNpITk+Fyuah2jL3fhNsdHIRpRYiQ3xpgh4fDBWdMfXPnZKqe+MDFxcWI2SXBgX37IQqehmDx9BcaMgNBIRO+eDrEoQGIioxE7J49yM3OwU1rHxhZEUSyP715bGcEv/WW6/orBJb+lspvsf3rbTxEHDYDpAT/avOXWLJk8ZT4smVL4XQ6sbVQD0Z2A+vOV2j952x8MDCfwLKJMx4aHkJiQhJCQ8UQBTHYtfMn9Pf3w95rx8GkZISHh4NhArH3l93gHnJwP3+uPFPf/blEbd5/y8q96weTQ+AsaRYZsI4hqZkbwpDTxWuzY9hT2NJz8UpT16X6h4P+eOvjEXCj48n0WvgXbPIFAdMPp/Pg/PqObwJTr0OYQqoEM2EDJyzFKMekKGF2jCyezJniE5HOmERSYjodyDcTQIl3jql6Uist24/XWLe8l3275QWYBiqRa7RGT4FNDhCQfm4kl9i/Ny3IUvUyRwoQlKJ0azq49321DdzQgjBp4Rhz+Brezrppq+p99IEv90pLQHmanAcDmM2ybIDCYN100mBb/3LDqbqONbKKli9yjUb/R/blmn8ATIrJHJzMCdEAAAAASUVORK5CYII=
+// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAATCAYAAACUef2IAAAD8UlEQVQ4EY3SfUyVVRzA8ac/dGplq5w1c/3R2z+ZFDmbzrbWRlvGyEA0tQDJF5gwmth4URMu1wsMJQiQGyjilbcrLxdNAq6Nii4ZKPiGi5dAYEmgQPf+LlyBrnzbQzDAjPFsZ+f5nd/5fc5zznMU5YEnKV8sa7NFXE/YZJ3BIR4mp7yrt8uSSpssrRfxzRLxPC2y3ijiXiCyIlUk6qJ05DH4zAPUVJhukBr/SGHzCRspTdA7Cu1dPbQ7wcUOym0rqxuFA0YhqEj4uETIsAjD94Rah/QkDT4EP2aQGp+Dwo4wG5daoe/PZuLCggjc5k1y9D66bnfxvgOUdisvNwpBeYJ7plDdIoDQZBNqZBpOd/eirJNSExAh7Am3UlELv12uZKOHGwcOHCQqOprdgQGkBO6k7VY7C/pHUBzCvE7B9bhw6uK/cK9DGHUInQ7pMQ8NLVOSjGLxjhcCkwStwcHYfTsazRdoNFpyc3JIS03DbDaz3W87lfqvyRyB58uFF68Kpj7B0S/k9gk5dwXDXaGoX0i5I4NKvFF8XfIFt0IhvQXab9QSF6vjfNl5dDod6enpGAwG/P13kHsqif422LtH+CpKoE2IGRKUG4LSJCjNE/01KR3/c6F5EvrKcSG/E65afuCN11wI+TyESnMlZwrPUGA0ssFjPfW131H2MwRrhdhIYVupoNwVlNaJ9ruwsFGuTV0HRVHWptkKtM1QnJ3JTr/PKM41sNXbCw/3D/H09ORsyWmaOmDLXjsB4cJRjbC4QVD+mEKVmzK8q23giRmwGpxu47I++QiJ8UcYBfQn8sk4ph8/d4AQ3TAlVdDdAsEXxlDarFPbvyH4tMqa/6DqABC8PywSS/lZCvvgp3sqBz9WXaC6+hJOoOlmHdXmfHpw4jMK6wYgE/jyljXwoegEfEif9g3x0dEMjo5hH4MP3nNDXXPJk4sJDdnFwgXzxuNN77wN94awDvxFV6kJGNk0GxxVbCzm00/8WOP6OqtWrhhHVPhh7aXly3nusUfRp2eoG/OfFdZGaamvqycuPm4GtvrNleRmJ/LWqpmLeXl6qWgHMH9WODYmlvKy8jtAleWXGpIPR2BIjcEmdnodcH/gb75NO8rh/RFUVFSqqMVuty/9X1RNAFEJsQmcM53rn4g3mKzQMAgnCyAkyEbY92PsA7qgAPhoVnAyqcIxh2IoyFVreFod351t2/LUUSE0Qcg/JMw3j99b02TNnHpAo9PoMBWZ1Gu8bLLIt9Sm3ZwghCcKi65LO/DIZG5OPZCgix6H1S+ecW4BKXL92Wwha9j6wpyw6ZOcTqe7pdoiVxqu9ACPT8/VWeyvZv5q3zh9bLb3fwBYLlKabrfnIAAAAABJRU5ErkJggg==
 // @require      https://code.jquery.com/jquery-3.3.1.min.js
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
 // @require      https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js
 // @require      https://piyolab.github.io/sushiether/web3.js/libs/web3.js_v1.0.0-beta.33/web3.min.js
+// @resource     FONTAWESOME  https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
 // @license      MIT
 // ==/UserScript==
 
@@ -98,9 +99,9 @@ myself, on Firefox, Brave, and Chrome, so I know for sure that this script works
 need to decide for yourself which userscript manager is right for you. Consult your doctor.)
 
 *BONUS!* For users that already have a userscript manager extension installed in their browser, you can
-install DextAssistant simply by clicking this link: [https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js](https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js).
+install DYORassistant simply by clicking this link: [https://github.com/ApopheniaPays/DYORassistant/raw/master/DYORassistant.user.js](https://github.com/ApopheniaPays/DYORassistant/raw/master/DYORassistant.user.js).
 
-This script is also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DextAssistant](https://openuserjs.org/scripts/ApopheniaPays/DextAssistant)
+This script is also hosted at [https://openuserjs.org/scripts/ApopheniaPays/DYORassistant](https://openuserjs.org/scripts/ApopheniaPays/DYORassistant)
 for one-click install if you prefer to get a minified version. Supposedly that will stay current as I update
 it here, but I haven't checked.
 
@@ -130,7 +131,7 @@ coded to make it easier to spot scammy trades, where one address buys and sells 
 to these addresses, there is also now a "ƒ" button to filter the list to show all the transactions for just that
 address, and a "Z" button that takes you to the Zerion overview for that wallet.
 
-6.) DEXTools "Dark mode" is now supported, because I was too lazy to attempt any real work tonight.
+6.) DEXTools "Dark mode" is now supported, because I was too lazy to do any real work tonight.
 
 7.) Rather than rely on the various browser plugins' hinky auto-update mechanism, the script adds an unobtrusive
 "update available" link to the footer of the screen after a new version has been pushed to this repo, for
@@ -160,21 +161,6 @@ var ethplorerkey="freekey";
 
 // *
 /****** END USER-CONFIGURABLE OPTIONS ***********/
-
-
-/************** HISTORY *********************/
-// 2020.08.28 - add visual higlight and prominent indication when there's contact info on pair page,
-//                    add hover effects and pointer cursor for all clickable elements,
-// 2020.08.27 - make compatible with DEXTools dark theme, because that's more important than
-//                    working on real features. Add icon. Add functionality to display "update
-//                    availalable" link. Update Pair Explorer filter icon to match default
-//                    Pool Explorer one.
-// 2020.08.25 - Alpha development. Color pool rows for added liquidity or new pools,
-//                    popover menu of extra research tools, token icons from Trustwallet
-//                    repo, mark 100% removes as "rugpull", integrate custom crypto search
-//                    engine results into Research Assistant popover, integrate live
-//                    CoinCompare pricing info, soooooperfast table sorting, color-coding and
-//                    filtering hex addresses
 
 /************** DEV TO-DOs *********************/
 // Live coingecko prices
@@ -219,6 +205,37 @@ var ethplorerkey="freekey";
 /**/
 
 
+var thisHistory= encodeURIComponent(`
+
+VERSION HISTORY
+===============
+
+2020.09.13t - transitional version while I work on code refactoring for greater portability.
+Finally fix button for Reasearch Assistant popover not appearing on pair page. Get Zerion links,
+address coloring, and table sorting working on all sites instead of just DEXTools. Add footer
+popovers for credits and version history. Color rows that contain cells labeled "buy" or "sell".
+Add classes and functions to remove additions if element that triggered their creation is gone.
+Spiffy new icon.
+
+2020.09.02 - add popover Research Assistant menu to Pair Explorer page, fixes to contact info
+indication, preparation for moving repository and begin rebrand to DYORa, titles to DYORa and
+version links, show version history when click on version link, begin prepping to show new
+version history before upgrade, rename functions to avoid potential conflicts [old version]
+
+2020.08.28 - add visual higlight and prominent indication when there's contact info on pair page,
+add hover effects and pointer cursor for all clickable elements, color code pair explorer page
+totals red/green for sell/buy
+
+020.08.27 - make compatible with DEXTools dark theme, because that's more important than
+working on real features. Add icon. Add functionality to display "updateavailalable" link. Update
+Pair Explorer filter icon to match default Pool Explorer one.
+
+2020.08.25 - Alpha development. Color pool rows for added liquidity or new pools, popover menu
+of extra research tools, token icons from Trustwallet repo, mark 100% removes as "rugpull",
+integrate custom crypto search engine results into Research Assistant popover, integrate live
+CryptoCompare pricing info, soooooperfast table sorting, color-coding and filtering hex addresses
+`);
+
 
 this.$ = this.jQuery = jQuery.noConflict(true);
 //required for compatilibilty in case they start using jQuery on Dextools
@@ -227,24 +244,27 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
              //Hey ho, let's go
 
-             var currentVersion="ALPHA-2020.08.28b";
+             var currentVersion="ALPHA-2020.90.04t";
 
-
-
+             var newVersionAvail="";
+             var newVersionHistory="";
+             var newVersionURL = "https://github.com/ApopheniaPays/DYORassistant/raw/master/DYORassistant.user.js";
              GM.xmlHttpRequest({
                  method: "GET",
-                 url: "https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js",
+                 url:newVersionURL,
                  onload: function(scrptTxt) {
                      var versionMtch = scrptTxt.response.match(/\/\/\s+@version\s+(.+)/i);
+                     newVersionHistory = encodeURIComponent(scrptTxt.response.match(/var thisHistory= \`([\s\S]+?)\`/i)[1]);
                      if (versionMtch  &&  versionMtch.length > 1) {
-                         var newVersionAvail = versionMtch[1];
+                         newVersionAvail = encodeURIComponent(versionMtch[1]);
                          if(newVersionAvail!=currentVersion) {waitForKeyElements('span#newVersion',addNewVersion);}
                      };
                  }
              });
 
+
              function addNewVersion (jNode) {
-                 jNode.html('<a href="https://github.com/ApopheniaPays/dextassistant/raw/master/dextAssistant.user.js" class="AP-DAJS-element">update available</a>');
+                 jNode.html('<a title="update DYORassistant" href="'+newVersionURL+'" class="AP_DAJS_element">v '+newVersionAvail.replace(/ALPHA-/gi,'')+' available</a>');
                  //yeah, it's hinky. This runs asynchronously so there's two different places this can happen: here, or synchronously down below.
              }
 
@@ -264,14 +284,17 @@ this.$ = this.jQuery = jQuery.noConflict(true);
              // of six characters.
              function intToARGB(i) {
                  var hex = ((i>>24)&0xFF).toString(16) +
-                     ((i>>16)&0xFF).toString(16) +
-                     ((i>>8)&0xFF).toString(16) +
-                     (i&0xFF).toString(16);
+                     ((i>>16)&0xAE).toString(16) +
+                     ((i>>8)&0xAE).toString(16) +
+                     (i&0xAE).toString(16);
                  // Sometimes the string returned will be too short so we
                  // add zeros to pad it out, which later get removed if
                  // the length is greater than six.
                  hex += '000000';
-                 return hex.substring(0, 6);
+                 var theReturn = hex.substring(0, 6).replace("b","3").replace("c","5").replace("d","7").replace("e","9").replace("f","a"); //make a little darker
+
+                 //   theReturn = (((theReturn & 0x7E7E7E) >> 1) | (col & 0x808080)) ;//darken it
+                 return theReturn;
              }
 
              // Extend the string type to allow converting to hex for quick access.
@@ -279,84 +302,184 @@ this.$ = this.jQuery = jQuery.noConflict(true);
                  return intToARGB(hashCode(this));
              }
 
+             window.thisHistory=thisHistory;
 
 
-             var allPagesScripts=`
-<script id="AP-DAJS-allPageScripts">
-function sortTable(n,tableId) {
-    var table = document.getElementById(tableId);
-    document.getElementById("AP-DAJS-th"+tableId+n).classList.toggle(".sorting");
-    window.setTimeout(sortTableMain(n,tableId), 100);
-    return;}
 
-function sortTableMain(n,tableId) {
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById(tableId);
-    try { document.getElementById("AP-DAJS-th"+tableId+table.getAttribute("lastSortedBy")).textContent="⇅";
-         document.getElementById("AP-DAJS-th"+tableId+table.getAttribute("lastSortedBy")).classList.toggle("text-info");
-        } catch {}
-            table.setAttribute("lastSortedBy",n);
+             function quoteFunction(funcCall){
+                 //from https://coursesweb.net/javascript/replace-javascript-variable-name-from-string-with-value_cs
+                 var str=funcCall.toString();
 
-    switching = true;
-    // Set the sorting direction to ascending:
-    dir = "asc";
-    /* Make a loop that will continue until no switching has been done: */
-    while (switching) {
-        // Start by saying: no switching is done:
-        switching = false;
-        rows = table.rows;
-        /* Loop through all table rows (except the
+                 // JavaScript & jQuery Courses - https://coursesweb.net/javascript/
+                 str = str.replace(/\$\{(.*?)\}/gi, function(a,b) {
+                     // if token is an array item, else, is object property, or variable
+                     if(b.match(/[a-z0-9_]+\[[a-z0-9_]+\]/i)) {
+                         var arritm = b.match(/([a-z0-9_]+)\[([a-z0-9_]+)\]/i);      // gets an array with the matched items
+                         return window[arritm[1]][arritm[2]];
+                     }
+                     else {
+                         var voitm = b.split('.');
+                         return (voitm.length == 2) ? window[voitm[0]][voitm[1]] : window[voitm[0]];
+                     }
+                 });
+
+                 return str;
+             }
+
+
+             function addJS_Node (text, s_URL, funcToRun) {
+                 var D                                   = document;
+                 var scriptNode                          = D.createElement ('script');
+                 scriptNode.type                         = "text/javascript";
+                 if (text)       scriptNode.textContent  = text;
+                 if (s_URL)      scriptNode.src          = s_URL;
+                 if (funcToRun)  scriptNode.textContent  = quoteFunction(funcToRun);
+
+                 var targ = D.getElementsByTagName ('head')[0] || D.body || D.documentElement;
+                 targ.appendChild (scriptNode);
+             }
+
+
+             /********************** Functions to include in pages **********************/
+             function AP_DAJS_displayHistory(){
+                 win=window.open("", 'DYORa Version History', 'width=700, height=700, right=24, top=24, scrollbars, resizable');
+                 win.document.write('<html><body><pre>'+decodeURIComponent(`${thisHistory}`)+'</pre></body></html>');return false;
+
+             }
+             addJS_Node(null, null, AP_DAJS_displayHistory);
+
+             function AP_DAJS_upgradeVersion(){
+                 win=window.open("", 'DYORa Version Upgrade', 'width=700, height=700, right=24, top=24, scrollbars, resizable');
+                 win.document.write('<html><body>Installed version: '+decodeURIComponent(`${currentVersion}`)+'<br>Available version: '+decodeURIComponent(`${newVersionAvail}`)+'< a href="'+decodeURIComponent(`${newVersionAvail}`)+'">click to install upgrade</a> (<a href="'+decodeURIComponent(`${newVersionAvail}.replace(/\/raw\//i,'/blob/')`)+'">source</a>)<br><small>After upgrading, please close this window and refresh the browser page you came from.</small><p><pre>'+decodeURIComponent(`${thisHistory}`)+'</pre></body></html>');return false;
+
+             }
+
+             addJS_Node(null, null, AP_DAJS_upgradeVersion);
+
+
+             function AP_DAJS_sortTable(n,tableId) {
+                 var table = document.getElementById(tableId);
+                 document.getElementById("AP_DAJS_th"+tableId+n).classList.toggle(".sorting");
+                 window.setTimeout(AP_DAJS_sortTableMain(n,tableId), 100);
+                 return;}
+
+             addJS_Node(null, null, AP_DAJS_sortTable);
+
+
+
+             function AP_DAJS_sortTableMain(n,tableId) {
+                 var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                 table = document.getElementById(tableId);
+                 try { document.getElementById("AP_DAJS_th"+tableId+table.getAttribute("lastSortedBy")).textContent="⇅";
+                      document.getElementById("AP_DAJS_th"+tableId+table.getAttribute("lastSortedBy")).classList.toggle("text-info");
+                     } catch(e) {};
+                 table.setAttribute("lastSortedBy",n);
+
+
+                 switching = true;
+                 // Set the sorting direction to ascending:
+                 dir = "asc";
+                 /* Make a loop that will continue until no switching has been done: */
+                 while (switching) {
+                     // Start by saying: no switching is done:
+                     switching = false;
+                     rows = table.rows;
+                     /* Loop through all table rows (except the
     first, which contains table headers): */
-        for (i = 1; i < (rows.length - 1); i++) {
-            // Start by saying there should be no switching:
-            shouldSwitch = false;
-            /* Get the two elements you want to compare,
+                     for (i = 1; i < (rows.length - 1); i++) {
+                         // Start by saying there should be no switching:
+                         shouldSwitch = false;
+                         /* Get the two elements you want to compare,
       one from current row and one from the next: */
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
-            /* Check if the two rows should switch place,
+                         x = rows[i].getElementsByTagName("TD")[n];
+                         y = rows[i + 1].getElementsByTagName("TD")[n];
+                         /* Check if the two rows should switch place,
       based on the direction, asc or desc: */
-            xValue=isNaN(x.getAttribute('AP-DAJS-valueCalc'))?x.getAttribute('AP-DAJS-valueCalc') :(+x.getAttribute('AP-DAJS-valueCalc') );
-            yValue=isNaN(y.getAttribute('AP-DAJS-valueCalc'))?y.getAttribute('AP-DAJS-valueCalc') :(+y.getAttribute('AP-DAJS-valueCalc') );
-            if (dir == "asc") {
-                if (xValue < yValue) {
-                    // If so, mark as a switch and break the loop:
-                    shouldSwitch = true;
-                    break;
-                }
-            } else if (dir == "desc") {
-                if (xValue > yValue) {
-                    // If so, mark as a switch and break the loop:
-                    shouldSwitch = true;
-                    break;
-                }
-            }
-        }
-        if (shouldSwitch) {
-            /* If a switch has been marked, make the switch
+                         xValue=isNaN(x.getAttribute('AP_DAJS_valueCalc'))?x.getAttribute('AP_DAJS_valueCalc') :(+x.getAttribute('AP_DAJS_valueCalc') );
+                         yValue=isNaN(y.getAttribute('AP_DAJS_valueCalc'))?y.getAttribute('AP_DAJS_valueCalc') :(+y.getAttribute('AP_DAJS_valueCalc') );
+                         if (dir == "asc") {
+                             if (xValue < yValue) {
+                                 // If so, mark as a switch and break the loop:
+                                 shouldSwitch = true;
+                                 break;
+                             }
+                         } else if (dir == "desc") {
+                             if (xValue > yValue) {
+                                 // If so, mark as a switch and break the loop:
+                                 shouldSwitch = true;
+                                 break;
+                             }
+                         }
+                     }
+                     if (shouldSwitch) {
+                         /* If a switch has been marked, make the switch
       and mark that a switch has been done: */
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            // Each time a switch is done, increase this count by 1:
-            switchcount ++;
-        } else {
-            /* If no switching has been done AND the direction is "asc",
+                         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                         switching = true;
+                         // Each time a switch is done, increase this count by 1:
+                         switchcount ++;
+                     } else {
+                         /* If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again. */
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
-        }
-    }
-    document.getElementById("AP-DAJS-th"+tableId+n).textContent=(dir=="desc"?"↓":"↑");
-    document.getElementById("AP-DAJS-th"+tableId+n).classList.toggle("text-info");
-    document.getElementById("AP-DAJS-th"+tableId+n).classList.toggle(".sorting");
-}
+                         if (switchcount == 0 && dir == "asc") {
+                             dir = "desc";
+                             switching = true;
+                         }
+                     }
+                 }
+                 document.getElementById("AP_DAJS_th"+tableId+n).textContent=(dir=="desc"?"↓":"↑");
+                 document.getElementById("AP_DAJS_th"+tableId+n).classList.toggle("text-info");
+                 document.getElementById("AP_DAJS_th"+tableId+n).classList.toggle(".sorting");
+             }
+
+             addJS_Node(null, null, AP_DAJS_sortTableMain);
+
+             function AP_DAJS_previewToggle (thisCounter,url,section){
+                 if(document.getElementById('AP_DAJS_previewResults'+thisCounter).style.display=='block'
+                    && document.getElementById('AP_DAJS_results'+thisCounter).src==decodeURIComponent(url))
+                 {document.getElementById('AP_DAJS_previewResults'+thisCounter).style.display='none';
+                  document.getElementById('AP_DAJS_floaterlink'+section+thisCounter).innerHTML='&gt;🔎'}
+                 else
+                 {document.getElementById('AP_DAJS_results'+thisCounter).src=decodeURIComponent(url);
+                  document.getElementById('AP_DAJS_previewResults'+thisCounter).style.display='block';
+                  document.getElementById('AP_DAJS_floaterlink'+section+thisCounter).innerHTML='&lt;🔍'}
+             }
+             addJS_Node(null, null, AP_DAJS_previewToggle);
+
+             function AP_DAJS_filterFunction(filterOn,tableId,theColor) {
+                 console.log("filterOn",filterOn);
+                 var filterAddr=filterOn.parentNode.getAttribute("ap_dajs_valuecalc")
+                 var thisIndex = Array.from(filterOn.parentNode.parentNode.children).indexOf(filterOn.parentNode);
+                 console.log("filterAddr",filterAddr);
+                 if (typeof window.filterState === 'undefined') {window.filterState="";}
+                 var filter= (window.filterState=="")?filterAddr:"";
+                 window.filterState=filter;
+                 var  table, tr, td, i, txtValue;
+                 table = document.getElementById(tableId);
 
 
-</script>
+                 tr = table.getElementsByTagName("tr");
+                 var hTD = table.getElementsByTagName("th")[thisIndex];
 
-`;
+                 for (i = 0; i < tr.length; i++) {
+                     td = tr[i].getElementsByTagName("td")[thisIndex];
+                     if (td) {
+                         txtValue = td.getAttribute("ap_dajs_valuecalc"); //td.textContent || td.innerText;
+                         console.log("txtValue",txtValue);
+
+                         if (txtValue.indexOf(filter) > -1 || filter=="" ) {
+                             tr[i].style.display = "";
+                         } else {
+                             tr[i].style.display = "none";
+                         }
+                     }
+                 }
+                 if (filter == "") {hTD.innerHTML = hTD.getAttribute("oldText");} else {hTD.setAttribute("oldText",hTD.innerHTML);hTD.innerHTML = 'Maker <span style="color:#'+theColor+' !important" class="AP_DAJS_element">'+filter+' only</span>';}
+             }
+             addJS_Node(null, null, AP_DAJS_filterFunction);
+             /********************** end Functions to include in pages **********************/
+
+
 
              function timeStringToSeconds (timeString) {
 
@@ -370,19 +493,59 @@ function sortTableMain(n,tableId) {
                  return(seconds);
              }
 
-             waitForKeyElements ( "th", prepareTable);
-             waitForKeyElements ("td.ng-tns-c46-2,td.ng-tns-c49-2", setTDvalue);
+             waitForKeyElements ( "thead>tr>th", prepareTable);
+             waitForKeyElements ("td", setTDvalue);
              waitForKeyElements ( ".circle", addLogo);
              waitForKeyElements ( "span.copyright.ml-auto.my-auto.mr-2", addDisclaimer);
+             waitForKeyElements ( "a[href*='/address/0x']", prepareEtherscanLink);
+             waitForKeyElements ( ".AP_DAJS_dependentElement:not(.AP_DAJS_dependency+.AP_DAJS_dependentElement)",removeDependency)
+
+             function removeDependency(jNode) {
+                 jNode.remove();
+             }
+
+             function prepareEtherscanLink(jNode) {
+                 var thisNode = jNode;
+                 var thisHREF = thisNode.attr('href');
+                 var theHex= /0\x[0-9a-f]+/i.exec(thisHREF)[0];
+                 try {var theTest=theHex.length;
+                      thisNode.attr('style','color: #'+theHex.toHexColour()+' !important');
+                      try { if( thisNode.closest("TD").length) {
+                          var thisIndex=thisNode.closest("TD").index();
+                          var theTable=thisNode.closest("table").attr('id');
+                          var theDupeCount=$("table#"+theTable+" a[href='"+thisHREF+"']").length;
+
+                          if (theDupeCount>1){
+                              thisNode.parent().prepend('<i title="filter on this address" class="AP_DAJS_element AP_DAJS_clickable filterbutton fa fa-filter pools-icon-warning ng-tns-c46-2" onclick="AP_DAJS_filterFunction(this,\''+thisNode.closest("table").attr("id")+'\',\''+theHex.toHexColour()+'\')"><sup>['+theDupeCount+']</sup></i>'); }
+                      }} catch (e) {console.log("ERROR - theHex",theHex);console.log(e);}
+                      //style="background:#'+theHex.toHexColour()+' !important"
+                      //  jNode.closest("td").next().attr('style','background: #'+theHex.toHexColsorttour()+' !important');
+
+                      thisNode.after('<a title="Zerion wallet overview" onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_dependentElement AP_DAJS_popupItem AP_DAJS_popupWin"'
+                                     +' href="https://app.zerion.io/'+theHex+'/overview">'
+                                     +' <div class="AP_DAJS_element backImg zeriImg hide"></div></a>');
+                      thisNode.addClass('AP_DAJS_dependency');
+
+                     } catch(e) {}
+
+             }
 
              function setTDvalue(jNode) {
                  var rightNow = (new Date().getTime()/1000 );
 
+                 var thisTD=jNode.clone();
+                 thisTD.find(".AP_DAJS_element").remove();
+
+                 jNode.attr("AP_DAJS_valueCalc",
+                            ( thisTD.text()!="" && thisTD.text().replace(/[ 0-9hdmsHDMS]*/g,"")=="" )?timeStringToSeconds(thisTD.text()):(isNaN(thisTD.text().replace(/[$,]/g,"")))?thisTD.text().toLowerCase():parseFloat(thisTD.text().replace(/[$,]/g,""))
+                           ); /*convert relative times to epoch time so don't have to worry about cell relative value updating, as it does. */
 
 
-                 jNode.attr("AP-DAJS-valueCalc",
-                            ( jNode.text()!="" && jNode.text().replace(/[ 0-9hdmsHDMS]*/g,"")=="" )?timeStringToSeconds(jNode.text()):(isNaN(jNode.text().replace(/[$,]/g,"")))?jNode.text().toLowerCase():parseFloat(jNode.text().replace(/[$,]/g,""))
-                           ); /*convert relative times to epoch time so don't have to worry about cell value updating, as it does. */
+
+                 /* now some special general formatting */
+                 if (jNode.attr("AP_DAJS_valueCalc")=="sell") {makeRed(jNode);}
+                 if (jNode.attr("AP_DAJS_valueCalc")=="buy") {makeGreen(jNode);}
+
                  return true;
                  /* jNode.on('DOMSubtreeModified', setTDvalue(jNode)); NOPE! Infinit loop */
              }
@@ -390,9 +553,9 @@ function sortTableMain(n,tableId) {
              function prepareTable (jNode) {
                  if (!jNode.closest("table").attr("id"))
                  {  jNode.closest("table").attr("id",Math.floor(Math.random() * Math.floor(Math.random() * Date.now())));}
-                 jNode.addClass("AP-DAJS-clickable");
-                 jNode.attr("onclick","sortTable("+jNode.index()+","+jNode.closest("table").attr("id")+")");
-                 jNode.append('<span class="AP-DAJS-element DAsorter" id="AP-DAJS-th'+jNode.closest("table").attr("id")+jNode.index()+'">⇅</span>');
+                 jNode.addClass("AP_DAJS_clickable");
+                 jNode.attr("onclick","AP_DAJS_sortTable("+jNode.index()+","+jNode.closest("table").attr("id")+")");
+                 jNode.append('<span class="AP_DAJS_element DAsorter" id="AP_DAJS_th'+jNode.closest("table").attr("id")+jNode.index()+'">⇅</span>');
              }
 
 
@@ -433,10 +596,11 @@ function sortTableMain(n,tableId) {
                  var thisPage = (document.location.href.match('www.dextools.io/app/uniswap/pair-explorer'))?"pair":"pool";
                  //   waitForKeyElements ( "div.card-header.border-bottom.ng-tns-c46-2>h6", addLink);
                  if(thisPage=="pool"){
+                     /************************ pool page functions ************************/
                      $(document).ready(function(){
-                         $(document.head).append(allPagesScripts+`
-<script id="AP-DAJS-poolScripts">
-    async function DAgetCCPrice(symbol,identifier) {
+                         $(document.head).append(`
+<script id="AP_DAJS_poolScripts">
+    async function AP_DAJS_getCCPrice(symbol,identifier) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://min-api.cryptocompare.com/data/price?fsym="+symbol+"&tsyms=USD,ETH", true);
     xhr.onload = function () {
@@ -447,27 +611,10 @@ function sortTableMain(n,tableId) {
 
 }
 
-function resizeIFrameToFitContent( iFrame ) {
 
-    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-}
-
-function previewToggle (thisCounter,url,section){
-    if(document.getElementById('AP-DAJS-previewResults'+thisCounter).style.display=='block'
-       && document.getElementById('AP-DAJS-results'+thisCounter).src==decodeURIComponent(url))
-    {document.getElementById('AP-DAJS-previewResults'+thisCounter).style.display='none';
-     document.getElementById('AP-DAJS-floaterlink'+section+thisCounter).innerHTML='&gt;🔎'}
-    else
-    {document.getElementById('AP-DAJS-results'+thisCounter).src=decodeURIComponent(url);
-     document.getElementById('AP-DAJS-previewResults'+thisCounter).style.display='block';
-     document.getElementById('AP-DAJS-floaterlink'+section+thisCounter).innerHTML='&lt;🔍'}
-}
 </script>
 `);
                      });
-
-
                      waitForKeyElements ( "td:nth-child(4) > a.badge-danger", makeRed);
                      waitForKeyElements ( "td:nth-child(4) > a.badge-success", makeGreen);
                      waitForKeyElements ( "td:nth-child(3) > a > i.fa-wpexplorer.pools-icon-warning:not(i.gAdded)", addGoog);
@@ -475,48 +622,26 @@ function previewToggle (thisCounter,url,section){
                      waitForKeyElements ( "td:nth-child(9) > a.ng-tns-c46-2.badge.badge-danger", rugPull);
                      //            waitForKeyElements ( "td:nth-child(5) > span", ccAdd);
 
-                     waitForKeyElements ( "#AP-DAJS-popupframe[src='']", togglePreview);
-                     //End page=pool
+                     waitForKeyElements ( "#AP_DAJS_popupframe[src='']", togglePreview);
+                     /************************ end pool page functions ************************/
                  }
                  else
                  {
-                     //page=pair
+                     /************************ pair page functions ************************/
                      $(document).ready(function(){
                          $(document.head).append(
-                             allPagesScripts+`
-<script id="AP-DAJS-pairScripts">
+                             `
+<script id="AP_DAJS_pairScripts">
 var filterState="";
 
-function filterFunction(filterAddr,tableId,theColor) {
-    var filter= (filterState=="")?filterAddr:"";
-    filterState=filter;
-    var  table, tr, td, i, txtValue;
-    table = document.getElementById(tableId);
 
-
-    tr = table.getElementsByTagName("tr");
-    var hTD = table.getElementsByTagName("th")[6];
-
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[6];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.indexOf(filter) > -1 || filter=="" ) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
-        }
-    }
-    if (filter == "") {hTD.innerHTML = hTD.getAttribute("oldText");} else {hTD.setAttribute("oldText",hTD.innerHTML);hTD.innerHTML = 'Maker <span style="color:#'+theColor+' !important" class="AP-DAJS-element">'+filter+' only</span>';}
-}
 </script>
 `);
                      });
-                     waitForKeyElements ( "td.ng-tns-c49-2:nth-child(7)", colorCodeHex);
-                     waitForKeyElements ( "h3.page-title:has(a.ng-tns-c49-2+a.ng-tns-c49-2)",hiliteExtraInfo); //nth-child(2) didn't work because 2nd child isn't 'a'!
-
-                     // end page=pair
+                     //  waitForKeyElements ( "td.ng-tns-c49-2:nth-child(7)", colorCodeHex);
+                     waitForKeyElements ( "h3.page-title>a.ng-tns-c49-2",hiliteExtraInfo); //nth-child(2) didn't work because 2nd child isn't 'a'!
+                     waitForKeyElements ( "h3.page-title + small.ng-tns-c56-2",addGoog);
+                     /************************ end pair page functions ************************/
                  }
 
 
@@ -524,240 +649,300 @@ function filterFunction(filterAddr,tableId,theColor) {
 
 
              function hiliteExtraInfo(jNode) { //visually highlight when there's extra contact info for a token
+                 var thisParent=jNode.parent();
+                 if (thisParent.children("a").length>1 && !(jNode.siblings("div#contactInfoFound").length)) {
+                     thisParent.append(" <div id='contactInfoFound' class='badge badge-success'>&lt;- <small>has contact info</small><!-- &#x1F60A;--></div>");
+                 } //let's only post it once.
+                 //jNode.children("a").addClass("badge").addClass("badge-success").html(jNode.children("a").html().append("Contact info found!"));
 
-                 jNode.children("a").addClass("badge-warning");
-                 jNode.append("<span class='text-warning'>Contact info found!</span>"); //let's only post it once.
+
+
              }
 
-             function colorCodeHex(jNode) {
+             function colorCodeHexOLD(jNode) { /* no longer used
                  var thisNode = jNode.children("a").first();
                  var theHex= thisNode.text().replace(/ /g,'');
-
                  if( thisNode.closest("table").attr("id")==""){thisNode.closest("table").attr('id','AddressesTable');}
-
                  if(jNode.next("td:has(>a.ng-tns-c49-2>span.badge-secondary)").length)
-                 { /* next cell indicates multiple transactions from this address */
+                 { /~ next cell indicates multiple transactions from this address ~/
                      thisNode.attr('style','color: #'+theHex.toHexColour()+' !important');
-                     thisNode.parent().prepend('<i title="filter on this address" class="AP-DAJS-element AP-DAJS-clickable filterbutton fa fa-filter pools-icon-warning ng-tns-c46-2" onclick="filterFunction(\''+theHex+'\',\''+thisNode.closest("table").attr("id")+'\',\''+theHex.toHexColour()+'\')"></i>');
+                     thisNode.parent().prepend('<i title="filter on this address" class="AP_DAJS_element AP_DAJS_clickable filterbutton fa fa-filter pools-icon-warning ng-tns-c46-2" onclick="AP_DAJS_filterFunction(this,\''+thisNode.closest("table").attr("id")+'\',\''+theHex.toHexColour()+'\')"></i>');
                      //style="background:#'+theHex.toHexColour()+' !important"
-                     //  jNode.closest("td").next().attr('style','background: #'+theHex.toHexColour()+' !important');
+                     //  jNode.closest("td").next().attr('style','background: #'+theHex.toHexColsorttour()+' !important');
                  }
-                 thisNode.parent().append('<a title="Zerion wallet overview" onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
+                 thisNode.parent().append('<a title="Zerion wallet overview" onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
                                           +' href="https://app.zerion.io/'+theHex+'/overview">'
-                                          +' <div class="AP-DAJS-element backImg zeriImg hide"></div></a>');
+                                          +' <div class="AP_DAJS_element AP_DAJS_zerionFromAddress backImg zeriImg hide"></div></a>'); */
              }
 
-             function togglePreview (jNode) {$("#AP-DAJS-preview").toggle();}
+
+
+             function togglePreview (jNode) {$("#AP_DAJS_preview").toggle();}
 
              function addLogo (jNode)
              {jNode.addClass("gearImg").css({"background-repeat":"no-repeat","background-position":"center"})};
 
-             function rugPull(jNode) { if (jNode.text()=="-100%") { //var rugHTML='<span class="AP-DAJS-element text-warning badge-danger">RUGPULL</span> ';
+             function rugPull(jNode) { if (jNode.text()=="-100%") { //var rugHTML='<span class="AP_DAJS_element text-warning badge-danger">RUGPULL</span> ';
                  jNode.addClass("badge-dark");
-                 // jNode.parent().prev().addClass("badge-danger");
-                 // jNode.parent().prevAll().eq(4).first().first().remove();
                  jNode.parent().prevAll().eq(4).children(":first").addClass("badge-dark");
                  jNode.parent().prevAll().eq(4).children(":first").text("RUGPULL");
-                 //jNode.parent().next().addClass("badge-danger");
              } }
 
-             function addLink(jNode) { var creditHTML='<div style="float:right" class="AP-DAJS-element"><div class="AP-DAJS-element sirImg backImg"></div> <a href="#" class="AP-DAJS-element">DextAssistant Installed</a></div>';
+             function addLink(jNode) { var creditHTML='<div style="float:right" class="AP_DAJS_element"><div class="AP_DAJS_element sirImg backImg"></div> <a href="#" class="AP_DAJS_element">DYORassistant Installed</a></div>';
                                       jNode.parent().prepend(creditHTML);
                                      }
-             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="AP-DAJS-element text-muted bottomdiv"><a href="#" class="AP-DAJS-element">DextAssistant</a><div class="AP-DAJS-element sirImg backImg" onclick="javascript:this.classList.toggle(\'anim\');"></div> '+currentVersion+' installed <span id="newVersion" class="AP-DAJS-element"></span></div>';
-                                            //              var creditHTML='<div style="margin:auto 0 auto auto;" class="AP-DAJS-element text-muted"><a href="#" class="AP-DAJS-element">DextAssistant</a><div class="AP-DAJS-element sirImg backImg"></div> is an independent community project not affiliated with DEXTools.io</div>';
+             function addDisclaimer(jNode) { var creditHTML='<div style="margin:auto 0 auto auto;" class="AP_DAJS_element text-muted bottomdiv">'
+             +'<a id="creditlink" data-toggle="popover" data-container="body" '
+             +'data-boundary="viewport" data-placement="top" type="button" data-html="true" href=""'
+             +'class="AP_DAJS_element">DYORassistant</a><div class="AP_DAJS_element sirImg backImg" '
+             +'onclick="javascript:this.classList.toggle(\'anim\');"></div> <a id="historylink" '
+             +'data-toggle="popover" data-container="body" data-boundary="viewport" data-placement="top"'
+             +'type="button" data-html="true" class="AP_DAJS_element" href="javascript:AP_DAJS_displayHistory()">'
+             +currentVersion+'</a> installed <span id="newVersion" class="AP_DAJS_element"></span>'
+             +'</div><div id="creditPopover" class="popover"></div>';
                                             jNode.before(creditHTML);
                                             $("div.navbar-toggler").on('click', 'div.navbar-toggler', function (e) {
 
                                             });
-                                           }
-             function makeRed(jNode){ jNode.parent().parent().addClass("redBkgd");
-                                     jNode.parent().next().addClass("redBkgd");
+
+                                            /******** show credits ******/
+                                            var showCreditsFunction=function() { var _this = this;
+                                                                                $("a#creditlink,a#upgradelink,a#historylink").not(this).popover('hide');
+                                                                                $(this).popover("show");//$('#frame'+thisCounter).src='https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22';
+                                                                                $(".popover")
+                                                                                    .on("mouseleave", function() {
+                                                                                    $(_this).popover('hide');
+                                                                                });
+                                                                               }
+                                            $("a#creditlink").popover({ trigger: "manual",
+                                                                       html: true,
+                                                                       animation: false,
+                                                                       sanitize:false,
+                                                                       content: function() { return 'by <a href="https://twitter.com/ApopheniaPays" target="_blank">@ApopheniaPays</a>.<p><a href="https://github.com/ApopheniaPays/dyorassistant" target="_blank">Github repo</a> - <a href="mailto:DYORfeedback@apopheniapays.com">email</a> - <a href="https://t.me/apopheniaprojects" target="_blank">Telegram Announcements</a>';} /* prevent duplicate elements */
+                                                                      })
+                                                .on("mouseenter",ShowAssistantOnHover?showCreditsFunction:"" )
+                                                .on("click",showCreditsFunction ).on("mouseleave", function() {
+                                                var _this = this;
+                                                setTimeout(function() { if (!$(".popover:hover").length) { $(_this).popover("hide");
+                                                                                                         }
+                                                                      }, 300);
+                                            });
+                                            /******** end credits *******/
+             $("a#historylink").popover({ trigger: "manual",
+                                         html: true,
+                                         animation: false,
+                                         sanitize:false,
+                                         content: function() { return "<textarea rows='10' columns='100'>"+decodeURIComponent(thisHistory)+"</textarea>";} /* prevent duplicate elements */
+                                        })
+                 .on("mouseenter",ShowAssistantOnHover?showCreditsFunction:"" )
+                 .on("click",showCreditsFunction ).on("mouseleave", function() {
+                 var _this = this;
+                 setTimeout(function() { if (!$(".popover:hover").length) { $(_this).popover("hide");
+                                                                          }
+                                       }, 300);
+             });
+             /******** end historylink *******/
+}
+             function makeRed(jNode){ jNode.closest("TR").addClass("redBkgd");
+                                     jNode.closest("TR").removeClass("greenBkgd");
                                     }
 
-             function makeGreen(jNode){ jNode.parent().parent().addClass("greenBkgd");
-                                       jNode.parent().next().addClass("greenBkgd");
+             function makeGreen(jNode){ jNode.closest("TR").addClass("greenBkgd");
+                                       jNode.closest("TR").removeClass("redBkgd");
                                       }
 
-             function addGoog(jNode){ jNode.addClass("gAdded");
-                                     var theAbbreviation=jNode.parent().parent().siblings().first().children(0).text();
-                                     var theContract=jNode.parent().parent().siblings().first().children(0).attr('href')
-                                     var thePair=jNode.parent().parent().next().children(0).attr('href')
-                                     theContract=theContract.substring(theContract.lastIndexOf("/")+1);
-                                     thePair=thePair.substring(thePair.lastIndexOf("/")+1);
-                                     var theIcon='https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/'+Web3.utils.toChecksumAddress(theContract)+'/logo.png'
-                                     //var theHTML='<a _ngcontent-apl-c46 target="_blank" class="AP-DAJS-element mr-2 ng-tns-c46-2 ng-star-inserted" href="https://www.google.com/search?q=%22'+theContract+'%22+OR+%22$'+theAbbreviation+'%22"><div _ngcontent-apl-c46 class="AP-DAJS-element googImg ng-tns-c46-2"></div></a>';
-
-
-                                     var thisCounter = IDcounter.toString();
-                                     //let's create the row icon while we're here
-                                     jNode.parent().parent().siblings("td:first-child").prepend('<img id="AP-DAJS-theCoinRow'+thisCounter+'" class="AP-DAJS-element smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'AP-DAJS-theCoinRow'+thisCounter+'\').classList.add(\'pHide\')"> ');
-
-
-                                     var theTD = jNode.parent().parent()||{};
-                                     var theNextTD = theTD.next()||{};
-                                     function displayPreviewOpener(thisCounter,url,section){
-                                         var theResult = '<div style="float:right" id="AP-DAJS-floater'+section+thisCounter+'" class="AP-DAJS-element">'
-                                         +' <a class="AP-DAJS-element floaterlink" id="AP-DAJS-floaterlink'+section+thisCounter+'" onmouseenter="previewToggle(\''+thisCounter+'\',\''+encodeURIComponent(url)+'\',\''+section+'\')">'
-                                         +'&gt;🔎</a></div>';
-                                         return theResult;
-                                     }
-
-                                     var thePreviewResults= '<div id="AP-DAJS-previewResults'+thisCounter+'" style="padding-left: 12px;margin:0; float: right; background: white; width: 285px !important; height: 275px !important; display: block;" class="AP-DAJS-element"><span class="AP-DAJS-element"><b>Quick search results for contract addresses:</b></span><br><iframe style="background:white;border-style:none;position:relative;top:0px;width:285px !important;height:95% !important;" id="AP-DAJS-results'+thisCounter+'" class="AP-DAJS-element"></iframe></div>';
-
-
-                                     var theHTML=
-                                         //~popover button
-                                         '<div class="AP-DAJS-element '+(theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted,i.text-secondary")[0]?'sirImg':'sirImg') //was 'sirImg':'gearImg'
-                                     +' text-'+(theNextTD.children("i.text-info")[0]?'info':theNextTD.children("i.text-warning")[0]?'warning':
-                                                theNextTD.children("i.text-danger")[0]?'danger':theNextTD.children("i.text-success")[0]?'success':'muted')
-                                     +' backImg" id="popButton'+thisCounter+'" data-toggle="popover"'
-                                     + ' data-container="body" data-boundary="viewport" data-placement="top" type="button" data-html="true">'
-                                     + (theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted")[0]?'':theNextTD.children("i.text-danger,i.fa-warning.text-danger")[0]?'<span class="AP-DAJS-element">💩</span>':theNextTD.children("i")[0]?'N':'')
-                                     + '</div>'
-
-
-                                     + '<div id="popover-content'+thisCounter+'" class="AP-DAJS-element pHide"></div>'
-                                     var contractFloatOpener=displayPreviewOpener(thisCounter,"https://apopheniapays.com/cryptosearch/resultsOnly.html?q=%22"+theContract+"%22+OR+%22"+thePair+"%22",'contract');
-                                     var chartexFloatOpener=displayPreviewOpener(thisCounter,"https://chartex.pro/?symbol=UNISWAP:"+theAbbreviation,'chartex');
-                                     var thisHTML= '<table class="AP-DAJS-element"><tr><td><div class="AP-DAJS-element centered AP-DAJS-popupItem">'
-
-                                     //~initialize side popup
-                                     + '<script id="AP-DAJS-hidePreviewResults">'
-                                     +'document.getElementById("AP-DAJS-previewResults'+thisCounter+'").style.display="none";'
-                                     +'</script>'
-
-                                     //~popover headers
-                                     + '<img id="AP-DAJS-theCoin'+thisCounter+'" class="AP-DAJS-element smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'AP-DAJS-theCoin'+thisCounter+'\').classList.add(\'coinImg\');document.getElementById(\'AP-DAJS-warning'+thisCounter+'\').classList.remove(\'pHide\')"><span contentediable="true"  class="AP-DAJS-element abbrev" id="abbrev'+thisCounter+'">'+theAbbreviation+'</span> <div id="AP-DAJS-warning'+thisCounter+'" class="AP-DAJS-element badge badge-danger pHide">no icon!</div>'
-                                     + '<br />'
-                                     + contractFloatOpener
-
-                                     //~Uniswap etherscan addr
-                                     + '<a class="AP-DAJS-element AP-DAJS-popupWin"  href="https://etherscan.io/token/'+theContract+'"><div class="AP-DAJS-element smallImg addrImg hide"></div></a><span contentediable="true" class="AP-DAJS-element contract text-muted">'+ theContract.substring(0,14)+'...'+theContract.substring(theContract.length-14,theContract.length)
-                                     + '</span>'
-
-                                     //~Uniswap pool addr
-                                     + '<br />'
-                                     + '<a  class="AP-DAJS-element AP-DAJS-popupWin" href="https://uniswap.info/pair/'+thePair+'"><div class="AP-DAJS-element smallImg unisImg hide"></div></a> <span contentediable="true" class="AP-DAJS-element contract text-muted">'+ thePair.substring(0,14)+'...'+thePair.substring(thePair.length-14,thePair.length)
-                                     + '</span>'
-                                     + '</div>'
-
-                                     //CryptoCompare Price
-                                     + '<hr class="AP-DAJS-element"><span class="AP-DAJS-element">Cryptocompare price:</span> <span id="priceSpanUSD'+thisCounter+'" class="AP-DAJS-element"></span> <span onclick="javascript:alert(\'CryptoCompare\\\'s free API is not reliable and returns incorrect data. Sorry, I\\\'ll reenable this when I can find a reliable free data source. Love, your developer\')" class="AP-DAJS-element"><u>disabled</u></span>'
-                                     + '<!-- script>DAgetCCPrice("'+theAbbreviation+'","USD'+thisCounter+'");DAgetCCPrice("'+theAbbreviation+'","ETH'+thisCounter+'")</script -->'
-                                     + '<hr class="AP-DAJS-element">'
-
-                                     //~Google Custom Seach Enging - crypto web search, include crypto news & social media, exclude block explorers
-                                     + '<div class="AP-DAJS-element backImg googImg hide"></div>'
-                                     + '<a onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin makeBold"'
-                                     + ' href="https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22&orig='+theAbbreviation+'&icon='+encodeURIComponent(theIcon)+'">'
-                                     +' Ox Addresses</a> | <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://apopheniapays.com/cryptosearch/results.html?q=%22$'+theAbbreviation+'%22&orig=Token%20addr%20'+theContract+'%20and%20Uniswap%20liquidity%20pool%20address'+thePair+'&icon='+encodeURIComponent(theIcon)+'">&quot;$'+theAbbreviation+'&quot;</a> <br> Crypto Filtered Web Search'
-                                     +'<hr class="AP-DAJS-element"> '
-
-                                     //~whole web search
-                                     + '<div class="AP-DAJS-element backImg googImg hide"></div> <a '
-                                     +'  onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin makeBold"'
-                                     +' href="https://www.google.com/search?q=%22'+theContract+'%22+OR+%22'+thePair+'%22">'
-                                     +' Ox Addresses</a> | <a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://www.google.com/search?q=%22$'+theAbbreviation+'%22">&quot;$'+theAbbreviation+'&quot;</a> <br> Whole Web Search'
-                                     +'<hr class="AP-DAJS-element"> '
-
-                                     //~zerion
-                                     +'<a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://app.zerion.io/explore/asset/'+theAbbreviation+'-'+theContract+'">'
-                                     +' <div class="AP-DAJS-element backImg zeriImg hide"></div>Token/Portfolio Analytics</a> <br>Zerion'
-                                     +'<hr class="AP-DAJS-element">'
-
-                                     //~Uniswap
-                                     +'<div class="AP-DAJS-element backImg unisImg hide"></div> <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://uniswap.info/token/'+theContract+'">Token Analytics</a> | '
-                                     +' <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://uniswap.info/pair/'+thePair+'">Pool Stats</a> <br>Uniswap'
-                                     +'<hr class="AP-DAJS-element">'
-
-                                     //~Mooniswap
-                                     +'<div class="AP-DAJS-element backImg moonImg hide"></div> <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://mooniswap.info/token/'+theContract+'">Token Analytics</a> | '
-                                     +' <a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://mooniswap.exchange/#/swap?inputCurrency='+theContract+'">Live trading</a> <br>1inch Mooniswap'
-                                     +'<hr class="AP-DAJS-element">'
-
-                                     //~unicrypt
-                                     +'<a  '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://unicrypt.network/uniswap-browser/pair/'+thePair+'">'
-                                     +' <div class="AP-DAJS-element backImg crypImg hide"></div>Verify liquidity lock</a> <br>Unicrypt'
-                                     +'<hr class="AP-DAJS-element"> '
-
-                                     //~cerberus.saren
-                                     +'<a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://cerberus.saren.io/coins/'+theContract+'">'
-                                     +' <div class="AP-DAJS-element backImg cerbImg hide"></div> Token analytics</a> <br> cerberus.saren'
-                                     +'<hr class="AP-DAJS-element"> '
-
-                                     //~Chartex
-                                     /*  + chartexFloatOpener No, don't the popover is really too small for Chartex */
-                                     +'<a '
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://chartex.pro/?symbol=UNISWAP:'+theAbbreviation+'">'
-                                     +' <div class="AP-DAJS-element backImg chexImg hide"></div> Candlestick chart</a> <br> ChartEX'
-                                     +'<hr class="AP-DAJS-element">'
-
-                                     //~Uniswap.vision
-                                     +'<a'
-                                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP-DAJS-element AP-DAJS-popupItem AP-DAJS-popupWin"'
-                                     +' href="https://uniswap.vision/?ticker=UniswapV2:'+theAbbreviation+'ETH">'
-                                     +' <div class="AP-DAJS-element backImg visiImg hide"></div> Candlestick chart</a> <br> uniswap.vision'
-                                     +'</td><td>'+thePreviewResults
-                                     +'</td></tr></table>' //end links
+             function addGoog(jNode){
+                 if (!jNode.hasClass("gAdded")) { /* console.log(jNode); */
+                     var googThisPage = (document.location.href.match('www.dextools.io/app/uniswap/pair-explorer'))?"pair":"pool";
+                     console.log("gAdded?", jNode.hasClass("gAdded"));
+                     console.log(googThisPage+" node ",jNode.html());
+                     var theAbbreviation=(googThisPage=="pool")?jNode.parent().parent().siblings().first().children(0).text():jNode.prev().find("strong").text().split(" ")[4];
+                     var theContract=(googThisPage=="pool")?jNode.parent().parent().siblings().first().children(0).attr('href'):jNode.prev().children("a:first-of-type").attr('href');
+                     var thePair=(googThisPage=="pool")?jNode.parent().parent().next().children(0).attr('href'):document.location.href;
+                     console.log("contract 1",theContract);
+                     var theIcon='';
+                     try {theContract=theContract.substring(theContract.lastIndexOf("/")+1);
+                          theIcon='https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/'+Web3.utils.toChecksumAddress(theContract)+'/logo.png';} catch(e) {theContract="";}
+                     thePair=thePair.substring(thePair.lastIndexOf("/")+1);
+                     /* console.log("ABC", jNode.html()); */
+                     console.log("contract 2",theContract);
 
 
 
-                                     +''; // just leave this at bottom so I don't have to keep moving semicolon as I add things
+                     var thisCounter = IDcounter.toString();
+                     //let's create the row coin icon while we're here
+                     try{
+                         jNode.closest("td").siblings("td:first-child").prepend('<img id="AP_DAJS_theCoinRow'+thisCounter+'" class="AP_DAJS_element smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'AP_DAJS_theCoinRow'+thisCounter+'\').classList.add(\'pHide\')"> ');
+                     } catch(e) {}
 
-                                     //                 var theHTML = '<Div href="#" data-toggle="popover" title="Popover Header" data-html="true" data-content="'+theInnerHTML.replace(/"/g,'\\"')+'" class="AP-DAJS-element">Toggle popover</div>';
-                                     //gotta use a DIV anot an IMG, because IMG with SRC="" or missing SRC attribute causes visual glitches, unwanted borders, etc
-                                     jNode.parent().parent().append( theHTML);
-                                     var showFunction=function() { var _this = this;
-                                                                  $("div.sirImg").not(this).popover('hide');
-                                                                  $(this).popover("show");//$('#frame'+thisCounter).src='https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22';
-                                                                  $(".popover")
-                                                                      .on("mouseleave", function() {
-                                                                      $(_this).popover('hide');
-                                                                  });
-                                                                 }
-                                     $("div#popButton"+thisCounter).popover({ trigger: "manual",
-                                                                             html: true,
-                                                                             animation: false,
-                                                                             sanitize:false,
-                                                                             content: function() { return thisHTML;} /* prevent duplicate elements */
-                                                                            })
-                                         .on("mouseenter",ShowAssistantOnHover?showFunction:"" )
-                                         .on("click",showFunction ).on("mouseleave", function() {
-                                         var _this = this;
-                                         setTimeout(function() { if (!$(".popover:hover").length) { $(_this).popover("hide");
-                                                                                                  }
-                                                               }, 300);
-                                     });
+                     var theTD = jNode.closest("TD")||{};
+                     var theNextTD = theTD.next()||{};
+                     function displayPreviewOpener(thisCounter,url,section){
+                         var theResult = '<div style="float:right" id="AP_DAJS_floater'+section+thisCounter+'" class="AP_DAJS_element">'
+                         +' <a class="AP_DAJS_element floaterlink" id="AP_DAJS_floaterlink'+section+thisCounter+'" onmouseenter="AP_DAJS_previewToggle(\''+thisCounter+'\',\''+encodeURIComponent(url)+'\',\''+section+'\')">'
+                         +'&gt;&#x1F50E;</a></div>';
+                         return theResult;
+                     }
+
+                     var thePreviewResults= '<div id="AP_DAJS_previewResults'+thisCounter+'" style="padding: 12px 0 0 12px;margin:0; float: right; top:0;background: white; width: 285px !important; height: 275px !important; display: block;word-break:break-word;word-wrap:break-word;" class="AP_DAJS_element"><span class="AP_DAJS_element"><b>Quick search for contract addresses:</b></span><br><iframe style="background:white;border-style:none;position:relative;top:0px;width:285px !important;height:95% !important;" id="AP_DAJS_results'+thisCounter+'" class="AP_DAJS_element"></iframe><br><span class="font-weight-normal">(Warning:<wbr> excessive<wbr> posts<wbr> only<wbr> on<wbr> social<wbr> media<wbr> sites<wbr> like<wbr> /biz/<wbr> or<wbr> Reddit <wbr>could<wbr> be <wbr>a coordinated <wbr>Pump & Dump. <wbr>Official <wbr>and <wbr>non-anonymous <wbr>sources <wbr>are <wbr>best.)</span></div>';
 
 
+                     var theHTML=
+                         //~popover button
+                         '<div class="AP_DAJS_element '+(theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted,i.text-secondary")[0]?'sirImg':'sirImg') //was 'sirImg':'gearImg'
+                     +' text-'+(theNextTD.children("i.text-info")[0]?'info':theNextTD.children("i.text-warning")[0]?'warning':
+                                theNextTD.children("i.text-danger")[0]?'danger':theNextTD.children("i.text-success")[0]?'success':'muted')
+                     +' backImg" id="popButton'+thisCounter+'" data-toggle="popover"'
+                     + ' data-container="body" data-boundary="viewport" data-placement="top" type="button" data-html="true">'
+                     + (theNextTD.children("i.text-success,i.text-info,i.text-warning,i.text-muted")[0]?'':theNextTD.children("i.text-danger,i.fa-warning.text-danger")[0]?'<span class="AP_DAJS_element">&#x1f4a9;</span>':theNextTD.children("i")[0]?'N':'')
+                     + '</div>'
 
-                                     /* didn't work, forget it     (function(){ new Clipboard('#copy-buttonContract'+thisCounter);
+
+                     + '<div id="popover-content'+thisCounter+'" class="AP_DAJS_element pHide"></div>'
+                     var contractFloatOpener=displayPreviewOpener(thisCounter,"https://apopheniapays.com/cryptosearch/resultsOnly.html?q=%22"+theContract+"%22+OR+%22"+thePair+"%22",'contract');
+                     var chartexFloatOpener=displayPreviewOpener(thisCounter,"https://chartex.pro/?symbol=UNISWAP:"+theAbbreviation,'chartex');
+                     var thisHTML= '<table class="AP_DAJS_element"><tr style="vertical-align:top"><td><div class="AP_DAJS_element centered AP_DAJS_popupItem">'
+
+                     //~initialize side popup
+                     + '<script id="AP_DAJS_hidePreviewResults">'
+                     +'document.getElementById("AP_DAJS_previewResults'+thisCounter+'").style.display="none";'
+                     +'</script>'
+
+                     //~popover headers
+                     + '<img id="AP_DAJS_theCoin'+thisCounter+'" class="AP_DAJS_element smallImg hide" src="'+theIcon+'" onerror="document.getElementById(\'AP_DAJS_theCoin'+thisCounter+'\').classList.add(\'coinImg\');document.getElementById(\'AP_DAJS_warning'+thisCounter+'\').classList.remove(\'pHide\')"><span contentediable="true"  class="AP_DAJS_element abbrev" id="abbrev'+thisCounter+'">'+theAbbreviation+'</span> <div id="AP_DAJS_warning'+thisCounter+'" class="AP_DAJS_element badge badge-danger pHide">no icon!</div>'
+                     + '<br />'
+                     + contractFloatOpener
+
+                     //~Uniswap etherscan addr
+                     + '<a class="AP_DAJS_element AP_DAJS_popupWin"  href="https://etherscan.io/token/'+theContract+'"><div class="AP_DAJS_element smallImg addrImg hide"></div></a><span contentediable="true" class="AP_DAJS_element contract text-muted">'+ theContract.substring(0,14)+'...'+theContract.substring(theContract.length-14,theContract.length)
+                     + '</span>'
+
+                     //~Uniswap pool addr
+                     + '<br />'
+                     + '<a  class="AP_DAJS_element AP_DAJS_popupWin" href="https://uniswap.info/pair/'+thePair+'"><div class="AP_DAJS_element smallImg unisImg hide"></div></a> <span contentediable="true" class="AP_DAJS_element contract text-muted">'+ thePair.substring(0,14)+'...'+thePair.substring(thePair.length-14,thePair.length)
+                     + '</span>'
+                     + '</div>'
+
+                     //CryptoCompare Price
+                     + '<hr class="AP_DAJS_element"><span class="AP_DAJS_element">Cryptocompare price:</span> <span id="priceSpanUSD'+thisCounter+'" class="AP_DAJS_element"></span> <span onclick="javascript:alert(\'CryptoCompare\\\'s free API is not reliable and returns incorrect data. Sorry, I\\\'ll reenable this when I can find a reliable free data source. Love, your developer\')" class="AP_DAJS_element"><u>disabled</u></span>'
+                     + '<!-- script>AP_DAJS_getCCPrice("'+theAbbreviation+'","USD'+thisCounter+'");AP_DAJS_getCCPrice("'+theAbbreviation+'","ETH'+thisCounter+'")</script -->'
+                     + '<hr class="AP_DAJS_element">'
+
+                     //~Google Custom Seach Enging - crypto web search, include crypto news & social media, exclude block explorers
+                     + '<div class="AP_DAJS_element backImg googImg hide"></div>'
+                     + '<a onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin makeBold"'
+                     + ' href="https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22&orig='+theAbbreviation+'&icon='+encodeURIComponent(theIcon)+'">'
+                     +' Ox Addresses</a> | <a  '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://apopheniapays.com/cryptosearch/results.html?q=%22$'+theAbbreviation+'%22&orig=Token%20addr%20'+theContract+'%20and%20Uniswap%20liquidity%20pool%20address'+thePair+'&icon='+encodeURIComponent(theIcon)+'">&quot;$'+theAbbreviation+'&quot;</a> <br> Crypto Filtered Web Search'
+                     +'<hr class="AP_DAJS_element"> '
+
+                     //~whole web search
+                     + '<div class="AP_DAJS_element backImg googImg hide"></div> <a '
+                     +'  onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin makeBold"'
+                     +' href="https://www.google.com/search?q=%22'+theContract+'%22+OR+%22'+thePair+'%22">'
+                     +' Ox Addresses</a> | <a '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://www.google.com/search?q=%22$'+theAbbreviation+'%22">&quot;$'+theAbbreviation+'&quot;</a> <br> Whole Web Search'
+                     +'<hr class="AP_DAJS_element"> '
+
+                     //~zerion
+                     +'<a '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://app.zerion.io/explore/asset/'+theAbbreviation+'-'+theContract+'">'
+                     +' <div class="AP_DAJS_element backImg zeriImg hide"></div>Token/Portfolio Analytics</a> <br>Zerion'
+                     +'<hr class="AP_DAJS_element">'
+
+                     //~Uniswap
+                     +'<div class="AP_DAJS_element backImg unisImg hide"></div> <a  '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://uniswap.info/token/'+theContract+'">Token Analytics</a> | '
+                     +' <a  '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://uniswap.info/pair/'+thePair+'">Pool Stats</a> <br>Uniswap'
+                     +'<hr class="AP_DAJS_element">'
+
+                     //~Mooniswap
+                     +'<div class="AP_DAJS_element backImg moonImg hide"></div> <a  '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://mooniswap.info/token/'+theContract+'">Token Analytics</a> | '
+                     +' <a  '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://mooniswap.exchange/#/swap?inputCurrency='+theContract+'">Live trading</a> <br>1inch Mooniswap'
+                     +'<hr class="AP_DAJS_element">'
+
+                     //~unicrypt
+                     +'<a  '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://unicrypt.network/uniswap-browser/pair/'+thePair+'">'
+                     +' <div class="AP_DAJS_element backImg crypImg hide"></div>Verify liquidity lock</a> <br>Unicrypt'
+                     +'<hr class="AP_DAJS_element"> '
+
+                     //~cerberus.saren
+                     +'<a '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://cerberus.saren.io/coins/'+theContract+'">'
+                     +' <div class="AP_DAJS_element backImg cerbImg hide"></div> Token analytics</a> <br> cerberus.saren'
+                     +'<hr class="AP_DAJS_element"> '
+
+                     //~Chartex
+                     /*  + chartexFloatOpener No, don't the popover is really too small for Chartex */
+                     +'<a '
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://chartex.pro/?symbol=UNISWAP:'+theAbbreviation+'">'
+                     +' <div class="AP_DAJS_element backImg chexImg hide"></div> Candlestick chart</a> <br> ChartEX'
+                     +'<hr class="AP_DAJS_element">'
+
+                     //~Uniswap.vision
+                     +'<a'
+                     +'   onclick="window.open(this.href, \'windowName\', \'width=1000, height=700, right=24, top=24, scrollbars, resizable\'); return false;" class="AP_DAJS_element AP_DAJS_popupItem AP_DAJS_popupWin"'
+                     +' href="https://uniswap.vision/?ticker=UniswapV2:'+theAbbreviation+'ETH">'
+                     +' <div class="AP_DAJS_element backImg visiImg hide"></div> Candlestick chart</a> <br> uniswap.vision'
+                     +'</td><td>'+thePreviewResults
+                     +'</td></tr></table>' //end links
+
+
+
+                     +''; // just leave this at bottom so I don't have to keep moving semicolon as I add things
+
+                     //                 var theHTML = '<Div href="#" data-toggle="popover" title="Popover Header" data-html="true" data-content="'+theInnerHTML.replace(/"/g,'\\"')+'" class="AP_DAJS_element">Toggle popover</div>';
+                     //gotta use a DIV anot an IMG, because IMG with SRC="" or missing SRC attribute causes visual glitches, unwanted borders, etc
+                     if(googThisPage=="pool") {jNode.parent().parent().append( theHTML);} else {jNode.append( theHTML);}
+                     var showFunction=function() { var _this = this;
+                                                  $("div.sirImg").not(this).popover('hide');
+                                                  $(this).popover("show");//$('#frame'+thisCounter).src='https://apopheniapays.com/cryptosearch/results.html?q=%22'+theContract+'%22+OR+%22'+thePair+'%22';
+                                                  $(".popover")
+                                                      .on("mouseleave", function() {
+                                                      $(_this).popover('hide');
+                                                  });
+                                                 }
+                     $("div#popButton"+thisCounter).popover({ trigger: "manual",
+                                                             html: true,
+                                                             animation: false,
+                                                             sanitize:false,
+                                                             content: function() { return thisHTML;} /* prevent duplicate elements */
+                                                            })
+                         .on("mouseenter",ShowAssistantOnHover?showFunction:"" )
+                         .on("click",showFunction ).on("mouseleave", function() {
+                         var _this = this;
+                         setTimeout(function() { if (!$(".popover:hover").length) { $(_this).popover("hide");
+                                                                                  }
+                                               }, 300);
+                     });
+
+
+
+
+
+
+                     /* didn't work, forget it     (function(){ new Clipboard('#copy-buttonContract'+thisCounter);
                      new Clipboard('#copy-buttonAbbrev'+thisCounter);
  })(); */
 
-                                     //.popover({ html: true,trigger : 'hover',	content: function() { return $('#popover-content'+thisCounter).html(); }});
-                                     IDcounter++;
-                                    }
+                     //.popover({ html: true,trigger : 'hover',	content: function() { return $('#popover-content'+thisCounter).html(); }});
+                     IDcounter++;if(theContract!=""){jNode.addClass("gAdded");}
+                     return true;}
+             }
 
              function poolWarning(jNode) { var theClasses= jNode.prop("class");
 
@@ -765,25 +950,49 @@ function filterFunction(filterAddr,tableId,theColor) {
                                           var thePoolLeft = jNode.closest("td").siblings().last().prev()
                                           thePoolLeft.addClass(theClass).addClass("makeBold");
                                           thePoolLeft.prev().prev().addClass(theClass).addClass("makeBold");
-                                          //<i _ngcontent-ljj-c46="" class="AP-DAJS-element ng-tns-c46-2 fa fa-info-circle ml-1 pools-icon-warning  text-danger ng-star-inserted" style=""></i>
+                                          //<i _ngcontent-ljj-c46="" class="AP_DAJS_element ng-tns-c46-2 fa fa-info-circle ml-1 pools-icon-warning  text-danger ng-star-inserted" style=""></i>
                                          }
 
              //add Styles
+             //Check if fontawesome is installed, add if not
+             $(document).ready(
+
+                 function () {
+                     let span = document.createElement('span');
+
+                     span.className = 'fa';
+                     span.style.display = 'none';
+                     document.body.insertBefore(span, document.body.firstChild);
+
+                     function css(element, property) {
+                         return window.getComputedStyle(element, null).getPropertyValue(property);
+                     }
+
+                     if (css(span, 'font-family') !== 'FontAwesome') {
+                         let headHTML = document.head;
+                         $(headHTML).append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">');
+                         s
+                     }
+                     document.body.removeChild(span);
+                 }
+
+             );
+
              GM_addStyle ( `
 
 
 /*body {max-width: 100% ;max-height: 100% ; overflow: hidden} yes, need this to prevent scrollbars during animation, but, breaks pair explorer */
 
-       #AP-DAJS-preview {position:fixed;display:none;top:15px;bottom:15px;right:15px;left:50%;z-index:9998;padding:12px;}
-                 #AP-DAJS-closebutton {height:24px;widht:24px;position:fixed;top:5px;right:5px;border:1px solid black;content:'X';color:red;background-color:white;font-size:24px;font-weight:bold;}
-#AP-DAJS-popupframe {height:100%;width:100%};
+       #AP_DAJS_preview {position:fixed;display:none;top:15px;bottom:15px;right:15px;left:50%;z-index:9998;padding:12px;}
+                 #AP_DAJS_closebutton {height:24px;widht:24px;position:fixed;top:5px;right:5px;border:1px solid black;content:'X';color:red;background-color:white;font-size:24px;font-weight:bold;}
+#AP_DAJS_popupframe {height:100%;width:100%};
 
 .invisible{ display:none; }
 
 
 
 
-div.AP-DAJS-popupItem, a.AP-DAJS-popupItem, a.AP-DAJS-popupItem:hover{ font-size:10px;color:black;font-style:normal;
+div.AP_DAJS_popupItem, a.AP_DAJS_popupItem, a.AP_DAJS_popupItem:hover{ font-size:10px;color:black;font-style:normal;
  }
 
 .centered{ text-align:center
@@ -820,6 +1029,8 @@ margin:0 1px 3px 1px;
 
  }
 
+td.ng-tns-c49-2.text-danger ~ td.ng-tns-c49-2:nth-child(n+5):nth-child(-n+6) {color:#c4183c;}
+td.ng-tns-c49-2.text-success ~ td.ng-tns-c49-2:nth-child(n+5):nth-child(-n+6) {color:#17c671;}
 
 .floaterlink {display:inline-block;text-align:center;border:1px solid #00b8d8;width:1.5em;height:1.5em;margin-top:.5em;font-size:2em;font-weight:bold;-webkit-border-radius: 24px;
 -moz-border-radius: 24px;
@@ -896,7 +1107,7 @@ content:'\\f0b0';
 
 .sorting {text-decoration:underline;}
 
-.sorting:after {content:'<span class="AP-DAJS-element"><i>(sorting...)</i></span>';}
+.sorting:after {content:'<span class="AP_DAJS_element"><i>(sorting...)</i></span>';}
 
 div.popover-body hr {margin:0px !important;}
 
@@ -924,8 +1135,8 @@ body.dark-theme .greenBkgd, body.dark-theme td.bg-light.greenBkgd{ background-co
 .makeBold{ font-weight:bold;
  }
 
-.AP-DAJS-clickable, a.AP-DAJS-element {cursor:pointer;}
-.AP-DAJS-clickable:hover, a.AP-DAJS-element:hover {cursor:pointer; opacity: .5; color:#007bff;}
+.AP_DAJS_clickable, a.AP_DAJS_element {cursor:pointer;}
+.AP_DAJS_clickable:hover, a.AP_DAJS_element:hover {opacity: .5; color:#007bff;}
 
 i.fa-warning{ background-color:#FFFF00 !important;
  }
@@ -937,10 +1148,19 @@ i.fa-warning{ background-color:#FFFF00 !important;
 .zeriImg { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAABsElEQVRYCWM0Mk77zzDIANMgcw/YOaOOIjZWRkNqNKSIDQFi1Q3KNMVCrOsbGhIYfH0siVWOoW758n0MPb0rMcSxCRAdUg0NCxg2bzmOzQyixPYfOE+UOpAioh0FUkyuw0ChdPbsLaIdxUhO3WdsrIbTgqgoZwYHewO4/PPnbxkio1oYPn/+BhcjxCA6TSEbhMvXamqyKA4C6alvWECSg0B6SIo+ZIehs3l5uRj6ejNRhEmNNphmskIKphmZdrDXZ3j2/C0Yg8RB0TVz1mZkJUSzyUpTRJtOpkKqRR+Z9mPVNuoorMGCRXA0pLAEClYhsooEUMXs62uFYmBxyXSSC0kUA5A4JDtKUlKYobg4jAFUWMLArFlbqOYgkJkkp6nGhgQUB92+/YTsQhLmKXSapJCKinRmQK+MN248ymBshL2CBpXwoAqZVEB0iQ6qbGfNLEIJJUKWgaqaxsaFDPsPXCCkFEWe6OgrQUtHKKbg4IDSXU9PJsktVqIdpa4ui8NqwsKgprSjA6KNRUgH0dFHyCBqyhMdUtS0lJBZo44iFEIw+dGQgoUEIXo0pAiFEEweAB/QayzTnqY4AAAAAElFTkSuQmCC)
 !important;}
 
-.sirImg { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAE00lEQVRIDY2Ve0xTdxTH6wvpLVDAuZAsuswZjTO6LZrtD3WazCzRbMYN0DiX7I+5LXGmbCqgsgBmTqHlIVUqqBMxvqXisFgRLay8WloqBS4USnkMKl6LvJXah9/lXGnDxMWd5OScex6fc+7vtvcKBK8QANPk5u6o1QVG7UeXa2sAzPKVUW6zquHGyst63ZHazq2++P+yB6ptnzIKDYIUZWAUZZDXd+3yNeaYe6OY7HJ/7lxzz0Zf7rX2VGPPOnFOOZZfqEFYbjmCFRrP6muGO2uuGkpDTpS7aJgoW8MPvdXOrXotkAoABPQ/dckfPX0GkkGnG2l13VhxUde69FxVq/hEmVuk0IAhcLYGddzA8teCy4CZAArsdjvSZRmI3hyNpMQksE0snnm8f9D56ntH5sRVWCTzTmv7aOvfdbb9/wlW3O/+duX56tp73f1321rbkJCQgBpdDXQ6HaprqpGYmAhLSwvdQIwPUtz5KOKTq/ri4ON3XZFFpstrr+hTV1yoqjist+3mawDMXHhG272hsA7P3B7s2LEDBoMBGo3Gr2azGdJUKYF7aGsf3AjMWnNJX80cK4VwQiNyNMMsECDQ2B2LGfkd3O50oLK8Ej/8+D30Or0fSgO0Wi0ypZn8mQMI84HJqmzceqH8DohBKpSXoOHhwDJ6WLO+K2nMruwdcF84exESiWTKxkajERnpGQTmAMyYDAYw/cOzlazwaAmEWSXejQX6cw8Axl/jeY6/8nLzkJ+Xzz8wun3a1mQyQSqVwlRnIvBBf8MkJ6a0KVN0VI2dpQ0Zk8IvXABlZ0/mw9JsgVqtxs8xMYjbE4fYvbEoVBYSlP6BoimNAoFAbrQdZDLUuGtzLJqSB9BxIisHNms7Qcrdbvegrd0Gt8tF108BfAbgYwApAH4FMN8HOVJlORSYocLVlp61vhhva+2P51F32iEZGZJtADZ4vd7xrs4uNDexGB8f9zrHnWhsaER7mxVer5eG7QSwrvbBYPuq8xVYlHvPomrjFvDQ9tHRN9+Sqx1Ey0zJxNjoGDwezwiAJ/Hx+/DG3FCEhgkRvzce0ZFREIcGIjhkNpITk+Fyuah2jL3fhNsdHIRpRYiQ3xpgh4fDBWdMfXPnZKqe+MDFxcWI2SXBgX37IQqehmDx9BcaMgNBIRO+eDrEoQGIioxE7J49yM3OwU1rHxhZEUSyP715bGcEv/WW6/orBJb+lspvsf3rbTxEHDYDpAT/avOXWLJk8ZT4smVL4XQ6sbVQD0Z2A+vOV2j952x8MDCfwLKJMx4aHkJiQhJCQ8UQBTHYtfMn9Pf3w95rx8GkZISHh4NhArH3l93gHnJwP3+uPFPf/blEbd5/y8q96weTQ+AsaRYZsI4hqZkbwpDTxWuzY9hT2NJz8UpT16X6h4P+eOvjEXCj48n0WvgXbPIFAdMPp/Pg/PqObwJTr0OYQqoEM2EDJyzFKMekKGF2jCyezJniE5HOmERSYjodyDcTQIl3jql6Uist24/XWLe8l3275QWYBiqRa7RGT4FNDhCQfm4kl9i/Ny3IUvUyRwoQlKJ0azq49321DdzQgjBp4Rhz+Brezrppq+p99IEv90pLQHmanAcDmM2ybIDCYN100mBb/3LDqbqONbKKli9yjUb/R/blmn8ATIrJHJzMCdEAAAAASUVORK5CYII=)
+.sirImgOLD { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAE00lEQVRIDY2Ve0xTdxTH6wvpLVDAuZAsuswZjTO6LZrtD3WazCzRbMYN0DiX7I+5LXGmbCqgsgBmTqHlIVUqqBMxvqXisFgRLay8WloqBS4USnkMKl6LvJXah9/lXGnDxMWd5OScex6fc+7vtvcKBK8QANPk5u6o1QVG7UeXa2sAzPKVUW6zquHGyst63ZHazq2++P+yB6ptnzIKDYIUZWAUZZDXd+3yNeaYe6OY7HJ/7lxzz0Zf7rX2VGPPOnFOOZZfqEFYbjmCFRrP6muGO2uuGkpDTpS7aJgoW8MPvdXOrXotkAoABPQ/dckfPX0GkkGnG2l13VhxUde69FxVq/hEmVuk0IAhcLYGddzA8teCy4CZAArsdjvSZRmI3hyNpMQksE0snnm8f9D56ntH5sRVWCTzTmv7aOvfdbb9/wlW3O/+duX56tp73f1321rbkJCQgBpdDXQ6HaprqpGYmAhLSwvdQIwPUtz5KOKTq/ri4ON3XZFFpstrr+hTV1yoqjist+3mawDMXHhG272hsA7P3B7s2LEDBoMBGo3Gr2azGdJUKYF7aGsf3AjMWnNJX80cK4VwQiNyNMMsECDQ2B2LGfkd3O50oLK8Ej/8+D30Or0fSgO0Wi0ypZn8mQMI84HJqmzceqH8DohBKpSXoOHhwDJ6WLO+K2nMruwdcF84exESiWTKxkajERnpGQTmAMyYDAYw/cOzlazwaAmEWSXejQX6cw8Axl/jeY6/8nLzkJ+Xzz8wun3a1mQyQSqVwlRnIvBBf8MkJ6a0KVN0VI2dpQ0Zk8IvXABlZ0/mw9JsgVqtxs8xMYjbE4fYvbEoVBYSlP6BoimNAoFAbrQdZDLUuGtzLJqSB9BxIisHNms7Qcrdbvegrd0Gt8tF108BfAbgYwApAH4FMN8HOVJlORSYocLVlp61vhhva+2P51F32iEZGZJtADZ4vd7xrs4uNDexGB8f9zrHnWhsaER7mxVer5eG7QSwrvbBYPuq8xVYlHvPomrjFvDQ9tHRN9+Sqx1Ey0zJxNjoGDwezwiAJ/Hx+/DG3FCEhgkRvzce0ZFREIcGIjhkNpITk+Fyuah2jL3fhNsdHIRpRYiQ3xpgh4fDBWdMfXPnZKqe+MDFxcWI2SXBgX37IQqehmDx9BcaMgNBIRO+eDrEoQGIioxE7J49yM3OwU1rHxhZEUSyP715bGcEv/WW6/orBJb+lspvsf3rbTxEHDYDpAT/avOXWLJk8ZT4smVL4XQ6sbVQD0Z2A+vOV2j952x8MDCfwLKJMx4aHkJiQhJCQ8UQBTHYtfMn9Pf3w95rx8GkZISHh4NhArH3l93gHnJwP3+uPFPf/blEbd5/y8q96weTQ+AsaRYZsI4hqZkbwpDTxWuzY9hT2NJz8UpT16X6h4P+eOvjEXCj48n0WvgXbPIFAdMPp/Pg/PqObwJTr0OYQqoEM2EDJyzFKMekKGF2jCyezJniE5HOmERSYjodyDcTQIl3jql6Uist24/XWLe8l3275QWYBiqRa7RGT4FNDhCQfm4kl9i/Ny3IUvUyRwoQlKJ0azq49321DdzQgjBp4Rhz+Brezrppq+p99IEv90pLQHmanAcDmM2ybIDCYN100mBb/3LDqbqONbKKli9yjUb/R/blmn8ATIrJHJzMCdEAAAAASUVORK5CYII=)
 !important;
+ margin-left: 7px !important;}
 
 
+
+.sirImgOLDTriangle { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAD4ElEQVRIDZ2UbUxbVRzGT1lxTgjGwG1ZjItZdE582fywOHyNX0zUDxo/GRMX50IkKkoJMspAOjZqbymyLo6ZoBZh0NHX3dvSDeyYWFihLS2UseJm0fFiSq2tE9aO18fcyshABtWb3OQ8//M8v/u/595zCEnwomSmDwU0+06C9gRtEkkSRbOgaHYgwURiNqGcFS2BkSFj3kostZGrpFlI8upBCk9p7jms79mqMIc2imw4D+AZe3i2o8gZhNjqS98mYx/jl+tA0SbxhuG1DABSFxcxYLGcw7e0FE7LGQDoi3sLGk6n0yzuk2nuXSu7bg1A1zGlEhUVRyCVSlF6qATHv6jm4IZ3da6dpKgZArlJsS5k9SSAaiNjhKigAKOjo3C73QgEAigrLcMFgw4TwLOk+PQhrusMaeuO1fk76th0bFL2uQwOlwN2ux1WqxWOXgeUSiXqak9yXX8QD5e2gJIxhjuCVk9EQpFgzr4c5Ivy4XS54Pf70T/Qj9z3c9Ft6+bAL8YzuXWVmQozMmjmpdWMNfWN6Wiw7NNSqJubUSIW48SXtSguFqOx4RQHlawIFTbNC6pMwytqawkAd4+PTUzTFTQH6R0fG9fbOrsWOQHAy2UAvHrrAQ9Usa+Tj+pBDjatv2lUvsiDLrsDalUjB6oBkDU/vwCWNcP6/fkogKkfOn7E13XfADNReMMzb9ePTI21DAciazW6XHuoxlo3PDiEE4oaOByOWQDR7Oy94Bq9K3kTdu/KQnIyP64f3bkD0ehMbLirMxb0OCGy+f/5qMu0pcHmI5pH9jb2YKjfizajCTk5B+IADnrr5vP54PF4y5qrP/3E47j+1w3sUnVHidiQvppL+BLteQ7s7nXNslojtxQL4tz9uJ9KxTZhGuqPKeILra5V4qms7chI24T9b7wMRENgrk2VE1EDhAr2+AowJWNfIWUavKZ1H/zJ4/m1TWfgIAf+AETB0HVfODI1GAXkzOS0MAR8HIvd9E4Ewj5uJ9om/9zOwZLKtSfjJ6Dc9PAynKJZf/JhPXarLg65epxzvvZWFHWOeEh+Y/tz6r7fs5ucgdRKxkby6pktEl3Hnu/sEy+0eMKZ1WcdJE91LuUz7ZWt1a2jS0drp6CKeZJQcvPzmQrzCClssuxRXRzxeTzwmBnUeIMR8t5XV3gSnZdXrhlMOWr8JbPK9Fta5ZlrPIn2EinXDmw5qr8qkJsmBDQ7SdHsIEWz7RTNXqXkzCeESC7wCQGPaz8ACH7u64O+Uc0txZvLr/RfBgCPSCRJKyIAUi5funyz3dL2/8EriLeJhYUFem5uLgLg37/Obb6Nhn8Dna1ooIakiNYAAAAASUVORK5CYII=)
+!important;
+ margin-left: 7px !important;}
+
+
+.sirImg { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAATCAYAAACUef2IAAAD8UlEQVQ4EY3SfUyVVRzA8ac/dGplq5w1c/3R2z+ZFDmbzrbWRlvGyEA0tQDJF5gwmth4URMu1wsMJQiQGyjilbcrLxdNAq6Nii4ZKPiGi5dAYEmgQPf+LlyBrnzbQzDAjPFsZ+f5nd/5fc5zznMU5YEnKV8sa7NFXE/YZJ3BIR4mp7yrt8uSSpssrRfxzRLxPC2y3ijiXiCyIlUk6qJ05DH4zAPUVJhukBr/SGHzCRspTdA7Cu1dPbQ7wcUOym0rqxuFA0YhqEj4uETIsAjD94Rah/QkDT4EP2aQGp+Dwo4wG5daoe/PZuLCggjc5k1y9D66bnfxvgOUdisvNwpBeYJ7plDdIoDQZBNqZBpOd/eirJNSExAh7Am3UlELv12uZKOHGwcOHCQqOprdgQGkBO6k7VY7C/pHUBzCvE7B9bhw6uK/cK9DGHUInQ7pMQ8NLVOSjGLxjhcCkwStwcHYfTsazRdoNFpyc3JIS03DbDaz3W87lfqvyRyB58uFF68Kpj7B0S/k9gk5dwXDXaGoX0i5I4NKvFF8XfIFt0IhvQXab9QSF6vjfNl5dDod6enpGAwG/P13kHsqif422LtH+CpKoE2IGRKUG4LSJCjNE/01KR3/c6F5EvrKcSG/E65afuCN11wI+TyESnMlZwrPUGA0ssFjPfW131H2MwRrhdhIYVupoNwVlNaJ9ruwsFGuTV0HRVHWptkKtM1QnJ3JTr/PKM41sNXbCw/3D/H09ORsyWmaOmDLXjsB4cJRjbC4QVD+mEKVmzK8q23giRmwGpxu47I++QiJ8UcYBfQn8sk4ph8/d4AQ3TAlVdDdAsEXxlDarFPbvyH4tMqa/6DqABC8PywSS/lZCvvgp3sqBz9WXaC6+hJOoOlmHdXmfHpw4jMK6wYgE/jyljXwoegEfEif9g3x0dEMjo5hH4MP3nNDXXPJk4sJDdnFwgXzxuNN77wN94awDvxFV6kJGNk0GxxVbCzm00/8WOP6OqtWrhhHVPhh7aXly3nusUfRp2eoG/OfFdZGaamvqycuPm4GtvrNleRmJ/LWqpmLeXl6qWgHMH9WODYmlvKy8jtAleWXGpIPR2BIjcEmdnodcH/gb75NO8rh/RFUVFSqqMVuty/9X1RNAFEJsQmcM53rn4g3mKzQMAgnCyAkyEbY92PsA7qgAPhoVnAyqcIxh2IoyFVreFod351t2/LUUSE0Qcg/JMw3j99b02TNnHpAo9PoMBWZ1Gu8bLLIt9Sm3ZwghCcKi65LO/DIZG5OPZCgix6H1S+ecW4BKXL92Wwha9j6wpyw6ZOcTqe7pdoiVxqu9ACPT8/VWeyvZv5q3zh9bLb3fwBYLlKabrfnIAAAAABJRU5ErkJggg==)
+!important;
  margin-left: 7px !important;}
 
 .cerbImg{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAA2CAYAAADZJImDAAAFJ0lEQVRYCe2Yz28VVRTHv+fOz/fQVyhKAjH+IIit3blTNpJG3isVYwqvMSHBRBP+Axfu6lpXxpUuSHAlRRINtH0IEjfIwo1IKaKJRqIEKLSUUObNr2POnfezr30zLW9j4ixm7twf5zPn3HPuuXPBAAEA58e2s3PolJTlYpSNWrE3jwYIB/LsjjO7h87VJfcSpupCgYIJxHdB7jC7h6alnjAZ9QrWAtJIC+zFILvEbnmml7CVINFDgf0qyC72ErYKSGtmg6t+J2xirf56ULcbiTMQwIzDBbjVGwAV9GvijT7IEegMPHozmbOkfzehq7WlfaFAPFC+BJc/TAQcNVcTlFaXBpLxBhBKZFlpwrq1ZwFpRwco7iYorS0jCIhrK0iawLXaM4PWEpC1/n9QVkt19Ou96fiEAWadelppGwq+VgFtZWYDRJGuY1agZkj0TiNmUyBPBHOv77p7qaAhol3t6g2I2QJRuGfp57eqZuHCUt/mJFPTeIQa7PFBPGuDKHgunB25/GThG4of8H2jb3hbcC3J1DXY44E0ZMh/OrhWumnkpnwEUABTvBjcNzcPu+FcRVuOxqONg2qQZ8LZkWXTnlYIQTGLIyiALIoXfRj9++qwDXjddUYN0h/MluaN3BQ3INyYfAA24oUARmGfG//647o1+rLyngMa8jcFc8VHZm5aUkiiSRuk7myNZ2aQ8sAy6kjxyEMnmCtGpjMjmkCbqxPCgB+pzRaipbOeeunVdJDEuM/wX8vbAip6v4yS6czoZNgFYqkt9pZw8bxnDhZlXDooALDThn3x+E2w/8pfTuF0NwhAEautthvdO3fLGigJpMxspIJ4h2Hgt1u4cuyzd4C/z3czFyQ/Kssw+O7JeXPwDQLCMp8wJomiVK/jvFKEeb6zc/seIAeE9wIYykpmTL63dskMkuzjGTHxF1L7PP/hTtILnpRTNaKbQQj7Rdpb/uojwD+uzG0C8evyG8/Geh2B4FQc7+ronwKRUMgEegRGvwHcvu+Dnn3XDG59T2qLDO6EiU5xHAMRyHFPO+HsiISCwFI10jrPR4gHt7ryZZftoWHmhUoXmEIcRzq+jNyU413dL7B0kEi3CGrO03mGAeWpgVJ3GBtJfIlm9hnHu3IgG0jcyVV6Fn6f+lRvJFNhJLAoEDcgJ/9tZlB90nftP9XIMV1hTBGUYYnHc+SNZgbJ8p/AdhNaEloHTOstEDJkN81hUKqaL09lBgHc3ncFLOaFCsQbGcsJxASH1VLVGqxk87q6zUC14L5e00wCtJmqq2qgZEUL01A78gQFowWS3eu01eLWXNPAt8IemAP7Y//GJyoMig+1JrKXGNLx1m6O5vAVJTG8SrZRK1r0q9Ys+Rv0naEPHlqDZ8EXZFckS7K+MoKkL8tPEoDdjcUmea/daSLWG0f+ydI7H9pb65+0py6qTWHNzWCzbkWJ5E8VDS1aWzNr9J/9P2q6bqvePSgroFwz35JM3jrmbH10JWcHeojrnASMTQyWn+IOz2ouQesD1HtrbWL34AzIGQGiiFbNutqiHfC6kCxPFeTGLhLcIrNXTc4UOoZFYtE40bSjMWuFWsqFxyQrE5QDycHtlxzRuMzLZ79+6p+Pk6bP2wKxvfvab9ocnB8bRWyeTjKB3qjLuiaHTjY4qJA3qfdnjAlFmNjQwYZiHLVo+dQZGDyij5NABoOrgG0z+981IWVjo5CGngKTl9v9B8Y5V2Z2D7O/aeyHuvf16hRSA+uwxb633/fzBy/1GvIvo5s1+uLsF3wAAAAASUVORK5CYII=)
@@ -971,13 +1191,20 @@ i.fa-warning{ background-color:#FFFF00 !important;
 
 .unisImg {background-image: url( https://www.dextools.io/app/assets/img/uniswap-logo-home.png) !important;}
 
-.gearImg{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAD2ElEQVRIDZWVf0wbZRjH6xa1d1dYzUQGAc3ifjjNcHPGP0zQGZIZdJlzU6fJkmmcZomGP4yJfzpjMgothZZSChFwRSAWrl3v+gMopS11FFootJVVVwaVsho4u7KSNCKSx7wnRyi5dXDJk+d9v8/z/bxv7sd7AgHPRUWZl85ZQl2HtMN3fHdThze3RJaX8452jITfMk6SumnmxOZa1rHS/2eeWOP6W9ToBELtgFMGvz0OgCPTGMCj503BdqSL1A4QN7nSY/F7T2cFckVLJJEranSwUEI9yOYX2ocjZ4wTzcc7R2/haq7mALHGuRpOpfZy3qx5NpkUox0RDYOAr0dxi5t5TjscKfjBleA0lAubh+4DwO6sQK74nWf6EtFgB5F6cOUja+AaGUkUAcAjqH4VYJf+dvzIeWqyCW8Y/BctTkcWTnHejOyYXzz2hs47UOEISz8wBVvEanv6QJs7ap5dPJbRuGVS74+V5zc57hU2O5nLttC3794Yqyj9edRq4BY6qfM5sXobcFHQ7GB+W1rav4XDO+0KL7y6R2VfwVU2wFQDLKNEe/N3ANglENX3A67kog8U4zOf81IeIH7tDF/j/JiiD1Cwr+hFy4QOV/SuCZV9kK8ZSM4CCB/A4JVDiXQxrvwfiKCvdQ1bGIbJYZu/vxn5hqi1wlm9j+R1P0R8sc0dJup64QLl13APmrXopqYey1f1JStsIelDGLzl9/U+Fy63gHueOZTRwDCQ84TCmv6iPyDLKGxz8p7eOySUm8AV/evIhgVt/WN6vBqTm+BMt0e/UdjBoKTVEcblJvjQ6FVv3IrTOo8Zl9GAYp/SuhSLAbYDpsAfTz6DyygQ1tCAySgo6/zFFgPABHtq6FVCSgG2HvLR21d2Av6qP1iFr3vZBaRGaPBOFwvOdntoXHoDCKmRjX0KcyK0sPTsduDtgbnS3BrjCudFnBMtAwH2AxmJ3T9Y1uGirljH5ee6RzR75VTqgNo61xOaezkbXDMx+05eLZ0sUpoXLhl99V9aJ+QntS6TLbp4nNd3dejXy3iVAXKqDf98YvTKtIHofnT4oGYdwO7roZmS053uVqLKsEZUGaBr6o8yXtBW0RKZLxJKSMAlesDYTEJhLZ04qDLPPCU3LgtZHdX0UFBLbf/Y/CkYLX9cQgKCIzDKzzdaJyt6/TWlbXYnJulhNaTnVhtgLJ56cuvmeOe6W9G38UpyDZf0AF5JQnmHi0JfJmpGh/pFvacVqySBQCEhV313mYx/Ii+UE69PzrzyKe2te7PdaYgk0kWcjjL6w7z+o737M9pb1xa8c3RzbfP4P3fDTpLcwaG8AAAAAElFTkSuQmCC)
+.gearImgOLD{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAD2ElEQVRIDZWVf0wbZRjH6xa1d1dYzUQGAc3ifjjNcHPGP0zQGZIZdJlzU6fJkmmcZomGP4yJfzpjMgothZZSChFwRSAWrl3v+gMopS11FFootJVVVwaVsho4u7KSNCKSx7wnRyi5dXDJk+d9v8/z/bxv7sd7AgHPRUWZl85ZQl2HtMN3fHdThze3RJaX8452jITfMk6SumnmxOZa1rHS/2eeWOP6W9ToBELtgFMGvz0OgCPTGMCj503BdqSL1A4QN7nSY/F7T2cFckVLJJEranSwUEI9yOYX2ocjZ4wTzcc7R2/haq7mALHGuRpOpfZy3qx5NpkUox0RDYOAr0dxi5t5TjscKfjBleA0lAubh+4DwO6sQK74nWf6EtFgB5F6cOUja+AaGUkUAcAjqH4VYJf+dvzIeWqyCW8Y/BctTkcWTnHejOyYXzz2hs47UOEISz8wBVvEanv6QJs7ap5dPJbRuGVS74+V5zc57hU2O5nLttC3794Yqyj9edRq4BY6qfM5sXobcFHQ7GB+W1rav4XDO+0KL7y6R2VfwVU2wFQDLKNEe/N3ANglENX3A67kog8U4zOf81IeIH7tDF/j/JiiD1Cwr+hFy4QOV/SuCZV9kK8ZSM4CCB/A4JVDiXQxrvwfiKCvdQ1bGIbJYZu/vxn5hqi1wlm9j+R1P0R8sc0dJup64QLl13APmrXopqYey1f1JStsIelDGLzl9/U+Fy63gHueOZTRwDCQ84TCmv6iPyDLKGxz8p7eOySUm8AV/evIhgVt/WN6vBqTm+BMt0e/UdjBoKTVEcblJvjQ6FVv3IrTOo8Zl9GAYp/SuhSLAbYDpsAfTz6DyygQ1tCAySgo6/zFFgPABHtq6FVCSgG2HvLR21d2Av6qP1iFr3vZBaRGaPBOFwvOdntoXHoDCKmRjX0KcyK0sPTsduDtgbnS3BrjCudFnBMtAwH2AxmJ3T9Y1uGirljH5ee6RzR75VTqgNo61xOaezkbXDMx+05eLZ0sUpoXLhl99V9aJ+QntS6TLbp4nNd3dejXy3iVAXKqDf98YvTKtIHofnT4oGYdwO7roZmS053uVqLKsEZUGaBr6o8yXtBW0RKZLxJKSMAlesDYTEJhLZ04qDLPPCU3LgtZHdX0UFBLbf/Y/CkYLX9cQgKCIzDKzzdaJyt6/TWlbXYnJulhNaTnVhtgLJ56cuvmeOe6W9G38UpyDZf0AF5JQnmHi0JfJmpGh/pFvacVqySBQCEhV313mYx/Ii+UE69PzrzyKe2te7PdaYgk0kWcjjL6w7z+o737M9pb1xa8c3RzbfP4P3fDTpLcwaG8AAAAAElFTkSuQmCC)
 !important;
  margin-left: 7px !important;
 text-align:center;
 font-weight:bold;
 font-size:15px;
 padding: 0 2px 6px 0;}
+
+
+.gearImgOLDtriangle{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAATCAYAAACUef2IAAAA+klEQVQ4Ea1UPQ7CIBTmDAYYjKPRA7kZB2dPYRy0j/QOzo48ooOJ8QSewiuoqwYsCYW2vEabNPC+P74ylDHiw5UBXpg5UU6XCcC3fekOglIoXPpgsdNjgoUmqULPPpzmyqgE4C28AruXgKuMLU/HLeM5n9CgaAtxuMJrg4UGVcGHWC0AX5aLcdLc1tabc7zX1Va+PU6skYOe1ohgEAXue7emtqHqXB8JpqQ2kYVeWO0ATqPgY5q3vVowxkh6AfigtvW1hqXh1iMVzjyWrN/T9T0hMkBn604yE2xp51eIidQSCdgDkKDXSYZv+6/V9Qku//Jj8NP/CSWYzQe4WOyxcf17xQAAAABJRU5ErkJggg==)
+!important;}
+
+.gearImg{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAADIElEQVQ4EZWT+0tTYRjH365QEPVbf0BFIfVLBBEF/dgPYdDVLCLTaqmJlGW3VdJFpYa6zC42Td1UtLJ0nulx2cysdHkBu0dZSjd1XTxpbnOnT6xNdJRoB76c9zzv83x4zvd9XiGGPcDEfLPHHmKGXTJKlIwSbkVJKkFZ8RBl9hMU3Q2UKAuKxooSWY2y2ghnG1THJZgzDDW0BMZfK1Sbk3WQWAcH7BBfB1kyJDTC5J8ggDVvoNgCx2sg9h7IDR7Uvn4aVOePkzBriCiEN3/K9SK19UgaZGbDqZsQ/gDSzRDZAuN6QHwF0QmiD5a1wQULaK6B7bUbcPO07yfVvb3OwzD/DxyYLueprUnJcDkHcjLhUjbE18CiD74uhQrCBcLtFzDjGwQXgqlJpR8nz/t66Ohx0Ob80S/BAmGq8uRFGOGgDEctcKQCEiyQLMFaG6y7DRFWCPNrmxU2W2B5LTz+7qKn08WWLjcbO11s7XIT/cXJpk8DL0TZM/fCVRLq9kew46FPIa1wugSqk6A0HUrPBep6CpQlAs9dxA14EO0gPvmt+gArX6lH/9hRdNezYUsJRN+DPTaIuQt770CGEc6ZIC0/UKlFUKCHsAoQThAOEN0gumBBO8aAA0wrV+PWl8HuWthbDRF2SCiHTAPoTYHSmcCaAUteguj1AcUXmPYWewB08CPZrGaHVkF0DWjug7YCsgyQkj8E9v5B3kVIkP3deiflK0x6T3d9JzMHWX+9tRL2mBqItEFsLegL4HzuEFhXCJIe1tpBDIC3U9EB0mf34r9gwwOP25gZU0q315LwejgmwRUDpA3akQvmTJj31jfT4jMkdRAynDHi+sajgaWht0BTD9pKMGRBqt+O4gyItYHw+CYh5B1nRgT9ayO3TtV44TsbQFcMF67CmUKQ9RDc5APPbfsl/6t21JiuXE1ZZ4ND3q4NvhtpNMGEbyDe86zxI1NHhYyUsO8WUlQlnM+BknQIqwfxHZep3RU0Us2Y4i0tzAi9yUutBBWpMKsZwh2e1WMqHi3J0uwKOnERDhXAfod6cLT8/9qvqlLjtbVjP6zfBMsWA2DNDr0AAAAASUVORK5CYII=)
+!important;}
 
 
 
@@ -1025,6 +1252,7 @@ overflow: hidden !important;
   -ms-animation: animationFrames linear .5s;
   -ms-animation-iteration-count: 1;
   -ms-transform-origin: 50% 50%;
+translateZ(0)
 }
 
 @keyframes animationFrames{
@@ -1116,13 +1344,9 @@ overflow: hidden !important;
  overflow: hidden;
  }
 }
-
-
-
-
-
-
 ` );
+             /* note: translateZ(0) supposedly iproves css anim performance by forcing creation of a separate layer. */
+
 
              //old sirImg data:image/png;base64,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
              initPage();
